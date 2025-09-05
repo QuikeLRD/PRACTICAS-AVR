@@ -367,10 +367,10 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x0000000000000000      0x8b1
+.debug_info     0x0000000000000000      0x8ac
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x0000000000000000      0x52e Q:/Programas/MicrochipStudio/7.0/Packs/atmel/ATmega_DFP/1.7.374/xc8/avr/lib/avr5/memx-const/crtatmega16.o
- .debug_info    0x000000000000052e      0x383 main.o
+ .debug_info    0x000000000000052e      0x37e main.o
 
 .debug_abbrev   0x0000000000000000      0x5e4
  *(.debug_abbrev)

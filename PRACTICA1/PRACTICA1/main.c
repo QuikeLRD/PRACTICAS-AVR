@@ -23,12 +23,12 @@ int main(void)
 	
     while(1)
     {
-        PORTB = j;
-		PORTC = y;
-		_delay_ms(500);
-		PORTB = y;
-		PORTC = j;
-		_delay_ms(500);
+    
+	i = PINA;
+	_delay_ms(100);
+	PORTB = i;
+	_delay_ms(100);
+	
 		
     }
 }
