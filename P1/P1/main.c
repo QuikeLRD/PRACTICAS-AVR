@@ -17,18 +17,50 @@
 int main(void)
 {
 	
-	DDRA = 0x00;
-	DDRB = 0x255;
-	DDRC = 0xFF;
+	DDRA = 0xFF;
+	DDRB = 0xFF;
+	
 	
 	
     while(1)
     {
         
-		i = PINA;
-		_delay_ms(100);
-		PORTB = i;
-		_delay_ms(100);
+		//AVANZAMOS PORTB DE 0 A 7  
+		
+		for(uint8_t i = 0; i<8; i++ )
+		{
+			PORTA = 0x00;
+			PORTB = (1<<i);
+			_delay_ms(80);
+		}
+		
+		//AVANZAMOS PORTA DE 0 A 7
+		for(uint8_t i =0; i<8; i++)
+		{
+			PORTA = (1<<i);
+			PORTB = 0x00;
+			_delay_ms(80);
+		} 
+		
+		//REGRESAMOS DE PORTA 
+		
+		for(uint8_t	i=6; i>=0; i--)
+		{
+			PORTA = (1<<i);
+			PORTB = 0x00;
+			_delay_ms(80);
+		}
+	
+	
+		//REGRESAMOS DE PORTB
+		
+		for(uint8_t i=7; i>=0; i--)
+		{
+			PORTA = 0x00;
+			PORTB = (1<<i);
+			_delay_ms(80);
+		}
+	
 		
 		 
     }
