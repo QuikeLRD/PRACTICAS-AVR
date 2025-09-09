@@ -5,30 +5,30 @@
  *  Author: enriq
  */ 
 
-#define CPU_F1000000
+#define CPU_F 1000000
 #include <xc.h>
 #include <avr/io.h>
 #include <util/delay.h>
 
 
-	int i = 0xF0, j = 0b10101010, y = 85;
+	int i = 0xF0, j = 0b10101010, y = 85, ValorA;
 
 
 int main(void)
 {
 	
 	DDRA = 0x00;
-	DDRB = 0x255;
+	DDRB = 255;
 	DDRC = 0xFF;
 	
 	
     while(1)
     {
-        
-		i = PINA;
-		_delay_ms(100);
-		PORTB = i;
-		_delay_ms(100);
+        ValorA = PINA;
+		PORTB  = ValorA & 0xF0;		//Nibble Alto
+		PORTC  = ValorA & 0x0F;	    //Nibble Bajo 	
+	
+		
 		
 		 
     }
