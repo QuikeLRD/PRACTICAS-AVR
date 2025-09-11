@@ -4,8 +4,8 @@
 #include <util/delay.h>
 #include "LCD.h" 
 
-char mensaje[] = "Hola, LCD!";
-
+char mensaje[] = "Bienvenido, a";
+char mensaje2[] = "Planas vs Zombis";
 
 
 int main(void)
@@ -19,10 +19,12 @@ int main(void)
 	
 	// Limpia la pantalla y coloca el cursor en la posición inicial
 	LIMPIA_LCD();
-	POS_LINEA1(0); // Cursor en línea 1, posición 0
 
 	// Escribe un mensaje de bienvenida
+	POS_LINEA1(0); // Cursor en línea 1, posición 0
 	ENVIA_CADENA(mensaje);
+	POS_LINEA2(0); // Cursor en línea 1, posición 0
+	ENVIA_CADENA(mensaje2);
 	_delay_ms(200);
 
 	CAR_ESP0();
@@ -124,25 +126,53 @@ int main(void)
 		//ZOMBI P6
 		POS_LINEA1(9);
 		ENVIA_DATO(5);
+		_delay_ms(500);
 				
 		//DISPARO
 		POS_LINEA1(5);
 		ENVIA_DATO(4);
+		
 		//BORRO ZOMBI P2
 		POS_LINEA1(9);
 		ENVIA_DATO(' ');
 		_delay_ms(10);
 		//BORRO ZOMBI2 P2
-		POS_LINEA1(15);
+		POS_LINEA2(15);
 		ENVIA_DATO(' ');
 		_delay_ms(10);
 		//ZOMBI P3
 		POS_LINEA1(8);
 		ENVIA_DATO(5);
+		
 		//ZOMBI2 P1
 		POS_LINEA2(14);
 		ENVIA_DATO(7);		
+		//BORRO ZOMBI2 P2
 		_delay_ms(500);
+		
+		
+		//PONGO PLANTA2
+		POS_LINEA2(1);
+		ENVIA_DATO(0);
+		//BORRO ZOMBI P4
+		POS_LINEA1(8);
+		ENVIA_DATO(' ');
+		_delay_ms(10);
+		//MUEVO ZOMBI1 P4
+		POS_LINEA1(7);
+		ENVIA_DATO(5);	
+		//DISPARO
+		POS_LINEA1(6);
+		ENVIA_DATO(4);
+		//BORRO ZOMBI P4
+		POS_LINEA2(14);
+		ENVIA_DATO(' ');
+		_delay_ms(10);
+		//ZOMBI2 P3
+		POS_LINEA2(13);
+		ENVIA_DATO(7);
+		_delay_ms(500);
+		
 		
 		
 		
