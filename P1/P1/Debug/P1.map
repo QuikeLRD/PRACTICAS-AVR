@@ -9,6 +9,11 @@ q:/archivosx86/mplab compiler/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/a
 q:/archivosx86/mplab compiler/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_exit.o)
                               q:/archivosx86/mplab compiler/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(_Exit.o) (_exit)
 
+Allocating common symbols
+Common symbol       size              file
+
+i                   0x2               main.o
+
 Discarded input sections
 
  .data          0x0000000000000000        0x0 Q:/Archivosx86/MicrochipStudio7/7.0/Packs/atmel/ATmega_DFP/1.7.374/xc8/avr/lib/avr5/memx-const/crtatmega16.o
@@ -18,7 +23,6 @@ Discarded input sections
  .bss           0x0000000000000000        0x0 main.o
  .data.y        0x0000000000000000        0x2 main.o
  .data.j        0x0000000000000000        0x2 main.o
- .data.i        0x0000000000000000        0x2 main.o
  .text          0x0000000000000000        0x0 q:/archivosx86/mplab compiler/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_copy_data.o)
  .data          0x0000000000000000        0x0 q:/archivosx86/mplab compiler/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_copy_data.o)
  .bss           0x0000000000000000        0x0 q:/archivosx86/mplab compiler/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_copy_data.o)
@@ -185,7 +189,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x0000000000000000       0xa8
+.text           0x0000000000000000       0xae
  *(.vectors)
  .vectors       0x0000000000000000       0x54 Q:/Archivosx86/MicrochipStudio7/7.0/Packs/atmel/ATmega_DFP/1.7.374/xc8/avr/lib/avr5/memx-const/crtatmega16.o
                 0x0000000000000000                __vector_default
@@ -193,43 +197,44 @@ END GROUP
  *(.vectors)
  *(.progmem.gcc*)
  *(.dinit)
- .dinit         0x0000000000000054        0x0 data_init
-                0x0000000000000054                . = ALIGN (0x2)
-                0x0000000000000054                __trampolines_start = .
+ .dinit         0x0000000000000054        0x5 data_init
+                0x000000000000005a                . = ALIGN (0x2)
+ *fill*         0x0000000000000059        0x1 
+                0x000000000000005a                __trampolines_start = .
  *(.trampolines)
- .trampolines   0x0000000000000054        0x0 linker stubs
+ .trampolines   0x000000000000005a        0x0 linker stubs
  *(.trampolines*)
-                0x0000000000000054                __trampolines_end = .
+                0x000000000000005a                __trampolines_end = .
  *libprintf_flt.a:*(.progmem.data)
  *libc.a:*(.progmem.data)
-                0x0000000000000054                . = ALIGN (0x2)
+                0x000000000000005a                . = ALIGN (0x2)
  *(.jumptables)
  *(.jumptables*)
  *(.lowtext)
  *(.lowtext*)
-                0x0000000000000054                __ctors_start = .
+                0x000000000000005a                __ctors_start = .
  *(.ctors)
-                0x0000000000000054                __ctors_end = .
-                0x0000000000000054                __dtors_start = .
+                0x000000000000005a                __ctors_end = .
+                0x000000000000005a                __dtors_start = .
  *(.dtors)
-                0x0000000000000054                __dtors_end = .
+                0x000000000000005a                __dtors_end = .
  SORT(*)(.ctors)
  SORT(*)(.dtors)
  *(.init0)
- .init0         0x0000000000000054        0x0 Q:/Archivosx86/MicrochipStudio7/7.0/Packs/atmel/ATmega_DFP/1.7.374/xc8/avr/lib/avr5/memx-const/crtatmega16.o
-                0x0000000000000054                __init
+ .init0         0x000000000000005a        0x0 Q:/Archivosx86/MicrochipStudio7/7.0/Packs/atmel/ATmega_DFP/1.7.374/xc8/avr/lib/avr5/memx-const/crtatmega16.o
+                0x000000000000005a                __init
  *(.init0)
  *(.init1)
  *(.init1)
  *(.init2)
- .init2         0x0000000000000054        0xc Q:/Archivosx86/MicrochipStudio7/7.0/Packs/atmel/ATmega_DFP/1.7.374/xc8/avr/lib/avr5/memx-const/crtatmega16.o
+ .init2         0x000000000000005a        0xc Q:/Archivosx86/MicrochipStudio7/7.0/Packs/atmel/ATmega_DFP/1.7.374/xc8/avr/lib/avr5/memx-const/crtatmega16.o
  *(.init2)
  *(.init3)
  *(.init3)
  *(.init4)
- .init4         0x0000000000000060       0x3c q:/archivosx86/mplab compiler/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_copy_data.o)
-                0x0000000000000060                __do_copy_data
-                0x000000000000008e                __do_clear_bss
+ .init4         0x0000000000000066       0x3c q:/archivosx86/mplab compiler/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_copy_data.o)
+                0x0000000000000066                __do_copy_data
+                0x0000000000000094                __do_clear_bss
  *(.init4)
  *(.init5)
  *(.init5)
@@ -240,12 +245,12 @@ END GROUP
  *(.init8)
  *(.init8)
  *(.init9)
- .init9         0x000000000000009c        0x8 Q:/Archivosx86/MicrochipStudio7/7.0/Packs/atmel/ATmega_DFP/1.7.374/xc8/avr/lib/avr5/memx-const/crtatmega16.o
+ .init9         0x00000000000000a2        0x8 Q:/Archivosx86/MicrochipStudio7/7.0/Packs/atmel/ATmega_DFP/1.7.374/xc8/avr/lib/avr5/memx-const/crtatmega16.o
  *(.init9)
-                0x00000000000000a4                . = ALIGN (0x2)
+                0x00000000000000aa                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00000000000000a4        0x0 q:/archivosx86/mplab compiler/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_exit.o)
-                0x00000000000000a4                _exit
+ .fini9         0x00000000000000aa        0x0 q:/archivosx86/mplab compiler/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_exit.o)
+                0x00000000000000aa                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -264,11 +269,11 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00000000000000a4        0x4 q:/archivosx86/mplab compiler/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_exit.o)
+ .fini0         0x00000000000000aa        0x4 q:/archivosx86/mplab compiler/avr/bin/../lib/gcc/avr/5.4.0/avr5/memx-const\libgcc.a(_exit.o)
  *(.fini0)
-                0x00000000000000a8                _etext = .
+                0x00000000000000ae                _etext = .
 
-.data           0x0000000000800060        0x0 load address 0x00000000000000a8
+.data           0x0000000000800060        0x0 load address 0x00000000000000ae
                 [!provide]                        PROVIDE (__data_start, .)
  *(.gnu.linkonce.d*)
  *(.gnu.linkonce.r*)
@@ -276,18 +281,20 @@ END GROUP
                 0x0000000000800060                _edata = .
                 [!provide]                        PROVIDE (__data_end, .)
 
-.bss            0x0000000000800060        0x0
+.bss            0x0000000000800060        0x2
                 [!provide]                        PROVIDE (__bss_start, .)
  *(COMMON)
+ COMMON         0x0000000000800060        0x2 main.o
+                0x0000000000800060                i
                 [!provide]                        PROVIDE (__bss_end, .)
-                0x00000000000000a8                __data_load_start = LOADADDR (.data)
-                0x00000000000000a8                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x00000000000000ae                __data_load_start = LOADADDR (.data)
+                0x00000000000000ae                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x0000000000800060        0x0
+.noinit         0x0000000000800062        0x0
                 [!provide]                        PROVIDE (__noinit_start, .)
  *(.noinit*)
                 [!provide]                        PROVIDE (__noinit_end, .)
-                0x0000000000800060                _end = .
+                0x0000000000800062                _end = .
 
 .eeprom         0x0000000000810000        0x0
  *(.eeprom*)
@@ -368,20 +375,20 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x0000000000000000      0x93d
+.debug_info     0x0000000000000000      0x933
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x0000000000000000      0x52e Q:/Archivosx86/MicrochipStudio7/7.0/Packs/atmel/ATmega_DFP/1.7.374/xc8/avr/lib/avr5/memx-const/crtatmega16.o
- .debug_info    0x000000000000052e      0x40f main.o
+ .debug_info    0x000000000000052e      0x405 main.o
 
-.debug_abbrev   0x0000000000000000      0x5e1
+.debug_abbrev   0x0000000000000000      0x5c9
  *(.debug_abbrev)
  .debug_abbrev  0x0000000000000000      0x4e7 Q:/Archivosx86/MicrochipStudio7/7.0/Packs/atmel/ATmega_DFP/1.7.374/xc8/avr/lib/avr5/memx-const/crtatmega16.o
- .debug_abbrev  0x00000000000004e7       0xfa main.o
+ .debug_abbrev  0x00000000000004e7       0xe2 main.o
 
-.debug_line     0x0000000000000000      0x285
+.debug_line     0x0000000000000000      0x2dc
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x0000000000000000      0x119 Q:/Archivosx86/MicrochipStudio7/7.0/Packs/atmel/ATmega_DFP/1.7.374/xc8/avr/lib/avr5/memx-const/crtatmega16.o
- .debug_line    0x0000000000000119      0x16c main.o
+ .debug_line    0x0000000000000119      0x1c3 main.o
 
 .debug_frame    0x0000000000000000       0x24
  *(.debug_frame)
@@ -392,9 +399,9 @@ END GROUP
  .debug_str     0x0000000000000000      0x1af Q:/Archivosx86/MicrochipStudio7/7.0/Packs/atmel/ATmega_DFP/1.7.374/xc8/avr/lib/avr5/memx-const/crtatmega16.o
  .debug_str     0x00000000000001af        0x0 main.o
 
-.debug_loc      0x0000000000000000      0x10a
+.debug_loc      0x0000000000000000      0x120
  *(.debug_loc)
- .debug_loc     0x0000000000000000      0x10a main.o
+ .debug_loc     0x0000000000000000      0x120 main.o
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -429,56 +436,56 @@ LOAD data_init
  .note.gnu.avr.deviceinfo
                 0x0000000000000000       0x3c Q:/Archivosx86/MicrochipStudio7/7.0/Packs/atmel/ATmega_DFP/1.7.374/xc8/avr/lib/avr5/memx-const/crtatmega16.o
 
-.text.main      0x00000000000000a8       0x80
- .text.main     0x00000000000000a8       0x80 main.o
-                0x00000000000000a8                main
+.text.main      0x00000000000000ae      0x132
+ .text.main     0x00000000000000ae      0x132 main.o
+                0x00000000000000ae                main
 
-.text.exit      0x0000000000000128       0x16
- .text.exit     0x0000000000000128       0x16 q:/archivosx86/mplab compiler/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(exit.o)
-                0x0000000000000128                exit
+.text.exit      0x00000000000001e0       0x16
+ .text.exit     0x00000000000001e0       0x16 q:/archivosx86/mplab compiler/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(exit.o)
+                0x00000000000001e0                exit
 
-.text           0x000000000000013e        0x4
- .text          0x000000000000013e        0x4 Q:/Archivosx86/MicrochipStudio7/7.0/Packs/atmel/ATmega_DFP/1.7.374/xc8/avr/lib/avr5/memx-const/crtatmega16.o
-                0x000000000000013e                __vector_1
-                0x000000000000013e                __vector_12
-                0x000000000000013e                __bad_interrupt
-                0x000000000000013e                __vector_6
-                0x000000000000013e                __vector_3
-                0x000000000000013e                __vector_11
-                0x000000000000013e                __vector_13
-                0x000000000000013e                __vector_17
-                0x000000000000013e                __vector_19
-                0x000000000000013e                __vector_7
-                0x000000000000013e                __vector_5
-                0x000000000000013e                __vector_4
-                0x000000000000013e                __vector_9
-                0x000000000000013e                __vector_2
-                0x000000000000013e                __vector_15
-                0x000000000000013e                __vector_8
-                0x000000000000013e                __vector_14
-                0x000000000000013e                __vector_10
-                0x000000000000013e                __vector_16
-                0x000000000000013e                __vector_18
-                0x000000000000013e                __vector_20
+.text           0x00000000000001f6        0x4
+ .text          0x00000000000001f6        0x4 Q:/Archivosx86/MicrochipStudio7/7.0/Packs/atmel/ATmega_DFP/1.7.374/xc8/avr/lib/avr5/memx-const/crtatmega16.o
+                0x00000000000001f6                __vector_1
+                0x00000000000001f6                __vector_12
+                0x00000000000001f6                __bad_interrupt
+                0x00000000000001f6                __vector_6
+                0x00000000000001f6                __vector_3
+                0x00000000000001f6                __vector_11
+                0x00000000000001f6                __vector_13
+                0x00000000000001f6                __vector_17
+                0x00000000000001f6                __vector_19
+                0x00000000000001f6                __vector_7
+                0x00000000000001f6                __vector_5
+                0x00000000000001f6                __vector_4
+                0x00000000000001f6                __vector_9
+                0x00000000000001f6                __vector_2
+                0x00000000000001f6                __vector_15
+                0x00000000000001f6                __vector_8
+                0x00000000000001f6                __vector_14
+                0x00000000000001f6                __vector_10
+                0x00000000000001f6                __vector_16
+                0x00000000000001f6                __vector_18
+                0x00000000000001f6                __vector_20
 
-.text._Exit     0x0000000000000142        0x4
- .text._Exit    0x0000000000000142        0x4 q:/archivosx86/mplab compiler/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(_Exit.o)
-                0x0000000000000142                _Exit
+.text._Exit     0x00000000000001fa        0x4
+ .text._Exit    0x00000000000001fa        0x4 q:/archivosx86/mplab compiler/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(_Exit.o)
+                0x00000000000001fa                _Exit
 
 .text.__dummy_fini
-                0x0000000000000146        0x2
+                0x00000000000001fe        0x2
  .text.__dummy_fini
-                0x0000000000000146        0x2 q:/archivosx86/mplab compiler/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(exit.o)
-                0x0000000000000146                _fini
+                0x00000000000001fe        0x2 q:/archivosx86/mplab compiler/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(exit.o)
+                0x00000000000001fe                _fini
 
 .text.__dummy_funcs_on_exit
-                0x0000000000000148        0x2
+                0x0000000000000200        0x2
  .text.__dummy_funcs_on_exit
-                0x0000000000000148        0x2 q:/archivosx86/mplab compiler/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(exit.o)
-                0x0000000000000148                __funcs_on_exit
+                0x0000000000000200        0x2 q:/archivosx86/mplab compiler/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(exit.o)
+                0x0000000000000200                __funcs_on_exit
 
 .text.__dummy_simulator_exit
-                0x000000000000014a        0x2
+                0x0000000000000202        0x2
  .text.__dummy_simulator_exit
-                0x000000000000014a        0x2 q:/archivosx86/mplab compiler/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(exit.o)
-                0x000000000000014a                __simulator_exit
+                0x0000000000000202        0x2 q:/archivosx86/mplab compiler/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(exit.o)
+                0x0000000000000202                __simulator_exit

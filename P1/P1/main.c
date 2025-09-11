@@ -11,7 +11,7 @@
 #include <util/delay.h>
 
 
-	int i = 0xF0, j = 0b10101010, y = 85;
+	int i, j = 0b10101010, y = 85;
 
 
 int main(void)
@@ -27,7 +27,7 @@ int main(void)
         
 		//AVANZAMOS PORTB DE 0 A 7  
 		
-		for(uint8_t i = 0; i<8; i++ )
+		for(i = 0; i<8; i++ )
 		{
 			PORTA = 0x00;
 			PORTB = (1<<i);
@@ -35,7 +35,7 @@ int main(void)
 		}
 		
 		//AVANZAMOS PORTA DE 0 A 7
-		for(uint8_t i =0; i<8; i++)
+		for(i =0; i<8; i++)
 		{
 			PORTA = (1<<i);
 			PORTB = 0x00;
@@ -44,7 +44,7 @@ int main(void)
 		
 		//REGRESAMOS DE PORTA 
 		
-		for(uint8_t	i=6; i>=0; i--)
+		for(i=7; i>=0; i--)
 		{
 			PORTA = (1<<i);
 			PORTB = 0x00;
@@ -54,7 +54,7 @@ int main(void)
 	
 		//REGRESAMOS DE PORTB
 		
-		for(uint8_t i=7; i>=0; i--)
+		for(i=7; i>=0; i--)
 		{
 			PORTA = 0x00;
 			PORTB = (1<<i);
