@@ -124,67 +124,71 @@ void SIN_DESPLAZAMIENTO_INCREMENTO(void)
 //==CARACTERES ESPECIALES======
 //=============================
 
+//GUISANTE
 void CAR_ESP0(void){
 	ENVIA_CMD(0x40);
 	_delay_ms(1);
-	ENVIA_DATO(0b00011111);//11111
+	ENVIA_DATO(0b00000100);//11111
 	_delay_ms(1); //1 1 1
-	ENVIA_DATO(0b00010101);//10101
+	ENVIA_DATO(0b00001110);//10101
 	_delay_ms(1); //11111
-	ENVIA_DATO(0b00010101);//01010
+	ENVIA_DATO(0b00001010);//01010
 	_delay_ms(1); //10101
-	ENVIA_DATO(0b00011111);//11111
+	ENVIA_DATO(0b00001011);//11111
 	_delay_ms(1);
-	ENVIA_DATO(0b00001010);
+	ENVIA_DATO(0b00001111);
 	_delay_ms(1);
-	ENVIA_DATO(0b00010101);
+	ENVIA_DATO(0b00000100);
 	_delay_ms(1);
-	ENVIA_DATO(0b00011111);
-	
+	ENVIA_DATO(0b00000110);
 	_delay_ms(1);
-	ENVIA_DATO(0b00000000);
+	ENVIA_DATO(0b00000001);
 	_delay_ms(1);
 }
+
+//Zombi Cubeta
 void CAR_ESP1(void){
 	ENVIA_CMD(0x48);
 	_delay_ms(1);
-	ENVIA_DATO(0b00000000);
+	ENVIA_DATO(0b00001110);
 	_delay_ms(1);
-	ENVIA_DATO(0b00001010);
+	ENVIA_DATO(0b00001110);
 	_delay_ms(1);
-	ENVIA_DATO(0b00011111);
-	_delay_ms(1);
-	ENVIA_DATO(0b00011111);
-	_delay_ms(1);
-	ENVIA_DATO(0b00011111);
+	ENVIA_DATO(0b00001110);
 	_delay_ms(1);
 	ENVIA_DATO(0b00001110);
 	_delay_ms(1);
 	ENVIA_DATO(0b00000100);
 	_delay_ms(1);
-	ENVIA_DATO(0b00000000);
+	ENVIA_DATO(0b00011100);
+	_delay_ms(1);
+	ENVIA_DATO(0b00000100);
+	_delay_ms(1);
+	ENVIA_DATO(0b00000100);
 	_delay_ms(1);
 }
+//Carnivora
 void CAR_ESP2(void){
 	ENVIA_CMD(0x50);
 	_delay_ms(1);
-	ENVIA_DATO(0b00000000);
+	ENVIA_DATO(0b00000100);
+	_delay_ms(1);
+	ENVIA_DATO(0b00001110);
+	_delay_ms(1);
+	ENVIA_DATO(0b00001111);
+	_delay_ms(1);
+	ENVIA_DATO(0b00011000);
+	_delay_ms(1);
+	ENVIA_DATO(0b00001111);
+	_delay_ms(1);
+	ENVIA_DATO(0b00001111);
+	_delay_ms(1);
+	ENVIA_DATO(0b00001100);
 	_delay_ms(1);
 	ENVIA_DATO(0b00000011);
 	_delay_ms(1);
-	ENVIA_DATO(0b00000111);
-	_delay_ms(1);
-	ENVIA_DATO(0b00010110);
-	_delay_ms(1);
-	ENVIA_DATO(0b00001000);
-	_delay_ms(1);
-	ENVIA_DATO(0b00010100);
-	_delay_ms(1);
-	ENVIA_DATO(0b00000000);
-	_delay_ms(1);
-	ENVIA_DATO(0b00000000);
-	_delay_ms(1);
 }
+//GIRASOL
 void CAR_ESP3(void){
 	ENVIA_CMD(0x58);
 	_delay_ms(1);
@@ -206,84 +210,90 @@ void CAR_ESP3(void){
 	ENVIA_DATO(0b00000011);
 	_delay_ms(1);
 }
+//PROYECTIL
 void CAR_ESP4(void){
 	ENVIA_CMD(0x60);
 	_delay_ms(1);
-	ENVIA_DATO(0b00000100);
+	ENVIA_DATO(0b00000000);
 	_delay_ms(1);
-	ENVIA_DATO(0b00000100);
+	ENVIA_DATO(0b00000000);
 	_delay_ms(1);
-	ENVIA_DATO(0b00001110);
+	ENVIA_DATO(0b00000000);
 	_delay_ms(1);
-	ENVIA_DATO(0b00011111);
+	ENVIA_DATO(0b00001100);
 	_delay_ms(1);
-	ENVIA_DATO(0b00011111);
+	ENVIA_DATO(0b00001100);
 	_delay_ms(1);
-	ENVIA_DATO(0b00000100);
+	ENVIA_DATO(0b00000000);
 	_delay_ms(1);
-	ENVIA_DATO(0b00000100);
+	ENVIA_DATO(0b00000000);
 	_delay_ms(1);
-	ENVIA_DATO(0b00000100);
+	ENVIA_DATO(0b00000000);
 	_delay_ms(1);
 }
+
+//Zombi basico
 void CAR_ESP5(void){
 	ENVIA_CMD(0x68);
 	_delay_ms(1);
-	ENVIA_DATO(0b00001110);
+	ENVIA_DATO(0b00000010);
 	_delay_ms(1);
-	ENVIA_DATO(0b00001010);
-	_delay_ms(1);
-	ENVIA_DATO(0b00001110);
-	_delay_ms(1);
-	ENVIA_DATO(0b00000100);
-	_delay_ms(1);
-	ENVIA_DATO(0b00011111);
-	_delay_ms(1);
-	ENVIA_DATO(0b00000100);
-	_delay_ms(1);
-	
-	ENVIA_DATO(0b00001010);
-	_delay_ms(1);
-	ENVIA_DATO(0b00010001);
-	_delay_ms(1);
-}
-void CAR_ESP6(void){
-	ENVIA_CMD(0x70);
-	_delay_ms(1);
-	ENVIA_DATO(0b00000001);
-	_delay_ms(1);
-	ENVIA_DATO(0b00000011);
+	ENVIA_DATO(0b00000111);
 	_delay_ms(1);
 	ENVIA_DATO(0b00000101);
 	_delay_ms(1);
-	ENVIA_DATO(0b00001001);
+	ENVIA_DATO(0b00000111);
 	_delay_ms(1);
-	ENVIA_DATO(0b00001001);
-	_delay_ms(1);
-	ENVIA_DATO(0b00001011);
-	_delay_ms(1);
-	ENVIA_DATO(0b00011011);
-	_delay_ms(1);
-	ENVIA_DATO(0b00011000);
-	_delay_ms(1);
-}
-void CAR_ESP7(void){
-	ENVIA_CMD(0x78);
+	ENVIA_DATO(0b00000010);
 	_delay_ms(1);
 	ENVIA_DATO(0b00001110);
 	_delay_ms(1);
-	ENVIA_DATO(0b00010001);
+	ENVIA_DATO(0b00000010);
 	_delay_ms(1);
-	ENVIA_DATO(0b00010001);
+	ENVIA_DATO(0b00000010);
 	_delay_ms(1);
-	ENVIA_DATO(0b00010001);
+}
+
+//NUEZ
+void CAR_ESP6(void){
+	ENVIA_CMD(0x70);
+	_delay_ms(1);
+	ENVIA_DATO(0b00000100);
+	_delay_ms(1);
+	ENVIA_DATO(0b00001110);
 	_delay_ms(1);
 	ENVIA_DATO(0b00011111);
 	_delay_ms(1);
-	ENVIA_DATO(0b00011011);
-	_delay_ms(1);
-	ENVIA_DATO(0b00011011);
+	ENVIA_DATO(0b00010101);
 	_delay_ms(1);
 	ENVIA_DATO(0b00011111);
+	_delay_ms(1);
+	ENVIA_DATO(0b00011111);
+	_delay_ms(1);
+	ENVIA_DATO(0b00001110);
+	_delay_ms(1);
+	ENVIA_DATO(0b00000100);
+	_delay_ms(1);
+}
+
+//Zombi oleada
+void CAR_ESP7(void){
+	ENVIA_CMD(0x78);
+	_delay_ms(1);
+	ENVIA_DATO(0b00000010);
+	_delay_ms(1);
+	ENVIA_DATO(0b00000101);
+	_delay_ms(1);
+	ENVIA_DATO(0b00010111);
+	_delay_ms(1);
+	ENVIA_DATO(0b00010111);
+	_delay_ms(1);
+	ENVIA_DATO(0b00011110);
+	_delay_ms(1);
+	ENVIA_DATO(0b00000010);
+	_delay_ms(1);
+	ENVIA_DATO(0b00000010);
+	_delay_ms(1);
+	ENVIA_DATO(0b00000010);
 	_delay_ms(1);
 }
