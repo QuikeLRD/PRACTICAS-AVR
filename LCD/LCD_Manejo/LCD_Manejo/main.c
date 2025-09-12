@@ -528,8 +528,17 @@ int main(void)
 		ENVIA_DATO(1);
 		_delay_ms(500);
 		
-		
-		
+		//DISPARA PLANTA
+		POS_LINEA2(3);
+		ENVIA_DATO(4);
+		//BORRAMOS ZOMBI BASICO
+		POS_LINEA1(5);
+		ENVIA_DATO(' ');
+		_delay_ms(10);
+		//MOVEMOS ZOMBI NORMAL
+		POS_LINEA2(4);
+		ENVIA_DATO(5);
+		_delay_ms(500);
 		
 		
 		
