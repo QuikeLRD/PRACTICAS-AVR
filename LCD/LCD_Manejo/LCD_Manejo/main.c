@@ -5,7 +5,7 @@
 #include "LCD.h" 
 
 char mensaje[] = "Bienvenido, a";
-char mensaje2[] = "Planas vs Zombis";
+char mensaje2[] = "Plantas vs Zombis";
 
 
 int main(void)
@@ -172,6 +172,36 @@ int main(void)
 		POS_LINEA2(13);
 		ENVIA_DATO(7);
 		_delay_ms(500);
+		
+		//ZOMBI1 Golpeado
+		POS_LINEA1(6);
+		ENVIA_DATO(2);
+		
+		//BORRAR ZOMBI1
+		POS_LINEA1(7);
+		ENVIA_DATO(' ');
+		_delay_ms(10);
+		
+		//DISPARO PLANTA2
+		POS_LINEA2(2);
+		ENVIA_DATO(4);
+		//BORRAMOS ZOMBI 2 (13)
+		POS_LINEA2(13);
+		ENVIA_DATO(' ');
+		_delay_ms(10);
+		//MOVEMOS ZOMBI 2
+		POS_LINEA2(12);
+		ENVIA_DATO(7);
+		_delay_ms(500);
+		
+		//MUERE ZOMBI1
+		POS_LINEA1(6);
+		ENVIA_DATO(' ');
+		_delay_ms(10);
+		
+		//DISPARO PLANTA2
+		POS_LINEA2(3);
+		ENVIA_DATO(4);
 		
 		
 		

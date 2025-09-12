@@ -167,26 +167,29 @@ void CAR_ESP1(void){
 	ENVIA_DATO(0b00000100);
 	_delay_ms(1);
 }
-//Carnivora
+//Zombi Golpeado
 void CAR_ESP2(void){
 	ENVIA_CMD(0x50);
 	_delay_ms(1);
-	ENVIA_DATO(0b00000100);
+	ENVIA_DATO(0b00000010);
+	_delay_ms(1);
+	ENVIA_DATO(0b00000111);
+	_delay_ms(1);
+	ENVIA_DATO(0b00000101);
+	_delay_ms(1);
+	ENVIA_DATO(0b00011111);
+	_delay_ms(1);
+	ENVIA_DATO(0b00011010);
 	_delay_ms(1);
 	ENVIA_DATO(0b00001110);
 	_delay_ms(1);
-	ENVIA_DATO(0b00001111);
+	ENVIA_DATO(0b00000010);
 	_delay_ms(1);
-	ENVIA_DATO(0b00011000);
+	ENVIA_DATO(0b00000010);
 	_delay_ms(1);
-	ENVIA_DATO(0b00001111);
-	_delay_ms(1);
-	ENVIA_DATO(0b00001111);
-	_delay_ms(1);
-	ENVIA_DATO(0b00001100);
-	_delay_ms(1);
-	ENVIA_DATO(0b00000011);
-	_delay_ms(1);
+	
+	
+	
 }
 //GIRASOL
 void CAR_ESP3(void){
