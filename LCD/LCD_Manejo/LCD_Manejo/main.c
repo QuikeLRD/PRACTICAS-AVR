@@ -197,13 +197,59 @@ int main(void)
 		//MUERE ZOMBI1
 		POS_LINEA1(6);
 		ENVIA_DATO(' ');
+		//BORRAMOS PROYECTILES PLANTA1
+		POS_LINEA1(2);
+		ENVIA_DATO(' ');
+		POS_LINEA1(3);
+		ENVIA_DATO(' ');
+		POS_LINEA1(4);
+		ENVIA_DATO(' ');
+		POS_LINEA1(5);
+		ENVIA_DATO(' ');
+		POS_LINEA1(6);
+		ENVIA_DATO(' ');
 		_delay_ms(10);
-		
 		//DISPARO PLANTA2
 		POS_LINEA2(3);
 		ENVIA_DATO(4);
+		//BORRAMOS ZOMBI 2 (12)
+		POS_LINEA2(12);
+		ENVIA_DATO(' ');
+		_delay_ms(10);
+		//MOVEMOS ZOMBI 2 (11)
+		POS_LINEA2(11);
+		ENVIA_DATO(7);
+		_delay_ms(500);
+		
+		//COLOCAMOS NUEZ
+		POS_LINEA2(8);
+		ENVIA_DATO(6);
+		//BORRAMOS ZOMBI 2 (11)
+		POS_LINEA2(11);
+		ENVIA_DATO(' ');
+		_delay_ms(10);
+		//MOVEMOS ZOMBI 2 (10)
+		POS_LINEA2(10);
+		ENVIA_DATO(7);
+		//DISPARO PLANTA2
+		POS_LINEA2(4);
+		ENVIA_DATO(4);
+		//BORRAMOS ZOMBI 2 (9)
+		POS_LINEA2(10);
+		ENVIA_DATO(' ');
+		_delay_ms(10);
+		//MOVEMOS ZOMBI 2 (11)
+		POS_LINEA2(9);
+		ENVIA_DATO(7);
+		//DISPARO PLANTA2
+		POS_LINEA2(4);
+		ENVIA_DATO(4);
+			
 		
 		
+		
+		
+		_delay_ms(500);
 		
 		
 		
