@@ -390,11 +390,11 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x0000000000000000     0x4ee2
+.debug_info     0x0000000000000000     0x5463
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x0000000000000000      0x52e Q:/Programas/MicrochipStudio/7.0/Packs/atmel/ATmega_DFP/1.7.374/xc8/avr/lib/avr5/memx-const/crtatmega16.o
  .debug_info    0x000000000000052e     0x1f20 LCD.o
- .debug_info    0x000000000000244e     0x2a94 main.o
+ .debug_info    0x000000000000244e     0x3015 main.o
 
 .debug_abbrev   0x0000000000000000      0x7d6
  *(.debug_abbrev)
@@ -402,11 +402,11 @@ END GROUP
  .debug_abbrev  0x00000000000004e7      0x19d LCD.o
  .debug_abbrev  0x0000000000000684      0x152 main.o
 
-.debug_line     0x0000000000000000     0x194a
+.debug_line     0x0000000000000000     0x1b6e
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x0000000000000000      0x119 Q:/Programas/MicrochipStudio/7.0/Packs/atmel/ATmega_DFP/1.7.374/xc8/avr/lib/avr5/memx-const/crtatmega16.o
  .debug_line    0x0000000000000119      0x816 LCD.o
- .debug_line    0x000000000000092f     0x101b main.o
+ .debug_line    0x000000000000092f     0x123f main.o
 
 .debug_frame    0x0000000000000000      0x1bc
  *(.debug_frame)
@@ -419,10 +419,10 @@ END GROUP
  .debug_str     0x00000000000001af        0x9 LCD.o
  .debug_str     0x00000000000001b8       0x90 main.o
 
-.debug_loc      0x0000000000000000     0x2ef5
+.debug_loc      0x0000000000000000     0x328b
  *(.debug_loc)
  .debug_loc     0x0000000000000000     0x1857 LCD.o
- .debug_loc     0x0000000000001857     0x169e main.o
+ .debug_loc     0x0000000000001857     0x1a34 main.o
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -458,147 +458,147 @@ LOAD data_init
  .note.gnu.avr.deviceinfo
                 0x0000000000000000       0x3c Q:/Programas/MicrochipStudio/7.0/Packs/atmel/ATmega_DFP/1.7.374/xc8/avr/lib/avr5/memx-const/crtatmega16.o
 
-.text.main      0x00000000000000b0      0xac8
- .text.main     0x00000000000000b0      0xac8 main.o
+.text.main      0x00000000000000b0      0xc48
+ .text.main     0x00000000000000b0      0xc48 main.o
                 0x00000000000000b0                main
 
-.text.CAR_ESP0  0x0000000000000b78       0xa4
+.text.CAR_ESP0  0x0000000000000cf8       0xa4
  .text.CAR_ESP0
-                0x0000000000000b78       0xa4 LCD.o
-                0x0000000000000b78                CAR_ESP0
+                0x0000000000000cf8       0xa4 LCD.o
+                0x0000000000000cf8                CAR_ESP0
 
-.text.CAR_ESP1  0x0000000000000c1c       0xa4
+.text.CAR_ESP1  0x0000000000000d9c       0xa4
  .text.CAR_ESP1
-                0x0000000000000c1c       0xa4 LCD.o
-                0x0000000000000c1c                CAR_ESP1
+                0x0000000000000d9c       0xa4 LCD.o
+                0x0000000000000d9c                CAR_ESP1
 
-.text.CAR_ESP2  0x0000000000000cc0       0xa4
+.text.CAR_ESP2  0x0000000000000e40       0xa4
  .text.CAR_ESP2
-                0x0000000000000cc0       0xa4 LCD.o
-                0x0000000000000cc0                CAR_ESP2
+                0x0000000000000e40       0xa4 LCD.o
+                0x0000000000000e40                CAR_ESP2
 
-.text.CAR_ESP3  0x0000000000000d64       0xa4
+.text.CAR_ESP3  0x0000000000000ee4       0xa4
  .text.CAR_ESP3
-                0x0000000000000d64       0xa4 LCD.o
-                0x0000000000000d64                CAR_ESP3
+                0x0000000000000ee4       0xa4 LCD.o
+                0x0000000000000ee4                CAR_ESP3
 
-.text.CAR_ESP4  0x0000000000000e08       0xa4
+.text.CAR_ESP4  0x0000000000000f88       0xa4
  .text.CAR_ESP4
-                0x0000000000000e08       0xa4 LCD.o
-                0x0000000000000e08                CAR_ESP4
+                0x0000000000000f88       0xa4 LCD.o
+                0x0000000000000f88                CAR_ESP4
 
-.text.CAR_ESP5  0x0000000000000eac       0xa4
+.text.CAR_ESP5  0x000000000000102c       0xa4
  .text.CAR_ESP5
-                0x0000000000000eac       0xa4 LCD.o
-                0x0000000000000eac                CAR_ESP5
+                0x000000000000102c       0xa4 LCD.o
+                0x000000000000102c                CAR_ESP5
 
-.text.CAR_ESP6  0x0000000000000f50       0xa4
+.text.CAR_ESP6  0x00000000000010d0       0xa4
  .text.CAR_ESP6
-                0x0000000000000f50       0xa4 LCD.o
-                0x0000000000000f50                CAR_ESP6
+                0x00000000000010d0       0xa4 LCD.o
+                0x00000000000010d0                CAR_ESP6
 
-.text.CAR_ESP7  0x0000000000000ff4       0xa4
+.text.CAR_ESP7  0x0000000000001174       0xa4
  .text.CAR_ESP7
-                0x0000000000000ff4       0xa4 LCD.o
-                0x0000000000000ff4                CAR_ESP7
+                0x0000000000001174       0xa4 LCD.o
+                0x0000000000001174                CAR_ESP7
 
 .text.ENVIA_CMD
-                0x0000000000001098       0x66
+                0x0000000000001218       0x66
  .text.ENVIA_CMD
-                0x0000000000001098       0x66 LCD.o
-                0x0000000000001098                ENVIA_CMD
+                0x0000000000001218       0x66 LCD.o
+                0x0000000000001218                ENVIA_CMD
 
 .text.ENVIA_DATO
-                0x00000000000010fe       0x66
+                0x000000000000127e       0x66
  .text.ENVIA_DATO
-                0x00000000000010fe       0x66 LCD.o
-                0x00000000000010fe                ENVIA_DATO
+                0x000000000000127e       0x66 LCD.o
+                0x000000000000127e                ENVIA_DATO
 
 .text.ENVIA_CADENA
-                0x0000000000001164       0x2c
+                0x00000000000012e4       0x2c
  .text.ENVIA_CADENA
-                0x0000000000001164       0x2c LCD.o
-                0x0000000000001164                ENVIA_CADENA
+                0x00000000000012e4       0x2c LCD.o
+                0x00000000000012e4                ENVIA_CADENA
 
 .text.LCD_INICIALIZA
-                0x0000000000001190       0x26
+                0x0000000000001310       0x26
  .text.LCD_INICIALIZA
-                0x0000000000001190       0x26 LCD.o
-                0x0000000000001190                LCD_INICIALIZA
+                0x0000000000001310       0x26 LCD.o
+                0x0000000000001310                LCD_INICIALIZA
 
-.text.exit      0x00000000000011b6       0x16
- .text.exit     0x00000000000011b6       0x16 q:/programas/xccompiler/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(exit.o)
-                0x00000000000011b6                exit
+.text.exit      0x0000000000001336       0x16
+ .text.exit     0x0000000000001336       0x16 q:/programas/xccompiler/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(exit.o)
+                0x0000000000001336                exit
 
 .text.LIMPIA_LCD
-                0x00000000000011cc        0x8
+                0x000000000000134c        0x8
  .text.LIMPIA_LCD
-                0x00000000000011cc        0x8 LCD.o
-                0x00000000000011cc                LIMPIA_LCD
+                0x000000000000134c        0x8 LCD.o
+                0x000000000000134c                LIMPIA_LCD
 
 .text.POS_LINEA1
-                0x00000000000011d4        0x8
+                0x0000000000001354        0x8
  .text.POS_LINEA1
-                0x00000000000011d4        0x8 LCD.o
-                0x00000000000011d4                POS_LINEA1
+                0x0000000000001354        0x8 LCD.o
+                0x0000000000001354                POS_LINEA1
 
 .text.POS_LINEA2
-                0x00000000000011dc        0x8
+                0x000000000000135c        0x8
  .text.POS_LINEA2
-                0x00000000000011dc        0x8 LCD.o
-                0x00000000000011dc                POS_LINEA2
+                0x000000000000135c        0x8 LCD.o
+                0x000000000000135c                POS_LINEA2
 
-.text           0x00000000000011e4        0x4
- .text          0x00000000000011e4        0x4 Q:/Programas/MicrochipStudio/7.0/Packs/atmel/ATmega_DFP/1.7.374/xc8/avr/lib/avr5/memx-const/crtatmega16.o
-                0x00000000000011e4                __vector_1
-                0x00000000000011e4                __vector_12
-                0x00000000000011e4                __bad_interrupt
-                0x00000000000011e4                __vector_6
-                0x00000000000011e4                __vector_3
-                0x00000000000011e4                __vector_11
-                0x00000000000011e4                __vector_13
-                0x00000000000011e4                __vector_17
-                0x00000000000011e4                __vector_19
-                0x00000000000011e4                __vector_7
-                0x00000000000011e4                __vector_5
-                0x00000000000011e4                __vector_4
-                0x00000000000011e4                __vector_9
-                0x00000000000011e4                __vector_2
-                0x00000000000011e4                __vector_15
-                0x00000000000011e4                __vector_8
-                0x00000000000011e4                __vector_14
-                0x00000000000011e4                __vector_10
-                0x00000000000011e4                __vector_16
-                0x00000000000011e4                __vector_18
-                0x00000000000011e4                __vector_20
+.text           0x0000000000001364        0x4
+ .text          0x0000000000001364        0x4 Q:/Programas/MicrochipStudio/7.0/Packs/atmel/ATmega_DFP/1.7.374/xc8/avr/lib/avr5/memx-const/crtatmega16.o
+                0x0000000000001364                __vector_1
+                0x0000000000001364                __vector_12
+                0x0000000000001364                __bad_interrupt
+                0x0000000000001364                __vector_6
+                0x0000000000001364                __vector_3
+                0x0000000000001364                __vector_11
+                0x0000000000001364                __vector_13
+                0x0000000000001364                __vector_17
+                0x0000000000001364                __vector_19
+                0x0000000000001364                __vector_7
+                0x0000000000001364                __vector_5
+                0x0000000000001364                __vector_4
+                0x0000000000001364                __vector_9
+                0x0000000000001364                __vector_2
+                0x0000000000001364                __vector_15
+                0x0000000000001364                __vector_8
+                0x0000000000001364                __vector_14
+                0x0000000000001364                __vector_10
+                0x0000000000001364                __vector_16
+                0x0000000000001364                __vector_18
+                0x0000000000001364                __vector_20
 
-.text._Exit     0x00000000000011e8        0x4
- .text._Exit    0x00000000000011e8        0x4 q:/programas/xccompiler/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(_Exit.o)
-                0x00000000000011e8                _Exit
+.text._Exit     0x0000000000001368        0x4
+ .text._Exit    0x0000000000001368        0x4 q:/programas/xccompiler/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(_Exit.o)
+                0x0000000000001368                _Exit
 
 .text.__dummy_fini
-                0x00000000000011ec        0x2
+                0x000000000000136c        0x2
  .text.__dummy_fini
-                0x00000000000011ec        0x2 q:/programas/xccompiler/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(exit.o)
-                0x00000000000011ec                _fini
+                0x000000000000136c        0x2 q:/programas/xccompiler/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(exit.o)
+                0x000000000000136c                _fini
 
 .text.__dummy_funcs_on_exit
-                0x00000000000011ee        0x2
+                0x000000000000136e        0x2
  .text.__dummy_funcs_on_exit
-                0x00000000000011ee        0x2 q:/programas/xccompiler/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(exit.o)
-                0x00000000000011ee                __funcs_on_exit
+                0x000000000000136e        0x2 q:/programas/xccompiler/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(exit.o)
+                0x000000000000136e                __funcs_on_exit
 
 .text.__dummy_simulator_exit
-                0x00000000000011f0        0x2
+                0x0000000000001370        0x2
  .text.__dummy_simulator_exit
-                0x00000000000011f0        0x2 q:/programas/xccompiler/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(exit.o)
-                0x00000000000011f0                __simulator_exit
+                0x0000000000001370        0x2 q:/programas/xccompiler/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5/memx-const\libc.a(exit.o)
+                0x0000000000001370                __simulator_exit
 
-.data.mensaje2  0x0000000000800060       0x11 load address 0x00000000000011f2
+.data.mensaje2  0x0000000000800060       0x11 load address 0x0000000000001372
  .data.mensaje2
                 0x0000000000800060       0x11 main.o
                 0x0000000000800060                mensaje2
 
-.data.mensaje   0x0000000000800071        0xe load address 0x0000000000001203
+.data.mensaje   0x0000000000800071        0xe load address 0x0000000000001383
  .data.mensaje  0x0000000000800071        0xe main.o
                 0x0000000000800071                mensaje

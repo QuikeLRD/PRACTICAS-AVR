@@ -532,13 +532,89 @@ int main(void)
 		POS_LINEA2(3);
 		ENVIA_DATO(4);
 		//BORRAMOS ZOMBI BASICO
-		POS_LINEA1(5);
+		POS_LINEA2(5);
 		ENVIA_DATO(' ');
 		_delay_ms(10);
 		//MOVEMOS ZOMBI NORMAL
 		POS_LINEA2(4);
 		ENVIA_DATO(5);
+		//BORRAMOS ZOMBI DE CUBETA2
+		POS_LINEA1(6);
+		ENVIA_DATO(' ');
+		_delay_ms(10);
+		//MOVEMOS ZOMBI DE CUBETA 2
+		POS_LINEA1(5);
+		ENVIA_DATO(7);
 		_delay_ms(500);
+		
+		//BORRAMOS ZOMBI DE CUBETA2
+		POS_LINEA2(4);
+		ENVIA_DATO(' ');
+		_delay_ms(10);
+		//MOVEMOS ZOMBI DE CUBETA 2
+		POS_LINEA2(3);
+		ENVIA_DATO(2);
+		//BORRAMOS ZOMBI DE CUBETA2
+		POS_LINEA1(6);
+		ENVIA_DATO(' ');
+		_delay_ms(10);
+		//MOVEMOS ZOMBI DE CUBETA 2
+		POS_LINEA1(5);
+		ENVIA_DATO(7);
+		_delay_ms(500);
+		
+		//DISPARO PLANTA3
+		POS_LINEA1(2);
+		ENVIA_DATO(4);
+		//BORRAMOS ZOMBI DE CUBETA2
+		POS_LINEA2(3);
+		ENVIA_DATO(' ');
+		_delay_ms(10);
+		//BORRAMOS ZOMBI DE CUBETA2
+		POS_LINEA1(5);
+		ENVIA_DATO(' ');
+		_delay_ms(10);
+		//MOVEMOS ZOMBI DE CUBETA 2
+		POS_LINEA1(4);
+		ENVIA_DATO(7);
+		//BORRAMOS ZOMBI DE CUBETA2
+		POS_LINEA2(3);
+		ENVIA_DATO(' ');
+		_delay_ms(10);
+		//MOVEMOS ZOMBI DE CUBETA 2
+		POS_LINEA1(4);
+		ENVIA_DATO(7);
+		_delay_ms(500);
+		
+		
+		//BORRAMOS GUISANTE
+		POS_LINEA1(2);
+		ENVIA_DATO(' ');
+		_delay_ms(10);
+		//BORRAMOS ZOMBI DE CUBETA2
+		POS_LINEA1(4);
+		ENVIA_DATO(' ');
+		_delay_ms(10);
+		//BORRAMOS ZOMBI DE CUBETA2
+		POS_LINEA1(3);
+		ENVIA_DATO(' ');
+		_delay_ms(10);
+		//MOVEMOS ZOMBI DE CUBETA 2
+		POS_LINEA1(2);
+		ENVIA_DATO(2);
+		
+		
+		_delay_ms(500);
+		
+		//PONEMOS PLANTA4
+		POS_LINEA1(2);
+		ENVIA_DATO(0);
+		_delay_ms(2000);
+		
+		
+		
+		
+	
 		
 		
 		
