@@ -1,59 +1,75 @@
+#include <avr/io.h>
 #include "Keyboard.h"
 
-char VALOR_TECLADO=' ';
-
-
-char LEE_TECLADO()
+char LEE_TECLADO(void)
 {
-	switch(PORTD)
-	{
+	// Valor por defecto: sin tecla
+	char key = ' ';
+
+	// Leemos filas (bits 0..3)
+	uint8_t filas = PIND & 0x0F;
+
+	// Evaluamos la columna ACTIVA.
+	// Nota: comparamos todo el puerto (como tus macros) o, si prefieres robustez,
+	// puedes comparar solo el nibble alto: (PORTD & 0xF0) == (COL1 & 0xF0), etc.
+	switch (PORTD) {
 		case COL1:
-		switch(PIND&0X0F)
-		{
-			case FIL1: VALOR_TECLADO='1'; break;//0X0E
-			case FIL2: VALOR_TECLADO='2'; break;//0X0D:
-			case FIL3: VALOR_TECLADO='3'; break;//0X0B
-			case FIL4: VALOR_TECLADO='A'; break;//0X07
+		switch (filas) {
+			case FIL1: key = '1'; break;
+			case FIL2: key = '2'; break;
+			case FIL3: key = '3'; break;
+			case FIL4: key = 'A'; break;
+			default:   key = ' ';  break; // IMPORTANTE
 		}
 		break;
+
 		case COL2:
-		switch(PIND&0X0F)
-		{
-			case FIL1: VALOR_TECLADO='4'; break;
-			case FIL2: VALOR_TECLADO='5'; break;
-			case FIL3: VALOR_TECLADO='6'; break;
-			case FIL4: VALOR_TECLADO='B'; break;
+		switch (filas) {
+			case FIL1: key = '4'; break;
+			case FIL2: key = '5'; break;
+			case FIL3: key = '6'; break;
+			case FIL4: key = 'B'; break;
+			default:   key = ' ';  break; // IMPORTANTE
 		}
 		break;
+
 		case COL3:
-		switch(PIND&0X0F)
-		{
-			case FIL1: VALOR_TECLADO='7'; break;
-			case FIL2: VALOR_TECLADO='8'; break;
-			case FIL3: VALOR_TECLADO='9'; break;
-			case FIL4: VALOR_TECLADO='C'; break;
+		switch (filas) {
+			case FIL1: key = '7'; break;
+			case FIL2: key = '8'; break;
+			case FIL3: key = '9'; break;
+			case FIL4: key = 'C'; break;
+			default:   key = ' ';  break; // IMPORTANTE
 		}
 		break;
+
 		case COL4:
-		switch(PIND&0X0F)
-		{
-			case FIL1: VALOR_TECLADO='*'; break;
-			case FIL2: VALOR_TECLADO='0'; break;
-			case FIL3: VALOR_TECLADO='#'; break;
-			case FIL4: VALOR_TECLADO='D'; break;
+		switch (filas) {
+			case FIL1: key = '*'; break;
+			case FIL2: key = '0'; break;
+			case FIL3: key = '#'; break;
+			case FIL4: key = 'D'; break;
+			default:   key = ' ';  break; // IMPORTANTE
 		}
+		break;
+
+		default:
+		// Si PORTD no está en un estado de columna válido, no hay tecla.
+		key = ' ';
 		break;
 	}
-	return VALOR_TECLADO;
+
+	return key;
 }
-void BARRE_TECLADO()
+
+void BARRE_TECLADO(void)
 {
-	switch(PORTD)
-	{
-		case COL1: PORTD=COL2; break;
-		case COL2: PORTD=COL3; break;
-		case COL3: PORTD=COL4; break;
-		//case COL4: PORTD=COL1; break;
-		default: PORTD=COL1;
+	// Avanza la columna activa. Mantener default para iniciar en COL1.
+	switch (PORTD) {
+		case COL1: PORTD = COL2; break;
+		case COL2: PORTD = COL3; break;
+		case COL3: PORTD = COL4; break;
+		case COL4: PORTD = COL1; break; // puedes usar default también
+		default:   PORTD = COL1; break;
 	}
 }

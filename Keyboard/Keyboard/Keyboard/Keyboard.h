@@ -1,7 +1,6 @@
-#define FIL1 0X0F & ~(0X01) ////0X0E
 #include <avr/io.h>
 
-
+#define FIL1 0X0F & ~(0X01) ////0X0E
 #define FIL2 0X0F & ~(0X02) ////0X0D
 #define FIL3 0X0F & ~(0X04) ////0X0B
 #define FIL4 0X0F & ~(0X08) ////0X07
