@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?> 
 <project>                                  
-  <executable name="Keyboard.elf">                 
+  <executable name="P3J.elf">                 
     <memory name="program">              
       <units>bytes</units>                 
       <length>16384</length>                 
-      <used>2472</used>                     
-      <free>13912</free>                     
+      <used>2387</used>                     
+      <free>13997</free>                     
     </memory>                              
     <memory name="data">                 
       <units>bytes</units>                 

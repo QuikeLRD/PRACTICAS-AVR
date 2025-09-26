@@ -2,9 +2,5 @@
 # Automatically-generated file. Do not edit or delete the file
 ################################################################################
 
-Keyboard.c
-
-LCD.c
-
-main2.c
+main.c
 

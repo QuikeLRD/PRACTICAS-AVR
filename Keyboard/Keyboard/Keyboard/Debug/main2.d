@@ -1,4 +1,4 @@
-main.d main.o: .././main.c \
+main2.d main2.o: .././main2.c \
  q:\programas\xccompiler\avr\avr\include\avr\io.h \
  q:\programas\xccompiler\avr\avr\include\avr\sfr_defs.h \
  q:\programas\xccompiler\avr\avr\include\inttypes.h \
@@ -14,8 +14,8 @@ main.d main.o: .././main.c \
  q:\programas\xccompiler\avr\avr\include\avr\lock.h \
  q:\programas\xccompiler\avr\avr\include\util\delay.h \
  q:\programas\xccompiler\avr\avr\include\util\delay_basic.h \
- q:\programas\xccompiler\avr\avr\include\math.h .././LCD.h \
- .././Keyboard.h
+ q:\programas\xccompiler\avr\avr\include\math.h \
+ q:\programas\xccompiler\avr\avr\include\stdlib.h
 
 q:\programas\xccompiler\avr\avr\include\avr\io.h:
 
@@ -49,6 +49,4 @@ q:\programas\xccompiler\avr\avr\include\util\delay_basic.h:
 
 q:\programas\xccompiler\avr\avr\include\math.h:
 
-.././LCD.h:
-
-.././Keyboard.h:
+q:\programas\xccompiler\avr\avr\include\stdlib.h:

@@ -3,20 +3,15 @@
 #include "LCD.h"
 #include "Keyboard.h"
 
-char mensaje[]  = "Practica 3";
-char mensaje2[] = "Teclado";
+char mensaje[] = "Practica 3";
+char mensaje2[] ="Teclado";
+
 
 int main(void)
 {
-	// LCD en PORTC como salida
 	DDRC = 0xFF;
-
-	// Teclado: PD7..PD4 = columnas (salida), PD3..PD0 = filas (entrada)
-	DDRD  = 0xF0;
-	PORTD =  0x0F;
-
-	// Estado inicial: activar COL1 y habilitar pull-ups en filas (bits bajos en 1)
-	PORTD = COL1; // Esto ya pone nibble alto = columnas (COL1) y nibble bajo = 0x0F (pull-ups)
+	DDRD = 0xF0;
+	PORTD = COL1;
 
 	LCD_INICIALIZA();
 	LIMPIA_LCD();
@@ -25,9 +20,16 @@ int main(void)
 	ENVIA_CADENA(mensaje);
 	POS_LINEA2(0);
 	ENVIA_CADENA(mensaje2);
-	_delay_ms(700);
+	_delay_ms(800);
 
-	LIMPIA_LCD();
+	 LIMPIA_LCD();
+
+
+	// Inicializa los caracteres especiales (¡importante!)
+	CAR_ESP0();
+	CAR_ESP1();
+	CAR_ESP2();
+	CAR_ESP3();
 
 	char tecla;
 
@@ -37,19 +39,23 @@ int main(void)
 
 		if (tecla != ' ')
 		{
-			ENVIA_DATO(tecla);
+			POS_LINEA1(0);
 
-			// Esperar a que se suelte la tecla, pero SIGUIENDO barriendo
-			do {
-				BARRE_TECLADO();
-				_delay_ms(2);
-			} while (LEE_TECLADO() != ' ');
+			// Mostrar carácter especial según la tecla
+			if (tecla == 'A') {
+				ENVIA_DATO(0); // CAR_ESP0
+				} else if (tecla == 'B') {
+				ENVIA_DATO(1); // CAR_ESP1
+				} else if (tecla == 'C') {
+				ENVIA_DATO(2); // CAR_ESP2
+				} else if (tecla == 'D') {
+				ENVIA_DATO(3); // CAR_ESP3
+				} else {
+				ENVIA_DATO(tecla); // Caracter normal
+			}
 
-			_delay_ms(80); // antirrebote
-		}
-
-		// Barrer continuamente para poder detectar la próxima tecla
 		BARRE_TECLADO();
-		_delay_ms(2); // pequeño tiempo de asentamiento
+		_delay_ms(10);
 	}
+}
 }
