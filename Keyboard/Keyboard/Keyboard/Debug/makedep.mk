@@ -6,5 +6,5 @@ Keyboard.c
 
 LCD.c
 
-main2.c
+main.c
 
