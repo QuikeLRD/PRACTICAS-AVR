@@ -6,10 +6,10 @@
 
 // Texto a desplazar
 
-static const char mensaje2[] = "PRIMER";
-static const char mensaje3[] = "INTERRUPCION";
+char mensaje2[] = "PRIMER";
+char mensaje3[] = "INTERRUPCION";
 
-static const char mensaje[] = "Luis Enrique Lerdo Crisostomo";
+char mensaje[] = "Luis Enrique Lerdo Crisostomo";
 
 // Bandera de evento desde la ISR (volatile)
 static volatile uint8_t g_alert = 0U;
@@ -100,9 +100,9 @@ int main(void)
 			// Muestra “PRIMER / INTERRUPCION” sin desplazamiento
 			LIMPIA_LCD();
 			POS_LINEA1(0);
-			ENVIA_CADENA("PRIMER");
+			ENVIA_CADENA(mensaje2);
 			POS_LINEA2(0);
-			ENVIA_CADENA("INTERRUPCION");
+			ENVIA_CADENA(mensaje3);
 
 			// Tiempo que quieres mostrar el mensaje (ajusta)
 			_delay_ms(2000);
