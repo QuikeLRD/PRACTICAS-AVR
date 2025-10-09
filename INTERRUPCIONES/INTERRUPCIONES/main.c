@@ -5,7 +5,7 @@
 #include <avr/interrupt.h>
 #include <util/delay.h>
 #include "LCD.h"
-#include "Keyboard.h"
+
 
 #define CPU_F 1000000 
 
@@ -17,14 +17,14 @@ static volatile uint8_t  flag2 = 0U;
 
 char mensaje[]  = "Luis Enrique Lerdo Crisostomo";
 
-char mensaje2[] = "PRIMER";
-char mensaje3[] = "INTERRUPCION";
+char mensaje2[] = "PLANTAS VS";
+char mensaje3[] = "ZOMBIS";
 
-char mensaje4[] = "SEGUNDA ";
-char mensaje5[] = "INTERRUPCION";
+char mensaje4[] = "CUIDADO CON LOS";
+char mensaje5[] = "ZOMBIS";
 
-char mensaje6[] = "TERCER";
-char mensaje7[] = "INTERRUPCION";
+char mensaje6[] = "RAPIDO COLOCA";
+char mensaje7[] = "PLANTAS!";
 
 
 //FUNCION PARA OBTENER EL NUMERO DE CARACTERES REALES EN EL TEXTO
@@ -101,11 +101,11 @@ int main (void){
 	MCUCR |= (1U << ISC01);											// CONFIGURAMOS INT0 POR FLANCO DE BAJADA
 	MCUCR &= (uint8_t)~(1U << ISC00);
 	// INT1: ISC11=1, ISC10=0
-	MCUCR |=  (1U << ISC11);										// CONFIGURAMOS INT1 POR FLANCO DE BAJADA
-	MCUCR &= (uint8_t)~(1U << ISC10);								
+	MCUCR |=  (1U << ISC10);										// CONFIGURAMOS INT1 POR TOGGLE
+	MCUCR &= (uint8_t)~(1U << ISC11);								
 	
 	// INT2: ISC2=0 EN MCUCSR (FLANCO DE BAJADA)
-	MCUCSR &= (uint8_t)~(1U << ISC2);								// CONFIGURAMOS INT2 POR FLANCO DE BAJADA
+	MCUCSR |= (1U << ISC2);											// CONFIGURAMOS INT2 POR FLANCO DE SUBIDA
 
 	
 	//LIMPIAMOS BANDERAS PENDIENTES
@@ -118,6 +118,17 @@ int main (void){
 	LIMPIA_LCD();													//LIMPIA LCD
 	
 	lcd_prepare_scroll_name();										//FUNCION PARA CARGAR  NOMBRES
+	
+	
+	CAR_ESP0();
+	CAR_ESP1();
+	CAR_ESP2();
+	CAR_ESP3();
+	CAR_ESP4();
+	CAR_ESP5();
+	CAR_ESP6();
+	CAR_ESP7();	
+	
 	
 	//DESPLAZAMIENTO INFINITO
 	uint8_t shifts = 0U;											//CONTADOR DE DESPLAZAMIENTOS APLICADOS
@@ -133,6 +144,12 @@ int main (void){
 			ENVIA_CADENA(mensaje2);
 			POS_LINEA2(0);
 			ENVIA_CADENA(mensaje3);
+			POS_LINEA2(8);
+			ENVIA_DATO(0);
+			POS_LINEA2(10);
+			ENVIA_DATO(4);
+			POS_LINEA2(12);
+			ENVIA_DATO(5);			
 			_delay_ms(2000);
 			
 			
@@ -155,6 +172,18 @@ int main (void){
 			ENVIA_CADENA(mensaje4);
 			POS_LINEA2(0);
 			ENVIA_CADENA(mensaje5);
+			POS_LINEA2(7);
+			ENVIA_DATO(5);
+			POS_LINEA2(8);
+			ENVIA_DATO(7);
+			POS_LINEA2(9);
+			ENVIA_DATO(1);			
+			POS_LINEA2(10);
+			ENVIA_DATO(7);
+			POS_LINEA2(11);
+			ENVIA_DATO(7);
+			
+			
 			_delay_ms(2000);
 					
 			LIMPIA_LCD();											//RESTAURA EL NOMBRE PARA EL DESPLAZAMIENTO
@@ -175,6 +204,14 @@ int main (void){
 			ENVIA_CADENA(mensaje6);
 			POS_LINEA2(0);
 			ENVIA_CADENA(mensaje7);
+			POS_LINEA2(9);
+			ENVIA_DATO(3);
+			POS_LINEA2(10);
+			ENVIA_DATO(0);
+			POS_LINEA2(11);
+			ENVIA_DATO(0);
+			POS_LINEA2(12);
+			ENVIA_DATO(6);
 			_delay_ms(2000);
 			
 			LIMPIA_LCD();											//RESTAURA EL NOMBRE PARA EL DESPLAZAMIENTO

@@ -15,8 +15,7 @@ main.d main.o: .././main.c \
  q:\archivosx86\mplab\ compiler\avr\avr\include\avr\interrupt.h \
  q:\archivosx86\mplab\ compiler\avr\avr\include\util\delay.h \
  q:\archivosx86\mplab\ compiler\avr\avr\include\util\delay_basic.h \
- q:\archivosx86\mplab\ compiler\avr\avr\include\math.h .././LCD.h \
- .././Keyboard.h
+ q:\archivosx86\mplab\ compiler\avr\avr\include\math.h .././LCD.h
 
 q:\archivosx86\mplab\ compiler\avr\avr\include\avr\io.h:
 
@@ -53,5 +52,3 @@ q:\archivosx86\mplab\ compiler\avr\avr\include\util\delay_basic.h:
 q:\archivosx86\mplab\ compiler\avr\avr\include\math.h:
 
 .././LCD.h:
-
-.././Keyboard.h:
