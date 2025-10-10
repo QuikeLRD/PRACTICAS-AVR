@@ -1,7 +1,7 @@
 // PRACTICA 4 PUNTO 2
 // LERDO CRISOSTOMO LUIS ENRIQUE
 
-#define CPU_F 8000000
+#define F_CPU 8000000UL
 #include <avr/io.h>
 #include <avr/interrupt.h>
 #include <util/delay.h>
@@ -9,7 +9,7 @@
 
 //CONFIGURACION GENERAL
 #define PATTERN_CYCLES 4U																//LIMITA CADA PATRON A 4 CICLOS
-#define BTN_MASK_PC  ((1U<<PC0)|(1U<<PC1)|(1U<<PC2)|(1U<<PC3)|(1U<<PC4))				
+#define BTN_MASK_PC  ((1U<<PC0)|(1U<<PC1)|(1U<<PC2))    // Solo PC0, PC1 y PC2 usan PCINT
 
 typedef enum {
     MODE_BIN = 0U,																		//MODO PRINCIPAL CUENTA DEL 0 AL 255
@@ -21,7 +21,7 @@ typedef enum {
 } mode_t;
 
 //BANDERAS DE LA INTERRUPCION
-static volatile uint8_t g_btn_flags = 0U;												//BIT0 ...BIT4 => PC0..PC4
+static volatile uint8_t g_btn_flags = 0U;												//BIT0 ...BIT4 => PC0..PC2, INT0, INT1
 static volatile uint8_t g_prev_pinc = 0xFFU;
 //ESTADO DEL ESTADO ACTUAL
 static volatile mode_t g_mode = MODE_BIN;
@@ -32,7 +32,7 @@ static inline uint8_t abort_requested(void) {
 }
 
 static inline void re_enable_pcint_for_index(uint8_t idx) {
-    const uint8_t pcint_bit = (uint8_t)(PCINT8 + idx);									// PC0..PC4 -> PCINT8..PCINT12
+    const uint8_t pcint_bit = (uint8_t)(PCINT8 + idx);									// PC0..PC2 -> PCINT8..PCINT10
     PCMSK1 |= (uint8_t)(1U << pcint_bit);
 }
 
@@ -54,14 +54,25 @@ ISR(PCINT1_vect)
     if (falling & (1U<<PC0)) { g_btn_flags |= (1U<<0); PCMSK1 &= (uint8_t)~(1U<<PCINT8);  }
     if (falling & (1U<<PC1)) { g_btn_flags |= (1U<<1); PCMSK1 &= (uint8_t)~(1U<<PCINT9);  }
     if (falling & (1U<<PC2)) { g_btn_flags |= (1U<<2); PCMSK1 &= (uint8_t)~(1U<<PCINT10); }
-    if (falling & (1U<<PC3)) { g_btn_flags |= (1U<<3); PCMSK1 &= (uint8_t)~(1U<<PCINT11); }
-    if (falling & (1U<<PC4)) { g_btn_flags |= (1U<<4); PCMSK1 &= (uint8_t)~(1U<<PCINT12); }
 
     g_prev_pinc = curr;
 }
 
-//	PATRONES DE LUCES
+// INT0 (PD2) - activa MODE_FILL (bit 3 en g_btn_flags)
+ISR(INT0_vect) {
+    g_btn_flags |= (1U << 3);
+    // Deshabilita INT0 para antirrebote, se re-habilita tras atender
+    EIMSK &= (uint8_t)~(1U << INT0);
+}
 
+// INT1 (PD3) - activa MODE_RANDOM (bit 4 en g_btn_flags)
+ISR(INT1_vect) {
+    g_btn_flags |= (1U << 4);
+    // Deshabilita INT1 para antirrebote, se re-habilita tras atender
+    EIMSK &= (uint8_t)~(1U << INT1);
+}
+
+//	PATRONES DE LUCES
 
 static void pattern_marquee(void)
 {
@@ -150,7 +161,6 @@ static void pattern_random(void)
 			PORTB = (uint8_t)(1U << i);
 			delay_abort_ms(80);
 		}
-		
 	}
 }
 
@@ -171,21 +181,35 @@ static uint8_t run_pattern(mode_t m)
 // ----------------------------- MAIN----------------------------- 
 int main(void)
 {
-    //CONFIGURACION SALIDAS PORTD AND PORTD
+    //CONFIGURACION SALIDAS PORTD AND PORTB
     DDRB = 0xFFU;
     DDRD = 0xFFU;
     PORTB = 0x00U;
     PORTD = 0x00U;
 
-    //ENTRADAS PC0 - PC4
+    //ENTRADAS PC0 - PC2
     DDRC  &= (uint8_t)~BTN_MASK_PC;
     PORTC |= BTN_MASK_PC;
 
-    //CONFIGURACION DE INTERRUPCION
+    //ENTRADAS INTERRUPCION EXTERNA INT0 (PD2) y INT1 (PD3)
+    DDRD &= (uint8_t)~((1U << PD2) | (1U << PD3));
+    PORTD |= (1U << PD2) | (1U << PD3);
+
+    //CONFIGURACION DE INTERRUPCION POR CAMBIO DE PIN EN C
     PCICR  |= (1U << PCIE1);
-    PCMSK1 |= (1U << PCINT8) | (1U << PCINT9) | (1U << PCINT10) | (1U << PCINT11) | (1U << PCINT12);
+    PCMSK1 |= (1U << PCINT8) | (1U << PCINT9) | (1U << PCINT10); // Solo PC0, PC1, PC2
     g_prev_pinc = PINC;
     PCIFR |= (1U << PCIF1);
+
+    //CONFIGURACION DE INTERRUPCIONES EXTERNAS
+    EICRA |=  (1U << ISC01);   // INT0 flanco de bajada: ISC01=1 ISC00=0
+    EICRA &= ~(1U << ISC00);
+
+    EICRA |=  (1U << ISC11);   // INT1 flanco de subida: ISC11=1 ISC10=0
+    EICRA &= ~(1U << ISC10);
+
+    EIFR  |= (1U << INTF0) | (1U << INTF1); // limpia banderas
+    EIMSK |= (1U << INT0) | (1U << INT1);   // habilita INT0 y INT1
 
     sei();
 
@@ -204,12 +228,21 @@ int main(void)
             if      (f & (1U<<0)) { req = MODE_MARQUEE;  idx = 0U; }
             else if (f & (1U<<1)) { req = MODE_PINGPONG; idx = 1U; }
             else if (f & (1U<<2)) { req = MODE_ALTERNATE;idx = 2U; }
-            else if (f & (1U<<3)) { req = MODE_FILL;     idx = 3U; }
-            else if (f & (1U<<4)) { req = MODE_RANDOM;   idx = 4U; }
+            else if (f & (1U<<3)) { req = MODE_FILL;     idx = 3U; }     // INT0
+            else if (f & (1U<<4)) { req = MODE_RANDOM;   idx = 4U; }     // INT1
 
             _delay_ms(25);													// BREVE ANTIREBOTE
-            PCIFR |= (1U << PCIF1);
-            re_enable_pcint_for_index(idx);
+            // Rehabilita sólo si es PCINT, no para INT0/INT1
+            if (idx < 3U) {
+                PCIFR |= (1U << PCIF1);
+                re_enable_pcint_for_index(idx);
+            } else if (idx == 3U) {
+                EIFR |= (1U << INTF0);
+                EIMSK |= (1U << INT0);
+            } else if (idx == 4U) {
+                EIFR |= (1U << INTF1);
+                EIMSK |= (1U << INT1);
+            }
 
             g_mode = req;													//INFORMATIVO
 

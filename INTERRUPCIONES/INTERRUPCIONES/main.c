@@ -223,7 +223,7 @@ int main (void){
 			continue;												//CONTINUA AL SIGUIENTE CICLO SIN DESPLAZAR
 		}
 		//MODO NORMAL SIN INTERRUPCION	
-		_delay_ms(100);												//VELOCIDAD DE SCROLL
+		_delay_ms(300);												//VELOCIDAD DE SCROLL
 		DESPLAZAMIENTO_PIZQUIERDA();								//FUNCION PARA DESPLAZAR POR IZQUIERDA
 		shifts++;
 		if (shifts >= 40U){

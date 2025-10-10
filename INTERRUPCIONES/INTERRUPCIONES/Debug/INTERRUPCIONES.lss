@@ -5,139 +5,139 @@ Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
   0 .text         000000b4  00000000  00000000  000000b4  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  1 .data         00000000  00800060  00000b22  00000bd6  2**0
+  1 .data         00000000  00800060  00000b28  00000bdc  2**0
                   ALLOC, LOAD, DATA
-  2 .comment      0000002f  00000000  00000000  00000bd6  2**0
+  2 .comment      0000002f  00000000  00000000  00000bdc  2**0
                   CONTENTS, READONLY
-  3 .stack.descriptors.hdr 0000000e  00000000  00000000  00000c05  2**0
+  3 .stack.descriptors.hdr 0000000e  00000000  00000000  00000c0b  2**0
                   CONTENTS, READONLY
-  4 .debug_aranges 00000118  00000000  00000000  00000c13  2**0
+  4 .debug_aranges 00000118  00000000  00000000  00000c19  2**0
                   CONTENTS, READONLY, DEBUGGING
-  5 .debug_info   00003039  00000000  00000000  00000d2b  2**0
+  5 .debug_info   00002fdb  00000000  00000000  00000d31  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_abbrev 00000845  00000000  00000000  00003d64  2**0
+  6 .debug_abbrev 00000845  00000000  00000000  00003d0c  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_line   00000dc0  00000000  00000000  000045a9  2**0
+  7 .debug_line   00000da8  00000000  00000000  00004551  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_frame  00000264  00000000  00000000  0000536c  2**2
+  8 .debug_frame  00000264  00000000  00000000  000052fc  2**2
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_str    0000026f  00000000  00000000  000055d0  2**0
+  9 .debug_str    0000026f  00000000  00000000  00005560  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_loc    00001c1a  00000000  00000000  0000583f  2**0
+ 10 .debug_loc    00001c1a  00000000  00000000  000057cf  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_ranges 000000f8  00000000  00000000  00007459  2**0
+ 11 .debug_ranges 000000f8  00000000  00000000  000073e9  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .text         00000004  00000ab6  00000ab6  00000b6a  2**1
+ 12 .text         00000004  00000abc  00000abc  00000b70  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 13 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00007554  2**2
+ 13 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  000074e4  2**2
                   CONTENTS, READONLY, DEBUGGING
- 14 .text.ENVIA_CMD 00000066  000008c0  000008c0  00000974  2**1
+ 14 .text.ENVIA_CMD 00000066  000008c6  000008c6  0000097a  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 15 .text.LCD_INICIALIZA 00000026  000009e6  000009e6  00000a9a  2**1
+ 15 .text.LCD_INICIALIZA 00000026  000009ec  000009ec  00000aa0  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 16 .text.ENVIA_DATO 00000066  00000926  00000926  000009da  2**1
+ 16 .text.ENVIA_DATO 00000066  0000092c  0000092c  000009e0  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 17 .text.ENVIA_CADENA 0000002c  000009ba  000009ba  00000a6e  2**1
+ 17 .text.ENVIA_CADENA 0000002c  000009c0  000009c0  00000a74  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 18 .text.LIMPIA_LCD 00000008  00000a8e  00000a8e  00000b42  2**1
+ 18 .text.LIMPIA_LCD 00000008  00000a94  00000a94  00000b48  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 19 .text.REGRESO_CASA 00000008  00000a96  00000a96  00000b4a  2**1
+ 19 .text.REGRESO_CASA 00000008  00000a9c  00000a9c  00000b50  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 20 .text.POS_LINEA1 00000008  00000a9e  00000a9e  00000b52  2**1
+ 20 .text.POS_LINEA1 00000008  00000aa4  00000aa4  00000b58  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 21 .text.POS_LINEA2 00000008  00000aa6  00000aa6  00000b5a  2**1
+ 21 .text.POS_LINEA2 00000008  00000aac  00000aac  00000b60  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 22 .text.DESPLAZAMIENTO_PIZQUIERDA 00000008  00000aae  00000aae  00000b62  2**1
+ 22 .text.DESPLAZAMIENTO_PIZQUIERDA 00000008  00000ab4  00000ab4  00000b68  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 23 .text.CAR_ESP0 000000a4  000003a0  000003a0  00000454  2**1
+ 23 .text.CAR_ESP0 000000a4  000003a6  000003a6  0000045a  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 24 .text.CAR_ESP1 000000a4  00000444  00000444  000004f8  2**1
+ 24 .text.CAR_ESP1 000000a4  0000044a  0000044a  000004fe  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 25 .text.CAR_ESP2 000000a4  000004e8  000004e8  0000059c  2**1
+ 25 .text.CAR_ESP2 000000a4  000004ee  000004ee  000005a2  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 26 .text.CAR_ESP3 000000a4  0000058c  0000058c  00000640  2**1
+ 26 .text.CAR_ESP3 000000a4  00000592  00000592  00000646  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 27 .text.CAR_ESP4 000000a4  00000630  00000630  000006e4  2**1
+ 27 .text.CAR_ESP4 000000a4  00000636  00000636  000006ea  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 28 .text.CAR_ESP5 000000a4  000006d4  000006d4  00000788  2**1
+ 28 .text.CAR_ESP5 000000a4  000006da  000006da  0000078e  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 29 .text.CAR_ESP6 000000a4  00000778  00000778  0000082c  2**1
+ 29 .text.CAR_ESP6 000000a4  0000077e  0000077e  00000832  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 30 .text.CAR_ESP7 000000a4  0000081c  0000081c  000008d0  2**1
+ 30 .text.CAR_ESP7 000000a4  00000822  00000822  000008d6  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 31 .text.str_len 0000002e  0000098c  0000098c  00000a40  2**1
+ 31 .text.str_len 0000002e  00000992  00000992  00000a46  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 32 .text.lcd_prepare_scroll_name 000000c0  000002e0  000002e0  00000394  2**1
+ 32 .text.lcd_prepare_scroll_name 000000c0  000002e6  000002e6  0000039a  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 33 .text.__vector_1 00000024  00000a0c  00000a0c  00000ac0  2**1
+ 33 .text.__vector_1 00000024  00000a12  00000a12  00000ac6  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 34 .text.__vector_2 00000024  00000a30  00000a30  00000ae4  2**1
+ 34 .text.__vector_2 00000024  00000a36  00000a36  00000aea  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 35 .text.__vector_18 00000024  00000a54  00000a54  00000b08  2**1
+ 35 .text.__vector_18 00000024  00000a5a  00000a5a  00000b0e  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 36 .text.main    0000022c  000000b4  000000b4  00000168  2**1
+ 36 .text.main    00000232  000000b4  000000b4  00000168  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 37 .data.mensaje7 00000009  008000a7  00000b0b  00000bbf  2**0
+ 37 .data.mensaje7 00000009  008000a7  00000b11  00000bc5  2**0
                   CONTENTS, ALLOC, LOAD, DATA
- 38 .data.mensaje6 0000000e  0080008e  00000af2  00000ba6  2**0
+ 38 .data.mensaje6 0000000e  0080008e  00000af8  00000bac  2**0
                   CONTENTS, ALLOC, LOAD, DATA
- 39 .data.mensaje5 00000007  008000b0  00000b14  00000bc8  2**0
+ 39 .data.mensaje5 00000007  008000b0  00000b1a  00000bce  2**0
                   CONTENTS, ALLOC, LOAD, DATA
- 40 .data.mensaje4 00000010  0080007e  00000ae2  00000b96  2**0
+ 40 .data.mensaje4 00000010  0080007e  00000ae8  00000b9c  2**0
                   CONTENTS, ALLOC, LOAD, DATA
- 41 .data.mensaje3 00000007  008000b7  00000b1b  00000bcf  2**0
+ 41 .data.mensaje3 00000007  008000b7  00000b21  00000bd5  2**0
                   CONTENTS, ALLOC, LOAD, DATA
- 42 .data.mensaje2 0000000b  0080009c  00000b00  00000bb4  2**0
+ 42 .data.mensaje2 0000000b  0080009c  00000b06  00000bba  2**0
                   CONTENTS, ALLOC, LOAD, DATA
- 43 .data.mensaje 0000001e  00800060  00000ac4  00000b78  2**0
+ 43 .data.mensaje 0000001e  00800060  00000aca  00000b7e  2**0
                   CONTENTS, ALLOC, LOAD, DATA
- 44 .bss.flag2    00000001  008000be  008000be  00000bd6  2**0
+ 44 .bss.flag2    00000001  008000be  008000be  00000bdc  2**0
                   ALLOC
- 45 .bss.flag1    00000001  008000bf  008000bf  00000bd6  2**0
+ 45 .bss.flag1    00000001  008000bf  008000bf  00000bdc  2**0
                   ALLOC
- 46 .bss.flag     00000001  008000c0  008000c0  00000bd6  2**0
+ 46 .bss.flag     00000001  008000c0  008000c0  00000bdc  2**0
                   ALLOC
- 47 .text.__dummy_fini 00000002  00000abe  00000abe  00000b72  2**1
+ 47 .text.__dummy_fini 00000002  00000ac4  00000ac4  00000b78  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 48 .text.__dummy_funcs_on_exit 00000002  00000ac0  00000ac0  00000b74  2**1
+ 48 .text.__dummy_funcs_on_exit 00000002  00000ac6  00000ac6  00000b7a  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 49 .text.__dummy_simulator_exit 00000002  00000ac2  00000ac2  00000b76  2**1
+ 49 .text.__dummy_simulator_exit 00000002  00000ac8  00000ac8  00000b7c  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 50 .text.exit    00000016  00000a78  00000a78  00000b2c  2**1
+ 50 .text.exit    00000016  00000a7e  00000a7e  00000b32  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 51 .text._Exit   00000004  00000aba  00000aba  00000b6e  2**1
+ 51 .text._Exit   00000004  00000ac0  00000ac0  00000b74  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
 
 Disassembly of section .text:
 
 00000000 <__vectors>:
    0:	0c 94 30 00 	jmp	0x60	; 0x60 <__ctors_end>
-   4:	0c 94 06 05 	jmp	0xa0c	; 0xa0c <__vector_1>
-   8:	0c 94 18 05 	jmp	0xa30	; 0xa30 <__vector_2>
-   c:	0c 94 5b 05 	jmp	0xab6	; 0xab6 <__bad_interrupt>
-  10:	0c 94 5b 05 	jmp	0xab6	; 0xab6 <__bad_interrupt>
-  14:	0c 94 5b 05 	jmp	0xab6	; 0xab6 <__bad_interrupt>
-  18:	0c 94 5b 05 	jmp	0xab6	; 0xab6 <__bad_interrupt>
-  1c:	0c 94 5b 05 	jmp	0xab6	; 0xab6 <__bad_interrupt>
-  20:	0c 94 5b 05 	jmp	0xab6	; 0xab6 <__bad_interrupt>
-  24:	0c 94 5b 05 	jmp	0xab6	; 0xab6 <__bad_interrupt>
-  28:	0c 94 5b 05 	jmp	0xab6	; 0xab6 <__bad_interrupt>
-  2c:	0c 94 5b 05 	jmp	0xab6	; 0xab6 <__bad_interrupt>
-  30:	0c 94 5b 05 	jmp	0xab6	; 0xab6 <__bad_interrupt>
-  34:	0c 94 5b 05 	jmp	0xab6	; 0xab6 <__bad_interrupt>
-  38:	0c 94 5b 05 	jmp	0xab6	; 0xab6 <__bad_interrupt>
-  3c:	0c 94 5b 05 	jmp	0xab6	; 0xab6 <__bad_interrupt>
-  40:	0c 94 5b 05 	jmp	0xab6	; 0xab6 <__bad_interrupt>
-  44:	0c 94 5b 05 	jmp	0xab6	; 0xab6 <__bad_interrupt>
-  48:	0c 94 2a 05 	jmp	0xa54	; 0xa54 <__vector_18>
-  4c:	0c 94 5b 05 	jmp	0xab6	; 0xab6 <__bad_interrupt>
-  50:	0c 94 5b 05 	jmp	0xab6	; 0xab6 <__bad_interrupt>
+   4:	0c 94 09 05 	jmp	0xa12	; 0xa12 <__vector_1>
+   8:	0c 94 1b 05 	jmp	0xa36	; 0xa36 <__vector_2>
+   c:	0c 94 5e 05 	jmp	0xabc	; 0xabc <__bad_interrupt>
+  10:	0c 94 5e 05 	jmp	0xabc	; 0xabc <__bad_interrupt>
+  14:	0c 94 5e 05 	jmp	0xabc	; 0xabc <__bad_interrupt>
+  18:	0c 94 5e 05 	jmp	0xabc	; 0xabc <__bad_interrupt>
+  1c:	0c 94 5e 05 	jmp	0xabc	; 0xabc <__bad_interrupt>
+  20:	0c 94 5e 05 	jmp	0xabc	; 0xabc <__bad_interrupt>
+  24:	0c 94 5e 05 	jmp	0xabc	; 0xabc <__bad_interrupt>
+  28:	0c 94 5e 05 	jmp	0xabc	; 0xabc <__bad_interrupt>
+  2c:	0c 94 5e 05 	jmp	0xabc	; 0xabc <__bad_interrupt>
+  30:	0c 94 5e 05 	jmp	0xabc	; 0xabc <__bad_interrupt>
+  34:	0c 94 5e 05 	jmp	0xabc	; 0xabc <__bad_interrupt>
+  38:	0c 94 5e 05 	jmp	0xabc	; 0xabc <__bad_interrupt>
+  3c:	0c 94 5e 05 	jmp	0xabc	; 0xabc <__bad_interrupt>
+  40:	0c 94 5e 05 	jmp	0xabc	; 0xabc <__bad_interrupt>
+  44:	0c 94 5e 05 	jmp	0xabc	; 0xabc <__bad_interrupt>
+  48:	0c 94 2d 05 	jmp	0xa5a	; 0xa5a <__vector_18>
+  4c:	0c 94 5e 05 	jmp	0xabc	; 0xabc <__bad_interrupt>
+  50:	0c 94 5e 05 	jmp	0xabc	; 0xabc <__bad_interrupt>
 
 00000054 <.dinit>:
   54:	00 60       	ori	r16, 0x00	; 0
   56:	00 be       	out	0x30, r0	; 48
   58:	00 0a       	sbc	r0, r16
-  5a:	c4 00       	.word	0x00c4	; ????
+  5a:	ca 00       	.word	0x00ca	; ????
   5c:	be 00       	.word	0x00be	; ????
   5e:	c1 80       	ldd	r12, Z+1	; 0x01
 
@@ -183,7 +183,7 @@ Disassembly of section .text:
   a4:	f4 07       	cpc	r31, r20
   a6:	31 f7       	brne	.-52     	; 0x74 <__do_copy_data+0x8>
   a8:	0e 94 5a 00 	call	0xb4	; 0xb4 <_etext>
-  ac:	0c 94 3c 05 	jmp	0xa78	; 0xa78 <exit>
+  ac:	0c 94 3f 05 	jmp	0xa7e	; 0xa7e <exit>
 
 000000b0 <_exit>:
   b0:	f8 94       	cli
@@ -193,1099 +193,1099 @@ Disassembly of section .text:
 
 Disassembly of section .text:
 
-00000ab6 <__bad_interrupt>:
- ab6:	0c 94 00 00 	jmp	0	; 0x0 <__TEXT_REGION_ORIGIN__>
+00000abc <__bad_interrupt>:
+ abc:	0c 94 00 00 	jmp	0	; 0x0 <__TEXT_REGION_ORIGIN__>
 
 Disassembly of section .text.ENVIA_CMD:
 
-000008c0 <ENVIA_CMD>:
+000008c6 <ENVIA_CMD>:
 	ENVIA_CMD(posicion);
 }
 
 void CURSOR_PARPADEO(void)
 {
 	ENVIA_CMD(0x0F);
- 8c0:	98 2f       	mov	r25, r24
- 8c2:	90 7f       	andi	r25, 0xF0	; 240
- 8c4:	95 bb       	out	0x15, r25	; 21
- 8c6:	95 b3       	in	r25, 0x15	; 21
- 8c8:	9b 7f       	andi	r25, 0xFB	; 251
+ 8c6:	98 2f       	mov	r25, r24
+ 8c8:	90 7f       	andi	r25, 0xF0	; 240
  8ca:	95 bb       	out	0x15, r25	; 21
  8cc:	95 b3       	in	r25, 0x15	; 21
- 8ce:	98 60       	ori	r25, 0x08	; 8
+ 8ce:	9b 7f       	andi	r25, 0xFB	; 251
  8d0:	95 bb       	out	0x15, r25	; 21
- 8d2:	e9 ef       	ldi	r30, 0xF9	; 249
- 8d4:	f0 e0       	ldi	r31, 0x00	; 0
- 8d6:	31 97       	sbiw	r30, 0x01	; 1
- 8d8:	f1 f7       	brne	.-4      	; 0x8d6 <ENVIA_CMD+0x16>
- 8da:	00 c0       	rjmp	.+0      	; 0x8dc <ENVIA_CMD+0x1c>
- 8dc:	00 00       	nop
- 8de:	95 b3       	in	r25, 0x15	; 21
- 8e0:	97 7f       	andi	r25, 0xF7	; 247
- 8e2:	95 bb       	out	0x15, r25	; 21
- 8e4:	e3 ec       	ldi	r30, 0xC3	; 195
- 8e6:	f9 e0       	ldi	r31, 0x09	; 9
- 8e8:	31 97       	sbiw	r30, 0x01	; 1
- 8ea:	f1 f7       	brne	.-4      	; 0x8e8 <ENVIA_CMD+0x28>
- 8ec:	00 c0       	rjmp	.+0      	; 0x8ee <ENVIA_CMD+0x2e>
- 8ee:	00 00       	nop
- 8f0:	f0 e1       	ldi	r31, 0x10	; 16
- 8f2:	8f 9f       	mul	r24, r31
- 8f4:	c0 01       	movw	r24, r0
- 8f6:	11 24       	eor	r1, r1
- 8f8:	85 bb       	out	0x15, r24	; 21
- 8fa:	85 b3       	in	r24, 0x15	; 21
- 8fc:	8b 7f       	andi	r24, 0xFB	; 251
+ 8d2:	95 b3       	in	r25, 0x15	; 21
+ 8d4:	98 60       	ori	r25, 0x08	; 8
+ 8d6:	95 bb       	out	0x15, r25	; 21
+ 8d8:	e9 ef       	ldi	r30, 0xF9	; 249
+ 8da:	f0 e0       	ldi	r31, 0x00	; 0
+ 8dc:	31 97       	sbiw	r30, 0x01	; 1
+ 8de:	f1 f7       	brne	.-4      	; 0x8dc <ENVIA_CMD+0x16>
+ 8e0:	00 c0       	rjmp	.+0      	; 0x8e2 <ENVIA_CMD+0x1c>
+ 8e2:	00 00       	nop
+ 8e4:	95 b3       	in	r25, 0x15	; 21
+ 8e6:	97 7f       	andi	r25, 0xF7	; 247
+ 8e8:	95 bb       	out	0x15, r25	; 21
+ 8ea:	e3 ec       	ldi	r30, 0xC3	; 195
+ 8ec:	f9 e0       	ldi	r31, 0x09	; 9
+ 8ee:	31 97       	sbiw	r30, 0x01	; 1
+ 8f0:	f1 f7       	brne	.-4      	; 0x8ee <ENVIA_CMD+0x28>
+ 8f2:	00 c0       	rjmp	.+0      	; 0x8f4 <ENVIA_CMD+0x2e>
+ 8f4:	00 00       	nop
+ 8f6:	f0 e1       	ldi	r31, 0x10	; 16
+ 8f8:	8f 9f       	mul	r24, r31
+ 8fa:	c0 01       	movw	r24, r0
+ 8fc:	11 24       	eor	r1, r1
  8fe:	85 bb       	out	0x15, r24	; 21
  900:	85 b3       	in	r24, 0x15	; 21
- 902:	88 60       	ori	r24, 0x08	; 8
+ 902:	8b 7f       	andi	r24, 0xFB	; 251
  904:	85 bb       	out	0x15, r24	; 21
- 906:	89 ef       	ldi	r24, 0xF9	; 249
- 908:	90 e0       	ldi	r25, 0x00	; 0
- 90a:	01 97       	sbiw	r24, 0x01	; 1
- 90c:	f1 f7       	brne	.-4      	; 0x90a <ENVIA_CMD+0x4a>
- 90e:	00 c0       	rjmp	.+0      	; 0x910 <ENVIA_CMD+0x50>
- 910:	00 00       	nop
- 912:	85 b3       	in	r24, 0x15	; 21
- 914:	87 7f       	andi	r24, 0xF7	; 247
- 916:	85 bb       	out	0x15, r24	; 21
- 918:	e3 ec       	ldi	r30, 0xC3	; 195
- 91a:	f9 e0       	ldi	r31, 0x09	; 9
- 91c:	31 97       	sbiw	r30, 0x01	; 1
- 91e:	f1 f7       	brne	.-4      	; 0x91c <ENVIA_CMD+0x5c>
- 920:	00 c0       	rjmp	.+0      	; 0x922 <ENVIA_CMD+0x62>
- 922:	00 00       	nop
- 924:	08 95       	ret
+ 906:	85 b3       	in	r24, 0x15	; 21
+ 908:	88 60       	ori	r24, 0x08	; 8
+ 90a:	85 bb       	out	0x15, r24	; 21
+ 90c:	89 ef       	ldi	r24, 0xF9	; 249
+ 90e:	90 e0       	ldi	r25, 0x00	; 0
+ 910:	01 97       	sbiw	r24, 0x01	; 1
+ 912:	f1 f7       	brne	.-4      	; 0x910 <ENVIA_CMD+0x4a>
+ 914:	00 c0       	rjmp	.+0      	; 0x916 <ENVIA_CMD+0x50>
+ 916:	00 00       	nop
+ 918:	85 b3       	in	r24, 0x15	; 21
+ 91a:	87 7f       	andi	r24, 0xF7	; 247
+ 91c:	85 bb       	out	0x15, r24	; 21
+ 91e:	e3 ec       	ldi	r30, 0xC3	; 195
+ 920:	f9 e0       	ldi	r31, 0x09	; 9
+ 922:	31 97       	sbiw	r30, 0x01	; 1
+ 924:	f1 f7       	brne	.-4      	; 0x922 <ENVIA_CMD+0x5c>
+ 926:	00 c0       	rjmp	.+0      	; 0x928 <ENVIA_CMD+0x62>
+ 928:	00 00       	nop
+ 92a:	08 95       	ret
 
 Disassembly of section .text.LCD_INICIALIZA:
 
-000009e6 <LCD_INICIALIZA>:
- 9e6:	82 e0       	ldi	r24, 0x02	; 2
- 9e8:	0e 94 60 04 	call	0x8c0	; 0x8c0 <ENVIA_CMD>
- 9ec:	88 e2       	ldi	r24, 0x28	; 40
- 9ee:	0e 94 60 04 	call	0x8c0	; 0x8c0 <ENVIA_CMD>
- 9f2:	8c e0       	ldi	r24, 0x0C	; 12
- 9f4:	0e 94 60 04 	call	0x8c0	; 0x8c0 <ENVIA_CMD>
- 9f8:	86 e0       	ldi	r24, 0x06	; 6
- 9fa:	0e 94 60 04 	call	0x8c0	; 0x8c0 <ENVIA_CMD>
- 9fe:	81 e0       	ldi	r24, 0x01	; 1
- a00:	0e 94 60 04 	call	0x8c0	; 0x8c0 <ENVIA_CMD>
- a04:	80 e8       	ldi	r24, 0x80	; 128
- a06:	0e 94 60 04 	call	0x8c0	; 0x8c0 <ENVIA_CMD>
- a0a:	08 95       	ret
+000009ec <LCD_INICIALIZA>:
+ 9ec:	82 e0       	ldi	r24, 0x02	; 2
+ 9ee:	0e 94 63 04 	call	0x8c6	; 0x8c6 <ENVIA_CMD>
+ 9f2:	88 e2       	ldi	r24, 0x28	; 40
+ 9f4:	0e 94 63 04 	call	0x8c6	; 0x8c6 <ENVIA_CMD>
+ 9f8:	8c e0       	ldi	r24, 0x0C	; 12
+ 9fa:	0e 94 63 04 	call	0x8c6	; 0x8c6 <ENVIA_CMD>
+ 9fe:	86 e0       	ldi	r24, 0x06	; 6
+ a00:	0e 94 63 04 	call	0x8c6	; 0x8c6 <ENVIA_CMD>
+ a04:	81 e0       	ldi	r24, 0x01	; 1
+ a06:	0e 94 63 04 	call	0x8c6	; 0x8c6 <ENVIA_CMD>
+ a0a:	80 e8       	ldi	r24, 0x80	; 128
+ a0c:	0e 94 63 04 	call	0x8c6	; 0x8c6 <ENVIA_CMD>
+ a10:	08 95       	ret
 
 Disassembly of section .text.ENVIA_DATO:
 
-00000926 <ENVIA_DATO>:
- 926:	98 2f       	mov	r25, r24
- 928:	90 7f       	andi	r25, 0xF0	; 240
- 92a:	95 bb       	out	0x15, r25	; 21
- 92c:	95 b3       	in	r25, 0x15	; 21
- 92e:	9c 60       	ori	r25, 0x0C	; 12
+0000092c <ENVIA_DATO>:
+ 92c:	98 2f       	mov	r25, r24
+ 92e:	90 7f       	andi	r25, 0xF0	; 240
  930:	95 bb       	out	0x15, r25	; 21
- 932:	e9 ef       	ldi	r30, 0xF9	; 249
- 934:	f0 e0       	ldi	r31, 0x00	; 0
- 936:	31 97       	sbiw	r30, 0x01	; 1
- 938:	f1 f7       	brne	.-4      	; 0x936 <ENVIA_DATO+0x10>
- 93a:	00 c0       	rjmp	.+0      	; 0x93c <ENVIA_DATO+0x16>
- 93c:	00 00       	nop
- 93e:	95 b3       	in	r25, 0x15	; 21
- 940:	97 7f       	andi	r25, 0xF7	; 247
- 942:	95 bb       	out	0x15, r25	; 21
+ 932:	95 b3       	in	r25, 0x15	; 21
+ 934:	9c 60       	ori	r25, 0x0C	; 12
+ 936:	95 bb       	out	0x15, r25	; 21
+ 938:	e9 ef       	ldi	r30, 0xF9	; 249
+ 93a:	f0 e0       	ldi	r31, 0x00	; 0
+ 93c:	31 97       	sbiw	r30, 0x01	; 1
+ 93e:	f1 f7       	brne	.-4      	; 0x93c <ENVIA_DATO+0x10>
+ 940:	00 c0       	rjmp	.+0      	; 0x942 <ENVIA_DATO+0x16>
+ 942:	00 00       	nop
  944:	95 b3       	in	r25, 0x15	; 21
- 946:	9b 7f       	andi	r25, 0xFB	; 251
+ 946:	97 7f       	andi	r25, 0xF7	; 247
  948:	95 bb       	out	0x15, r25	; 21
- 94a:	e3 ec       	ldi	r30, 0xC3	; 195
- 94c:	f9 e0       	ldi	r31, 0x09	; 9
- 94e:	31 97       	sbiw	r30, 0x01	; 1
- 950:	f1 f7       	brne	.-4      	; 0x94e <ENVIA_DATO+0x28>
- 952:	00 c0       	rjmp	.+0      	; 0x954 <ENVIA_DATO+0x2e>
- 954:	00 00       	nop
- 956:	f0 e1       	ldi	r31, 0x10	; 16
- 958:	8f 9f       	mul	r24, r31
- 95a:	c0 01       	movw	r24, r0
- 95c:	11 24       	eor	r1, r1
- 95e:	85 bb       	out	0x15, r24	; 21
- 960:	85 b3       	in	r24, 0x15	; 21
- 962:	8c 60       	ori	r24, 0x0C	; 12
+ 94a:	95 b3       	in	r25, 0x15	; 21
+ 94c:	9b 7f       	andi	r25, 0xFB	; 251
+ 94e:	95 bb       	out	0x15, r25	; 21
+ 950:	e3 ec       	ldi	r30, 0xC3	; 195
+ 952:	f9 e0       	ldi	r31, 0x09	; 9
+ 954:	31 97       	sbiw	r30, 0x01	; 1
+ 956:	f1 f7       	brne	.-4      	; 0x954 <ENVIA_DATO+0x28>
+ 958:	00 c0       	rjmp	.+0      	; 0x95a <ENVIA_DATO+0x2e>
+ 95a:	00 00       	nop
+ 95c:	f0 e1       	ldi	r31, 0x10	; 16
+ 95e:	8f 9f       	mul	r24, r31
+ 960:	c0 01       	movw	r24, r0
+ 962:	11 24       	eor	r1, r1
  964:	85 bb       	out	0x15, r24	; 21
- 966:	89 ef       	ldi	r24, 0xF9	; 249
- 968:	90 e0       	ldi	r25, 0x00	; 0
- 96a:	01 97       	sbiw	r24, 0x01	; 1
- 96c:	f1 f7       	brne	.-4      	; 0x96a <ENVIA_DATO+0x44>
- 96e:	00 c0       	rjmp	.+0      	; 0x970 <ENVIA_DATO+0x4a>
- 970:	00 00       	nop
- 972:	85 b3       	in	r24, 0x15	; 21
- 974:	87 7f       	andi	r24, 0xF7	; 247
- 976:	85 bb       	out	0x15, r24	; 21
+ 966:	85 b3       	in	r24, 0x15	; 21
+ 968:	8c 60       	ori	r24, 0x0C	; 12
+ 96a:	85 bb       	out	0x15, r24	; 21
+ 96c:	89 ef       	ldi	r24, 0xF9	; 249
+ 96e:	90 e0       	ldi	r25, 0x00	; 0
+ 970:	01 97       	sbiw	r24, 0x01	; 1
+ 972:	f1 f7       	brne	.-4      	; 0x970 <ENVIA_DATO+0x44>
+ 974:	00 c0       	rjmp	.+0      	; 0x976 <ENVIA_DATO+0x4a>
+ 976:	00 00       	nop
  978:	85 b3       	in	r24, 0x15	; 21
- 97a:	8b 7f       	andi	r24, 0xFB	; 251
+ 97a:	87 7f       	andi	r24, 0xF7	; 247
  97c:	85 bb       	out	0x15, r24	; 21
- 97e:	e3 ec       	ldi	r30, 0xC3	; 195
- 980:	f9 e0       	ldi	r31, 0x09	; 9
- 982:	31 97       	sbiw	r30, 0x01	; 1
- 984:	f1 f7       	brne	.-4      	; 0x982 <ENVIA_DATO+0x5c>
- 986:	00 c0       	rjmp	.+0      	; 0x988 <ENVIA_DATO+0x62>
- 988:	00 00       	nop
- 98a:	08 95       	ret
+ 97e:	85 b3       	in	r24, 0x15	; 21
+ 980:	8b 7f       	andi	r24, 0xFB	; 251
+ 982:	85 bb       	out	0x15, r24	; 21
+ 984:	e3 ec       	ldi	r30, 0xC3	; 195
+ 986:	f9 e0       	ldi	r31, 0x09	; 9
+ 988:	31 97       	sbiw	r30, 0x01	; 1
+ 98a:	f1 f7       	brne	.-4      	; 0x988 <ENVIA_DATO+0x5c>
+ 98c:	00 c0       	rjmp	.+0      	; 0x98e <ENVIA_DATO+0x62>
+ 98e:	00 00       	nop
+ 990:	08 95       	ret
 
 Disassembly of section .text.ENVIA_CADENA:
 
-000009ba <ENVIA_CADENA>:
- 9ba:	0f 93       	push	r16
- 9bc:	1f 93       	push	r17
- 9be:	cf 93       	push	r28
- 9c0:	df 93       	push	r29
- 9c2:	8c 01       	movw	r16, r24
- 9c4:	c0 e0       	ldi	r28, 0x00	; 0
- 9c6:	d0 e0       	ldi	r29, 0x00	; 0
- 9c8:	03 c0       	rjmp	.+6      	; 0x9d0 <ENVIA_CADENA+0x16>
- 9ca:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
- 9ce:	21 96       	adiw	r28, 0x01	; 1
- 9d0:	f8 01       	movw	r30, r16
- 9d2:	ec 0f       	add	r30, r28
- 9d4:	fd 1f       	adc	r31, r29
- 9d6:	80 81       	ld	r24, Z
- 9d8:	81 11       	cpse	r24, r1
- 9da:	f7 cf       	rjmp	.-18     	; 0x9ca <ENVIA_CADENA+0x10>
- 9dc:	df 91       	pop	r29
- 9de:	cf 91       	pop	r28
- 9e0:	1f 91       	pop	r17
- 9e2:	0f 91       	pop	r16
- 9e4:	08 95       	ret
+000009c0 <ENVIA_CADENA>:
+ 9c0:	0f 93       	push	r16
+ 9c2:	1f 93       	push	r17
+ 9c4:	cf 93       	push	r28
+ 9c6:	df 93       	push	r29
+ 9c8:	8c 01       	movw	r16, r24
+ 9ca:	c0 e0       	ldi	r28, 0x00	; 0
+ 9cc:	d0 e0       	ldi	r29, 0x00	; 0
+ 9ce:	03 c0       	rjmp	.+6      	; 0x9d6 <ENVIA_CADENA+0x16>
+ 9d0:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
+ 9d4:	21 96       	adiw	r28, 0x01	; 1
+ 9d6:	f8 01       	movw	r30, r16
+ 9d8:	ec 0f       	add	r30, r28
+ 9da:	fd 1f       	adc	r31, r29
+ 9dc:	80 81       	ld	r24, Z
+ 9de:	81 11       	cpse	r24, r1
+ 9e0:	f7 cf       	rjmp	.-18     	; 0x9d0 <ENVIA_CADENA+0x10>
+ 9e2:	df 91       	pop	r29
+ 9e4:	cf 91       	pop	r28
+ 9e6:	1f 91       	pop	r17
+ 9e8:	0f 91       	pop	r16
+ 9ea:	08 95       	ret
 
 Disassembly of section .text.LIMPIA_LCD:
 
-00000a8e <LIMPIA_LCD>:
- a8e:	81 e0       	ldi	r24, 0x01	; 1
- a90:	0e 94 60 04 	call	0x8c0	; 0x8c0 <ENVIA_CMD>
- a94:	08 95       	ret
+00000a94 <LIMPIA_LCD>:
+ a94:	81 e0       	ldi	r24, 0x01	; 1
+ a96:	0e 94 63 04 	call	0x8c6	; 0x8c6 <ENVIA_CMD>
+ a9a:	08 95       	ret
 
 Disassembly of section .text.REGRESO_CASA:
 
-00000a96 <REGRESO_CASA>:
- a96:	82 e0       	ldi	r24, 0x02	; 2
- a98:	0e 94 60 04 	call	0x8c0	; 0x8c0 <ENVIA_CMD>
- a9c:	08 95       	ret
+00000a9c <REGRESO_CASA>:
+ a9c:	82 e0       	ldi	r24, 0x02	; 2
+ a9e:	0e 94 63 04 	call	0x8c6	; 0x8c6 <ENVIA_CMD>
+ aa2:	08 95       	ret
 
 Disassembly of section .text.POS_LINEA1:
 
-00000a9e <POS_LINEA1>:
- a9e:	80 68       	ori	r24, 0x80	; 128
- aa0:	0e 94 60 04 	call	0x8c0	; 0x8c0 <ENVIA_CMD>
- aa4:	08 95       	ret
+00000aa4 <POS_LINEA1>:
+ aa4:	80 68       	ori	r24, 0x80	; 128
+ aa6:	0e 94 63 04 	call	0x8c6	; 0x8c6 <ENVIA_CMD>
+ aaa:	08 95       	ret
 
 Disassembly of section .text.POS_LINEA2:
 
-00000aa6 <POS_LINEA2>:
- aa6:	80 6c       	ori	r24, 0xC0	; 192
- aa8:	0e 94 60 04 	call	0x8c0	; 0x8c0 <ENVIA_CMD>
- aac:	08 95       	ret
+00000aac <POS_LINEA2>:
+ aac:	80 6c       	ori	r24, 0xC0	; 192
+ aae:	0e 94 63 04 	call	0x8c6	; 0x8c6 <ENVIA_CMD>
+ ab2:	08 95       	ret
 
 Disassembly of section .text.DESPLAZAMIENTO_PIZQUIERDA:
 
-00000aae <DESPLAZAMIENTO_PIZQUIERDA>:
+00000ab4 <DESPLAZAMIENTO_PIZQUIERDA>:
 }
 
 void DESPLAZAMIENTO_PIZQUIERDA(void)
 {
 	ENVIA_CMD(0x18);
- aae:	88 e1       	ldi	r24, 0x18	; 24
- ab0:	0e 94 60 04 	call	0x8c0	; 0x8c0 <ENVIA_CMD>
- ab4:	08 95       	ret
+ ab4:	88 e1       	ldi	r24, 0x18	; 24
+ ab6:	0e 94 63 04 	call	0x8c6	; 0x8c6 <ENVIA_CMD>
+ aba:	08 95       	ret
 
 Disassembly of section .text.CAR_ESP0:
 
-000003a0 <CAR_ESP0>:
+000003a6 <CAR_ESP0>:
 	ENVIA_CMD(posicion);
 }
 
 void CURSOR_PARPADEO(void)
 {
 	ENVIA_CMD(0x0F);
- 3a0:	80 e4       	ldi	r24, 0x40	; 64
- 3a2:	0e 94 60 04 	call	0x8c0	; 0x8c0 <ENVIA_CMD>
- 3a6:	89 ef       	ldi	r24, 0xF9	; 249
- 3a8:	90 e0       	ldi	r25, 0x00	; 0
- 3aa:	01 97       	sbiw	r24, 0x01	; 1
- 3ac:	f1 f7       	brne	.-4      	; 0x3aa <CAR_ESP0+0xa>
- 3ae:	00 c0       	rjmp	.+0      	; 0x3b0 <CAR_ESP0+0x10>
- 3b0:	00 00       	nop
- 3b2:	84 e0       	ldi	r24, 0x04	; 4
- 3b4:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
- 3b8:	89 ef       	ldi	r24, 0xF9	; 249
- 3ba:	90 e0       	ldi	r25, 0x00	; 0
- 3bc:	01 97       	sbiw	r24, 0x01	; 1
- 3be:	f1 f7       	brne	.-4      	; 0x3bc <CAR_ESP0+0x1c>
- 3c0:	00 c0       	rjmp	.+0      	; 0x3c2 <CAR_ESP0+0x22>
- 3c2:	00 00       	nop
- 3c4:	8e e0       	ldi	r24, 0x0E	; 14
- 3c6:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
- 3ca:	89 ef       	ldi	r24, 0xF9	; 249
- 3cc:	90 e0       	ldi	r25, 0x00	; 0
- 3ce:	01 97       	sbiw	r24, 0x01	; 1
- 3d0:	f1 f7       	brne	.-4      	; 0x3ce <CAR_ESP0+0x2e>
- 3d2:	00 c0       	rjmp	.+0      	; 0x3d4 <CAR_ESP0+0x34>
- 3d4:	00 00       	nop
- 3d6:	8a e0       	ldi	r24, 0x0A	; 10
- 3d8:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
- 3dc:	89 ef       	ldi	r24, 0xF9	; 249
- 3de:	90 e0       	ldi	r25, 0x00	; 0
- 3e0:	01 97       	sbiw	r24, 0x01	; 1
- 3e2:	f1 f7       	brne	.-4      	; 0x3e0 <CAR_ESP0+0x40>
- 3e4:	00 c0       	rjmp	.+0      	; 0x3e6 <CAR_ESP0+0x46>
- 3e6:	00 00       	nop
- 3e8:	8b e0       	ldi	r24, 0x0B	; 11
- 3ea:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
- 3ee:	89 ef       	ldi	r24, 0xF9	; 249
- 3f0:	90 e0       	ldi	r25, 0x00	; 0
- 3f2:	01 97       	sbiw	r24, 0x01	; 1
- 3f4:	f1 f7       	brne	.-4      	; 0x3f2 <CAR_ESP0+0x52>
- 3f6:	00 c0       	rjmp	.+0      	; 0x3f8 <CAR_ESP0+0x58>
- 3f8:	00 00       	nop
- 3fa:	8f e0       	ldi	r24, 0x0F	; 15
- 3fc:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
- 400:	89 ef       	ldi	r24, 0xF9	; 249
- 402:	90 e0       	ldi	r25, 0x00	; 0
- 404:	01 97       	sbiw	r24, 0x01	; 1
- 406:	f1 f7       	brne	.-4      	; 0x404 <__DATA_REGION_LENGTH__+0x4>
- 408:	00 c0       	rjmp	.+0      	; 0x40a <__DATA_REGION_LENGTH__+0xa>
- 40a:	00 00       	nop
- 40c:	84 e0       	ldi	r24, 0x04	; 4
- 40e:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
- 412:	89 ef       	ldi	r24, 0xF9	; 249
- 414:	90 e0       	ldi	r25, 0x00	; 0
- 416:	01 97       	sbiw	r24, 0x01	; 1
- 418:	f1 f7       	brne	.-4      	; 0x416 <__DATA_REGION_LENGTH__+0x16>
- 41a:	00 c0       	rjmp	.+0      	; 0x41c <__DATA_REGION_LENGTH__+0x1c>
- 41c:	00 00       	nop
- 41e:	86 e0       	ldi	r24, 0x06	; 6
- 420:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
- 424:	89 ef       	ldi	r24, 0xF9	; 249
- 426:	90 e0       	ldi	r25, 0x00	; 0
- 428:	01 97       	sbiw	r24, 0x01	; 1
- 42a:	f1 f7       	brne	.-4      	; 0x428 <__DATA_REGION_LENGTH__+0x28>
- 42c:	00 c0       	rjmp	.+0      	; 0x42e <__DATA_REGION_LENGTH__+0x2e>
- 42e:	00 00       	nop
- 430:	81 e0       	ldi	r24, 0x01	; 1
- 432:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
- 436:	89 ef       	ldi	r24, 0xF9	; 249
- 438:	90 e0       	ldi	r25, 0x00	; 0
- 43a:	01 97       	sbiw	r24, 0x01	; 1
- 43c:	f1 f7       	brne	.-4      	; 0x43a <__DATA_REGION_LENGTH__+0x3a>
- 43e:	00 c0       	rjmp	.+0      	; 0x440 <__DATA_REGION_LENGTH__+0x40>
- 440:	00 00       	nop
- 442:	08 95       	ret
+ 3a6:	80 e4       	ldi	r24, 0x40	; 64
+ 3a8:	0e 94 63 04 	call	0x8c6	; 0x8c6 <ENVIA_CMD>
+ 3ac:	89 ef       	ldi	r24, 0xF9	; 249
+ 3ae:	90 e0       	ldi	r25, 0x00	; 0
+ 3b0:	01 97       	sbiw	r24, 0x01	; 1
+ 3b2:	f1 f7       	brne	.-4      	; 0x3b0 <CAR_ESP0+0xa>
+ 3b4:	00 c0       	rjmp	.+0      	; 0x3b6 <CAR_ESP0+0x10>
+ 3b6:	00 00       	nop
+ 3b8:	84 e0       	ldi	r24, 0x04	; 4
+ 3ba:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
+ 3be:	89 ef       	ldi	r24, 0xF9	; 249
+ 3c0:	90 e0       	ldi	r25, 0x00	; 0
+ 3c2:	01 97       	sbiw	r24, 0x01	; 1
+ 3c4:	f1 f7       	brne	.-4      	; 0x3c2 <CAR_ESP0+0x1c>
+ 3c6:	00 c0       	rjmp	.+0      	; 0x3c8 <CAR_ESP0+0x22>
+ 3c8:	00 00       	nop
+ 3ca:	8e e0       	ldi	r24, 0x0E	; 14
+ 3cc:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
+ 3d0:	89 ef       	ldi	r24, 0xF9	; 249
+ 3d2:	90 e0       	ldi	r25, 0x00	; 0
+ 3d4:	01 97       	sbiw	r24, 0x01	; 1
+ 3d6:	f1 f7       	brne	.-4      	; 0x3d4 <CAR_ESP0+0x2e>
+ 3d8:	00 c0       	rjmp	.+0      	; 0x3da <CAR_ESP0+0x34>
+ 3da:	00 00       	nop
+ 3dc:	8a e0       	ldi	r24, 0x0A	; 10
+ 3de:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
+ 3e2:	89 ef       	ldi	r24, 0xF9	; 249
+ 3e4:	90 e0       	ldi	r25, 0x00	; 0
+ 3e6:	01 97       	sbiw	r24, 0x01	; 1
+ 3e8:	f1 f7       	brne	.-4      	; 0x3e6 <CAR_ESP0+0x40>
+ 3ea:	00 c0       	rjmp	.+0      	; 0x3ec <CAR_ESP0+0x46>
+ 3ec:	00 00       	nop
+ 3ee:	8b e0       	ldi	r24, 0x0B	; 11
+ 3f0:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
+ 3f4:	89 ef       	ldi	r24, 0xF9	; 249
+ 3f6:	90 e0       	ldi	r25, 0x00	; 0
+ 3f8:	01 97       	sbiw	r24, 0x01	; 1
+ 3fa:	f1 f7       	brne	.-4      	; 0x3f8 <CAR_ESP0+0x52>
+ 3fc:	00 c0       	rjmp	.+0      	; 0x3fe <CAR_ESP0+0x58>
+ 3fe:	00 00       	nop
+ 400:	8f e0       	ldi	r24, 0x0F	; 15
+ 402:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
+ 406:	89 ef       	ldi	r24, 0xF9	; 249
+ 408:	90 e0       	ldi	r25, 0x00	; 0
+ 40a:	01 97       	sbiw	r24, 0x01	; 1
+ 40c:	f1 f7       	brne	.-4      	; 0x40a <__DATA_REGION_LENGTH__+0xa>
+ 40e:	00 c0       	rjmp	.+0      	; 0x410 <__DATA_REGION_LENGTH__+0x10>
+ 410:	00 00       	nop
+ 412:	84 e0       	ldi	r24, 0x04	; 4
+ 414:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
+ 418:	89 ef       	ldi	r24, 0xF9	; 249
+ 41a:	90 e0       	ldi	r25, 0x00	; 0
+ 41c:	01 97       	sbiw	r24, 0x01	; 1
+ 41e:	f1 f7       	brne	.-4      	; 0x41c <__DATA_REGION_LENGTH__+0x1c>
+ 420:	00 c0       	rjmp	.+0      	; 0x422 <__DATA_REGION_LENGTH__+0x22>
+ 422:	00 00       	nop
+ 424:	86 e0       	ldi	r24, 0x06	; 6
+ 426:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
+ 42a:	89 ef       	ldi	r24, 0xF9	; 249
+ 42c:	90 e0       	ldi	r25, 0x00	; 0
+ 42e:	01 97       	sbiw	r24, 0x01	; 1
+ 430:	f1 f7       	brne	.-4      	; 0x42e <__DATA_REGION_LENGTH__+0x2e>
+ 432:	00 c0       	rjmp	.+0      	; 0x434 <__DATA_REGION_LENGTH__+0x34>
+ 434:	00 00       	nop
+ 436:	81 e0       	ldi	r24, 0x01	; 1
+ 438:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
+ 43c:	89 ef       	ldi	r24, 0xF9	; 249
+ 43e:	90 e0       	ldi	r25, 0x00	; 0
+ 440:	01 97       	sbiw	r24, 0x01	; 1
+ 442:	f1 f7       	brne	.-4      	; 0x440 <__DATA_REGION_LENGTH__+0x40>
+ 444:	00 c0       	rjmp	.+0      	; 0x446 <__DATA_REGION_LENGTH__+0x46>
+ 446:	00 00       	nop
+ 448:	08 95       	ret
 
 Disassembly of section .text.CAR_ESP1:
 
-00000444 <CAR_ESP1>:
- 444:	88 e4       	ldi	r24, 0x48	; 72
- 446:	0e 94 60 04 	call	0x8c0	; 0x8c0 <ENVIA_CMD>
- 44a:	89 ef       	ldi	r24, 0xF9	; 249
- 44c:	90 e0       	ldi	r25, 0x00	; 0
- 44e:	01 97       	sbiw	r24, 0x01	; 1
- 450:	f1 f7       	brne	.-4      	; 0x44e <CAR_ESP1+0xa>
- 452:	00 c0       	rjmp	.+0      	; 0x454 <CAR_ESP1+0x10>
- 454:	00 00       	nop
- 456:	8e e0       	ldi	r24, 0x0E	; 14
- 458:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
- 45c:	89 ef       	ldi	r24, 0xF9	; 249
- 45e:	90 e0       	ldi	r25, 0x00	; 0
- 460:	01 97       	sbiw	r24, 0x01	; 1
- 462:	f1 f7       	brne	.-4      	; 0x460 <__stack+0x1>
- 464:	00 c0       	rjmp	.+0      	; 0x466 <__stack+0x7>
- 466:	00 00       	nop
- 468:	8e e0       	ldi	r24, 0x0E	; 14
- 46a:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
- 46e:	89 ef       	ldi	r24, 0xF9	; 249
- 470:	90 e0       	ldi	r25, 0x00	; 0
- 472:	01 97       	sbiw	r24, 0x01	; 1
- 474:	f1 f7       	brne	.-4      	; 0x472 <__stack+0x13>
- 476:	00 c0       	rjmp	.+0      	; 0x478 <__stack+0x19>
- 478:	00 00       	nop
- 47a:	8e e0       	ldi	r24, 0x0E	; 14
- 47c:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
- 480:	89 ef       	ldi	r24, 0xF9	; 249
- 482:	90 e0       	ldi	r25, 0x00	; 0
- 484:	01 97       	sbiw	r24, 0x01	; 1
- 486:	f1 f7       	brne	.-4      	; 0x484 <__stack+0x25>
- 488:	00 c0       	rjmp	.+0      	; 0x48a <__stack+0x2b>
- 48a:	00 00       	nop
- 48c:	8e e0       	ldi	r24, 0x0E	; 14
- 48e:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
- 492:	89 ef       	ldi	r24, 0xF9	; 249
- 494:	90 e0       	ldi	r25, 0x00	; 0
- 496:	01 97       	sbiw	r24, 0x01	; 1
- 498:	f1 f7       	brne	.-4      	; 0x496 <__stack+0x37>
- 49a:	00 c0       	rjmp	.+0      	; 0x49c <__stack+0x3d>
- 49c:	00 00       	nop
- 49e:	84 e0       	ldi	r24, 0x04	; 4
- 4a0:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
- 4a4:	89 ef       	ldi	r24, 0xF9	; 249
- 4a6:	90 e0       	ldi	r25, 0x00	; 0
- 4a8:	01 97       	sbiw	r24, 0x01	; 1
- 4aa:	f1 f7       	brne	.-4      	; 0x4a8 <__stack+0x49>
- 4ac:	00 c0       	rjmp	.+0      	; 0x4ae <__stack+0x4f>
- 4ae:	00 00       	nop
- 4b0:	8c e1       	ldi	r24, 0x1C	; 28
- 4b2:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
- 4b6:	89 ef       	ldi	r24, 0xF9	; 249
- 4b8:	90 e0       	ldi	r25, 0x00	; 0
- 4ba:	01 97       	sbiw	r24, 0x01	; 1
- 4bc:	f1 f7       	brne	.-4      	; 0x4ba <__stack+0x5b>
- 4be:	00 c0       	rjmp	.+0      	; 0x4c0 <__stack+0x61>
- 4c0:	00 00       	nop
- 4c2:	84 e0       	ldi	r24, 0x04	; 4
- 4c4:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
- 4c8:	89 ef       	ldi	r24, 0xF9	; 249
- 4ca:	90 e0       	ldi	r25, 0x00	; 0
- 4cc:	01 97       	sbiw	r24, 0x01	; 1
- 4ce:	f1 f7       	brne	.-4      	; 0x4cc <__stack+0x6d>
- 4d0:	00 c0       	rjmp	.+0      	; 0x4d2 <__stack+0x73>
- 4d2:	00 00       	nop
- 4d4:	84 e0       	ldi	r24, 0x04	; 4
- 4d6:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
- 4da:	89 ef       	ldi	r24, 0xF9	; 249
- 4dc:	90 e0       	ldi	r25, 0x00	; 0
- 4de:	01 97       	sbiw	r24, 0x01	; 1
- 4e0:	f1 f7       	brne	.-4      	; 0x4de <__stack+0x7f>
- 4e2:	00 c0       	rjmp	.+0      	; 0x4e4 <__stack+0x85>
- 4e4:	00 00       	nop
- 4e6:	08 95       	ret
+0000044a <CAR_ESP1>:
+ 44a:	88 e4       	ldi	r24, 0x48	; 72
+ 44c:	0e 94 63 04 	call	0x8c6	; 0x8c6 <ENVIA_CMD>
+ 450:	89 ef       	ldi	r24, 0xF9	; 249
+ 452:	90 e0       	ldi	r25, 0x00	; 0
+ 454:	01 97       	sbiw	r24, 0x01	; 1
+ 456:	f1 f7       	brne	.-4      	; 0x454 <CAR_ESP1+0xa>
+ 458:	00 c0       	rjmp	.+0      	; 0x45a <CAR_ESP1+0x10>
+ 45a:	00 00       	nop
+ 45c:	8e e0       	ldi	r24, 0x0E	; 14
+ 45e:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
+ 462:	89 ef       	ldi	r24, 0xF9	; 249
+ 464:	90 e0       	ldi	r25, 0x00	; 0
+ 466:	01 97       	sbiw	r24, 0x01	; 1
+ 468:	f1 f7       	brne	.-4      	; 0x466 <__stack+0x7>
+ 46a:	00 c0       	rjmp	.+0      	; 0x46c <__stack+0xd>
+ 46c:	00 00       	nop
+ 46e:	8e e0       	ldi	r24, 0x0E	; 14
+ 470:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
+ 474:	89 ef       	ldi	r24, 0xF9	; 249
+ 476:	90 e0       	ldi	r25, 0x00	; 0
+ 478:	01 97       	sbiw	r24, 0x01	; 1
+ 47a:	f1 f7       	brne	.-4      	; 0x478 <__stack+0x19>
+ 47c:	00 c0       	rjmp	.+0      	; 0x47e <__stack+0x1f>
+ 47e:	00 00       	nop
+ 480:	8e e0       	ldi	r24, 0x0E	; 14
+ 482:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
+ 486:	89 ef       	ldi	r24, 0xF9	; 249
+ 488:	90 e0       	ldi	r25, 0x00	; 0
+ 48a:	01 97       	sbiw	r24, 0x01	; 1
+ 48c:	f1 f7       	brne	.-4      	; 0x48a <__stack+0x2b>
+ 48e:	00 c0       	rjmp	.+0      	; 0x490 <__stack+0x31>
+ 490:	00 00       	nop
+ 492:	8e e0       	ldi	r24, 0x0E	; 14
+ 494:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
+ 498:	89 ef       	ldi	r24, 0xF9	; 249
+ 49a:	90 e0       	ldi	r25, 0x00	; 0
+ 49c:	01 97       	sbiw	r24, 0x01	; 1
+ 49e:	f1 f7       	brne	.-4      	; 0x49c <__stack+0x3d>
+ 4a0:	00 c0       	rjmp	.+0      	; 0x4a2 <__stack+0x43>
+ 4a2:	00 00       	nop
+ 4a4:	84 e0       	ldi	r24, 0x04	; 4
+ 4a6:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
+ 4aa:	89 ef       	ldi	r24, 0xF9	; 249
+ 4ac:	90 e0       	ldi	r25, 0x00	; 0
+ 4ae:	01 97       	sbiw	r24, 0x01	; 1
+ 4b0:	f1 f7       	brne	.-4      	; 0x4ae <__stack+0x4f>
+ 4b2:	00 c0       	rjmp	.+0      	; 0x4b4 <__stack+0x55>
+ 4b4:	00 00       	nop
+ 4b6:	8c e1       	ldi	r24, 0x1C	; 28
+ 4b8:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
+ 4bc:	89 ef       	ldi	r24, 0xF9	; 249
+ 4be:	90 e0       	ldi	r25, 0x00	; 0
+ 4c0:	01 97       	sbiw	r24, 0x01	; 1
+ 4c2:	f1 f7       	brne	.-4      	; 0x4c0 <__stack+0x61>
+ 4c4:	00 c0       	rjmp	.+0      	; 0x4c6 <__stack+0x67>
+ 4c6:	00 00       	nop
+ 4c8:	84 e0       	ldi	r24, 0x04	; 4
+ 4ca:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
+ 4ce:	89 ef       	ldi	r24, 0xF9	; 249
+ 4d0:	90 e0       	ldi	r25, 0x00	; 0
+ 4d2:	01 97       	sbiw	r24, 0x01	; 1
+ 4d4:	f1 f7       	brne	.-4      	; 0x4d2 <__stack+0x73>
+ 4d6:	00 c0       	rjmp	.+0      	; 0x4d8 <__stack+0x79>
+ 4d8:	00 00       	nop
+ 4da:	84 e0       	ldi	r24, 0x04	; 4
+ 4dc:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
+ 4e0:	89 ef       	ldi	r24, 0xF9	; 249
+ 4e2:	90 e0       	ldi	r25, 0x00	; 0
+ 4e4:	01 97       	sbiw	r24, 0x01	; 1
+ 4e6:	f1 f7       	brne	.-4      	; 0x4e4 <__stack+0x85>
+ 4e8:	00 c0       	rjmp	.+0      	; 0x4ea <__stack+0x8b>
+ 4ea:	00 00       	nop
+ 4ec:	08 95       	ret
 
 Disassembly of section .text.CAR_ESP2:
 
-000004e8 <CAR_ESP2>:
- 4e8:	80 e5       	ldi	r24, 0x50	; 80
- 4ea:	0e 94 60 04 	call	0x8c0	; 0x8c0 <ENVIA_CMD>
- 4ee:	89 ef       	ldi	r24, 0xF9	; 249
- 4f0:	90 e0       	ldi	r25, 0x00	; 0
- 4f2:	01 97       	sbiw	r24, 0x01	; 1
- 4f4:	f1 f7       	brne	.-4      	; 0x4f2 <CAR_ESP2+0xa>
- 4f6:	00 c0       	rjmp	.+0      	; 0x4f8 <CAR_ESP2+0x10>
- 4f8:	00 00       	nop
- 4fa:	82 e0       	ldi	r24, 0x02	; 2
- 4fc:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
- 500:	89 ef       	ldi	r24, 0xF9	; 249
- 502:	90 e0       	ldi	r25, 0x00	; 0
- 504:	01 97       	sbiw	r24, 0x01	; 1
- 506:	f1 f7       	brne	.-4      	; 0x504 <CAR_ESP2+0x1c>
- 508:	00 c0       	rjmp	.+0      	; 0x50a <CAR_ESP2+0x22>
- 50a:	00 00       	nop
- 50c:	87 e0       	ldi	r24, 0x07	; 7
- 50e:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
- 512:	89 ef       	ldi	r24, 0xF9	; 249
- 514:	90 e0       	ldi	r25, 0x00	; 0
- 516:	01 97       	sbiw	r24, 0x01	; 1
- 518:	f1 f7       	brne	.-4      	; 0x516 <CAR_ESP2+0x2e>
- 51a:	00 c0       	rjmp	.+0      	; 0x51c <CAR_ESP2+0x34>
- 51c:	00 00       	nop
- 51e:	85 e0       	ldi	r24, 0x05	; 5
- 520:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
- 524:	89 ef       	ldi	r24, 0xF9	; 249
- 526:	90 e0       	ldi	r25, 0x00	; 0
- 528:	01 97       	sbiw	r24, 0x01	; 1
- 52a:	f1 f7       	brne	.-4      	; 0x528 <CAR_ESP2+0x40>
- 52c:	00 c0       	rjmp	.+0      	; 0x52e <CAR_ESP2+0x46>
- 52e:	00 00       	nop
- 530:	8f e1       	ldi	r24, 0x1F	; 31
- 532:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
- 536:	89 ef       	ldi	r24, 0xF9	; 249
- 538:	90 e0       	ldi	r25, 0x00	; 0
- 53a:	01 97       	sbiw	r24, 0x01	; 1
- 53c:	f1 f7       	brne	.-4      	; 0x53a <CAR_ESP2+0x52>
- 53e:	00 c0       	rjmp	.+0      	; 0x540 <CAR_ESP2+0x58>
- 540:	00 00       	nop
- 542:	8a e1       	ldi	r24, 0x1A	; 26
- 544:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
- 548:	89 ef       	ldi	r24, 0xF9	; 249
- 54a:	90 e0       	ldi	r25, 0x00	; 0
- 54c:	01 97       	sbiw	r24, 0x01	; 1
- 54e:	f1 f7       	brne	.-4      	; 0x54c <CAR_ESP2+0x64>
- 550:	00 c0       	rjmp	.+0      	; 0x552 <CAR_ESP2+0x6a>
- 552:	00 00       	nop
- 554:	8e e0       	ldi	r24, 0x0E	; 14
- 556:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
- 55a:	89 ef       	ldi	r24, 0xF9	; 249
- 55c:	90 e0       	ldi	r25, 0x00	; 0
- 55e:	01 97       	sbiw	r24, 0x01	; 1
- 560:	f1 f7       	brne	.-4      	; 0x55e <CAR_ESP2+0x76>
- 562:	00 c0       	rjmp	.+0      	; 0x564 <CAR_ESP2+0x7c>
- 564:	00 00       	nop
- 566:	82 e0       	ldi	r24, 0x02	; 2
- 568:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
- 56c:	89 ef       	ldi	r24, 0xF9	; 249
- 56e:	90 e0       	ldi	r25, 0x00	; 0
- 570:	01 97       	sbiw	r24, 0x01	; 1
- 572:	f1 f7       	brne	.-4      	; 0x570 <CAR_ESP2+0x88>
- 574:	00 c0       	rjmp	.+0      	; 0x576 <CAR_ESP2+0x8e>
- 576:	00 00       	nop
- 578:	82 e0       	ldi	r24, 0x02	; 2
- 57a:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
- 57e:	89 ef       	ldi	r24, 0xF9	; 249
- 580:	90 e0       	ldi	r25, 0x00	; 0
- 582:	01 97       	sbiw	r24, 0x01	; 1
- 584:	f1 f7       	brne	.-4      	; 0x582 <CAR_ESP2+0x9a>
- 586:	00 c0       	rjmp	.+0      	; 0x588 <CAR_ESP2+0xa0>
- 588:	00 00       	nop
- 58a:	08 95       	ret
+000004ee <CAR_ESP2>:
+ 4ee:	80 e5       	ldi	r24, 0x50	; 80
+ 4f0:	0e 94 63 04 	call	0x8c6	; 0x8c6 <ENVIA_CMD>
+ 4f4:	89 ef       	ldi	r24, 0xF9	; 249
+ 4f6:	90 e0       	ldi	r25, 0x00	; 0
+ 4f8:	01 97       	sbiw	r24, 0x01	; 1
+ 4fa:	f1 f7       	brne	.-4      	; 0x4f8 <CAR_ESP2+0xa>
+ 4fc:	00 c0       	rjmp	.+0      	; 0x4fe <CAR_ESP2+0x10>
+ 4fe:	00 00       	nop
+ 500:	82 e0       	ldi	r24, 0x02	; 2
+ 502:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
+ 506:	89 ef       	ldi	r24, 0xF9	; 249
+ 508:	90 e0       	ldi	r25, 0x00	; 0
+ 50a:	01 97       	sbiw	r24, 0x01	; 1
+ 50c:	f1 f7       	brne	.-4      	; 0x50a <CAR_ESP2+0x1c>
+ 50e:	00 c0       	rjmp	.+0      	; 0x510 <CAR_ESP2+0x22>
+ 510:	00 00       	nop
+ 512:	87 e0       	ldi	r24, 0x07	; 7
+ 514:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
+ 518:	89 ef       	ldi	r24, 0xF9	; 249
+ 51a:	90 e0       	ldi	r25, 0x00	; 0
+ 51c:	01 97       	sbiw	r24, 0x01	; 1
+ 51e:	f1 f7       	brne	.-4      	; 0x51c <CAR_ESP2+0x2e>
+ 520:	00 c0       	rjmp	.+0      	; 0x522 <CAR_ESP2+0x34>
+ 522:	00 00       	nop
+ 524:	85 e0       	ldi	r24, 0x05	; 5
+ 526:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
+ 52a:	89 ef       	ldi	r24, 0xF9	; 249
+ 52c:	90 e0       	ldi	r25, 0x00	; 0
+ 52e:	01 97       	sbiw	r24, 0x01	; 1
+ 530:	f1 f7       	brne	.-4      	; 0x52e <CAR_ESP2+0x40>
+ 532:	00 c0       	rjmp	.+0      	; 0x534 <CAR_ESP2+0x46>
+ 534:	00 00       	nop
+ 536:	8f e1       	ldi	r24, 0x1F	; 31
+ 538:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
+ 53c:	89 ef       	ldi	r24, 0xF9	; 249
+ 53e:	90 e0       	ldi	r25, 0x00	; 0
+ 540:	01 97       	sbiw	r24, 0x01	; 1
+ 542:	f1 f7       	brne	.-4      	; 0x540 <CAR_ESP2+0x52>
+ 544:	00 c0       	rjmp	.+0      	; 0x546 <CAR_ESP2+0x58>
+ 546:	00 00       	nop
+ 548:	8a e1       	ldi	r24, 0x1A	; 26
+ 54a:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
+ 54e:	89 ef       	ldi	r24, 0xF9	; 249
+ 550:	90 e0       	ldi	r25, 0x00	; 0
+ 552:	01 97       	sbiw	r24, 0x01	; 1
+ 554:	f1 f7       	brne	.-4      	; 0x552 <CAR_ESP2+0x64>
+ 556:	00 c0       	rjmp	.+0      	; 0x558 <CAR_ESP2+0x6a>
+ 558:	00 00       	nop
+ 55a:	8e e0       	ldi	r24, 0x0E	; 14
+ 55c:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
+ 560:	89 ef       	ldi	r24, 0xF9	; 249
+ 562:	90 e0       	ldi	r25, 0x00	; 0
+ 564:	01 97       	sbiw	r24, 0x01	; 1
+ 566:	f1 f7       	brne	.-4      	; 0x564 <CAR_ESP2+0x76>
+ 568:	00 c0       	rjmp	.+0      	; 0x56a <CAR_ESP2+0x7c>
+ 56a:	00 00       	nop
+ 56c:	82 e0       	ldi	r24, 0x02	; 2
+ 56e:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
+ 572:	89 ef       	ldi	r24, 0xF9	; 249
+ 574:	90 e0       	ldi	r25, 0x00	; 0
+ 576:	01 97       	sbiw	r24, 0x01	; 1
+ 578:	f1 f7       	brne	.-4      	; 0x576 <CAR_ESP2+0x88>
+ 57a:	00 c0       	rjmp	.+0      	; 0x57c <CAR_ESP2+0x8e>
+ 57c:	00 00       	nop
+ 57e:	82 e0       	ldi	r24, 0x02	; 2
+ 580:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
+ 584:	89 ef       	ldi	r24, 0xF9	; 249
+ 586:	90 e0       	ldi	r25, 0x00	; 0
+ 588:	01 97       	sbiw	r24, 0x01	; 1
+ 58a:	f1 f7       	brne	.-4      	; 0x588 <CAR_ESP2+0x9a>
+ 58c:	00 c0       	rjmp	.+0      	; 0x58e <CAR_ESP2+0xa0>
+ 58e:	00 00       	nop
+ 590:	08 95       	ret
 
 Disassembly of section .text.CAR_ESP3:
 
-0000058c <CAR_ESP3>:
- 58c:	88 e5       	ldi	r24, 0x58	; 88
- 58e:	0e 94 60 04 	call	0x8c0	; 0x8c0 <ENVIA_CMD>
- 592:	89 ef       	ldi	r24, 0xF9	; 249
- 594:	90 e0       	ldi	r25, 0x00	; 0
- 596:	01 97       	sbiw	r24, 0x01	; 1
- 598:	f1 f7       	brne	.-4      	; 0x596 <CAR_ESP3+0xa>
- 59a:	00 c0       	rjmp	.+0      	; 0x59c <CAR_ESP3+0x10>
- 59c:	00 00       	nop
- 59e:	81 e1       	ldi	r24, 0x11	; 17
- 5a0:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
- 5a4:	89 ef       	ldi	r24, 0xF9	; 249
- 5a6:	90 e0       	ldi	r25, 0x00	; 0
- 5a8:	01 97       	sbiw	r24, 0x01	; 1
- 5aa:	f1 f7       	brne	.-4      	; 0x5a8 <CAR_ESP3+0x1c>
- 5ac:	00 c0       	rjmp	.+0      	; 0x5ae <CAR_ESP3+0x22>
- 5ae:	00 00       	nop
- 5b0:	8a e0       	ldi	r24, 0x0A	; 10
- 5b2:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
- 5b6:	89 ef       	ldi	r24, 0xF9	; 249
- 5b8:	90 e0       	ldi	r25, 0x00	; 0
- 5ba:	01 97       	sbiw	r24, 0x01	; 1
- 5bc:	f1 f7       	brne	.-4      	; 0x5ba <CAR_ESP3+0x2e>
- 5be:	00 c0       	rjmp	.+0      	; 0x5c0 <CAR_ESP3+0x34>
- 5c0:	00 00       	nop
- 5c2:	84 e0       	ldi	r24, 0x04	; 4
- 5c4:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
- 5c8:	89 ef       	ldi	r24, 0xF9	; 249
- 5ca:	90 e0       	ldi	r25, 0x00	; 0
- 5cc:	01 97       	sbiw	r24, 0x01	; 1
- 5ce:	f1 f7       	brne	.-4      	; 0x5cc <CAR_ESP3+0x40>
- 5d0:	00 c0       	rjmp	.+0      	; 0x5d2 <CAR_ESP3+0x46>
- 5d2:	00 00       	nop
- 5d4:	8a e0       	ldi	r24, 0x0A	; 10
- 5d6:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
- 5da:	89 ef       	ldi	r24, 0xF9	; 249
- 5dc:	90 e0       	ldi	r25, 0x00	; 0
- 5de:	01 97       	sbiw	r24, 0x01	; 1
- 5e0:	f1 f7       	brne	.-4      	; 0x5de <CAR_ESP3+0x52>
- 5e2:	00 c0       	rjmp	.+0      	; 0x5e4 <CAR_ESP3+0x58>
- 5e4:	00 00       	nop
- 5e6:	85 e1       	ldi	r24, 0x15	; 21
- 5e8:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
- 5ec:	89 ef       	ldi	r24, 0xF9	; 249
- 5ee:	90 e0       	ldi	r25, 0x00	; 0
- 5f0:	01 97       	sbiw	r24, 0x01	; 1
- 5f2:	f1 f7       	brne	.-4      	; 0x5f0 <CAR_ESP3+0x64>
- 5f4:	00 c0       	rjmp	.+0      	; 0x5f6 <CAR_ESP3+0x6a>
- 5f6:	00 00       	nop
- 5f8:	84 e0       	ldi	r24, 0x04	; 4
- 5fa:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
- 5fe:	89 ef       	ldi	r24, 0xF9	; 249
- 600:	90 e0       	ldi	r25, 0x00	; 0
- 602:	01 97       	sbiw	r24, 0x01	; 1
- 604:	f1 f7       	brne	.-4      	; 0x602 <CAR_ESP3+0x76>
- 606:	00 c0       	rjmp	.+0      	; 0x608 <CAR_ESP3+0x7c>
- 608:	00 00       	nop
- 60a:	84 e0       	ldi	r24, 0x04	; 4
- 60c:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
- 610:	89 ef       	ldi	r24, 0xF9	; 249
- 612:	90 e0       	ldi	r25, 0x00	; 0
- 614:	01 97       	sbiw	r24, 0x01	; 1
- 616:	f1 f7       	brne	.-4      	; 0x614 <CAR_ESP3+0x88>
- 618:	00 c0       	rjmp	.+0      	; 0x61a <CAR_ESP3+0x8e>
- 61a:	00 00       	nop
- 61c:	84 e0       	ldi	r24, 0x04	; 4
- 61e:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
- 622:	89 ef       	ldi	r24, 0xF9	; 249
- 624:	90 e0       	ldi	r25, 0x00	; 0
- 626:	01 97       	sbiw	r24, 0x01	; 1
- 628:	f1 f7       	brne	.-4      	; 0x626 <CAR_ESP3+0x9a>
- 62a:	00 c0       	rjmp	.+0      	; 0x62c <CAR_ESP3+0xa0>
- 62c:	00 00       	nop
- 62e:	08 95       	ret
+00000592 <CAR_ESP3>:
+ 592:	88 e5       	ldi	r24, 0x58	; 88
+ 594:	0e 94 63 04 	call	0x8c6	; 0x8c6 <ENVIA_CMD>
+ 598:	89 ef       	ldi	r24, 0xF9	; 249
+ 59a:	90 e0       	ldi	r25, 0x00	; 0
+ 59c:	01 97       	sbiw	r24, 0x01	; 1
+ 59e:	f1 f7       	brne	.-4      	; 0x59c <CAR_ESP3+0xa>
+ 5a0:	00 c0       	rjmp	.+0      	; 0x5a2 <CAR_ESP3+0x10>
+ 5a2:	00 00       	nop
+ 5a4:	81 e1       	ldi	r24, 0x11	; 17
+ 5a6:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
+ 5aa:	89 ef       	ldi	r24, 0xF9	; 249
+ 5ac:	90 e0       	ldi	r25, 0x00	; 0
+ 5ae:	01 97       	sbiw	r24, 0x01	; 1
+ 5b0:	f1 f7       	brne	.-4      	; 0x5ae <CAR_ESP3+0x1c>
+ 5b2:	00 c0       	rjmp	.+0      	; 0x5b4 <CAR_ESP3+0x22>
+ 5b4:	00 00       	nop
+ 5b6:	8a e0       	ldi	r24, 0x0A	; 10
+ 5b8:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
+ 5bc:	89 ef       	ldi	r24, 0xF9	; 249
+ 5be:	90 e0       	ldi	r25, 0x00	; 0
+ 5c0:	01 97       	sbiw	r24, 0x01	; 1
+ 5c2:	f1 f7       	brne	.-4      	; 0x5c0 <CAR_ESP3+0x2e>
+ 5c4:	00 c0       	rjmp	.+0      	; 0x5c6 <CAR_ESP3+0x34>
+ 5c6:	00 00       	nop
+ 5c8:	84 e0       	ldi	r24, 0x04	; 4
+ 5ca:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
+ 5ce:	89 ef       	ldi	r24, 0xF9	; 249
+ 5d0:	90 e0       	ldi	r25, 0x00	; 0
+ 5d2:	01 97       	sbiw	r24, 0x01	; 1
+ 5d4:	f1 f7       	brne	.-4      	; 0x5d2 <CAR_ESP3+0x40>
+ 5d6:	00 c0       	rjmp	.+0      	; 0x5d8 <CAR_ESP3+0x46>
+ 5d8:	00 00       	nop
+ 5da:	8a e0       	ldi	r24, 0x0A	; 10
+ 5dc:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
+ 5e0:	89 ef       	ldi	r24, 0xF9	; 249
+ 5e2:	90 e0       	ldi	r25, 0x00	; 0
+ 5e4:	01 97       	sbiw	r24, 0x01	; 1
+ 5e6:	f1 f7       	brne	.-4      	; 0x5e4 <CAR_ESP3+0x52>
+ 5e8:	00 c0       	rjmp	.+0      	; 0x5ea <CAR_ESP3+0x58>
+ 5ea:	00 00       	nop
+ 5ec:	85 e1       	ldi	r24, 0x15	; 21
+ 5ee:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
+ 5f2:	89 ef       	ldi	r24, 0xF9	; 249
+ 5f4:	90 e0       	ldi	r25, 0x00	; 0
+ 5f6:	01 97       	sbiw	r24, 0x01	; 1
+ 5f8:	f1 f7       	brne	.-4      	; 0x5f6 <CAR_ESP3+0x64>
+ 5fa:	00 c0       	rjmp	.+0      	; 0x5fc <CAR_ESP3+0x6a>
+ 5fc:	00 00       	nop
+ 5fe:	84 e0       	ldi	r24, 0x04	; 4
+ 600:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
+ 604:	89 ef       	ldi	r24, 0xF9	; 249
+ 606:	90 e0       	ldi	r25, 0x00	; 0
+ 608:	01 97       	sbiw	r24, 0x01	; 1
+ 60a:	f1 f7       	brne	.-4      	; 0x608 <CAR_ESP3+0x76>
+ 60c:	00 c0       	rjmp	.+0      	; 0x60e <CAR_ESP3+0x7c>
+ 60e:	00 00       	nop
+ 610:	84 e0       	ldi	r24, 0x04	; 4
+ 612:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
+ 616:	89 ef       	ldi	r24, 0xF9	; 249
+ 618:	90 e0       	ldi	r25, 0x00	; 0
+ 61a:	01 97       	sbiw	r24, 0x01	; 1
+ 61c:	f1 f7       	brne	.-4      	; 0x61a <CAR_ESP3+0x88>
+ 61e:	00 c0       	rjmp	.+0      	; 0x620 <CAR_ESP3+0x8e>
+ 620:	00 00       	nop
+ 622:	84 e0       	ldi	r24, 0x04	; 4
+ 624:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
+ 628:	89 ef       	ldi	r24, 0xF9	; 249
+ 62a:	90 e0       	ldi	r25, 0x00	; 0
+ 62c:	01 97       	sbiw	r24, 0x01	; 1
+ 62e:	f1 f7       	brne	.-4      	; 0x62c <CAR_ESP3+0x9a>
+ 630:	00 c0       	rjmp	.+0      	; 0x632 <CAR_ESP3+0xa0>
+ 632:	00 00       	nop
+ 634:	08 95       	ret
 
 Disassembly of section .text.CAR_ESP4:
 
-00000630 <CAR_ESP4>:
- 630:	80 e6       	ldi	r24, 0x60	; 96
- 632:	0e 94 60 04 	call	0x8c0	; 0x8c0 <ENVIA_CMD>
- 636:	89 ef       	ldi	r24, 0xF9	; 249
- 638:	90 e0       	ldi	r25, 0x00	; 0
- 63a:	01 97       	sbiw	r24, 0x01	; 1
- 63c:	f1 f7       	brne	.-4      	; 0x63a <CAR_ESP4+0xa>
- 63e:	00 c0       	rjmp	.+0      	; 0x640 <CAR_ESP4+0x10>
- 640:	00 00       	nop
- 642:	80 e0       	ldi	r24, 0x00	; 0
- 644:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
- 648:	89 ef       	ldi	r24, 0xF9	; 249
- 64a:	90 e0       	ldi	r25, 0x00	; 0
- 64c:	01 97       	sbiw	r24, 0x01	; 1
- 64e:	f1 f7       	brne	.-4      	; 0x64c <CAR_ESP4+0x1c>
- 650:	00 c0       	rjmp	.+0      	; 0x652 <CAR_ESP4+0x22>
- 652:	00 00       	nop
- 654:	80 e0       	ldi	r24, 0x00	; 0
- 656:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
- 65a:	89 ef       	ldi	r24, 0xF9	; 249
- 65c:	90 e0       	ldi	r25, 0x00	; 0
- 65e:	01 97       	sbiw	r24, 0x01	; 1
- 660:	f1 f7       	brne	.-4      	; 0x65e <CAR_ESP4+0x2e>
- 662:	00 c0       	rjmp	.+0      	; 0x664 <CAR_ESP4+0x34>
- 664:	00 00       	nop
- 666:	80 e0       	ldi	r24, 0x00	; 0
- 668:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
- 66c:	89 ef       	ldi	r24, 0xF9	; 249
- 66e:	90 e0       	ldi	r25, 0x00	; 0
- 670:	01 97       	sbiw	r24, 0x01	; 1
- 672:	f1 f7       	brne	.-4      	; 0x670 <CAR_ESP4+0x40>
- 674:	00 c0       	rjmp	.+0      	; 0x676 <CAR_ESP4+0x46>
- 676:	00 00       	nop
- 678:	8c e0       	ldi	r24, 0x0C	; 12
- 67a:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
- 67e:	89 ef       	ldi	r24, 0xF9	; 249
- 680:	90 e0       	ldi	r25, 0x00	; 0
- 682:	01 97       	sbiw	r24, 0x01	; 1
- 684:	f1 f7       	brne	.-4      	; 0x682 <CAR_ESP4+0x52>
- 686:	00 c0       	rjmp	.+0      	; 0x688 <CAR_ESP4+0x58>
- 688:	00 00       	nop
- 68a:	8c e0       	ldi	r24, 0x0C	; 12
- 68c:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
- 690:	89 ef       	ldi	r24, 0xF9	; 249
- 692:	90 e0       	ldi	r25, 0x00	; 0
- 694:	01 97       	sbiw	r24, 0x01	; 1
- 696:	f1 f7       	brne	.-4      	; 0x694 <CAR_ESP4+0x64>
- 698:	00 c0       	rjmp	.+0      	; 0x69a <CAR_ESP4+0x6a>
- 69a:	00 00       	nop
- 69c:	80 e0       	ldi	r24, 0x00	; 0
- 69e:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
- 6a2:	89 ef       	ldi	r24, 0xF9	; 249
- 6a4:	90 e0       	ldi	r25, 0x00	; 0
- 6a6:	01 97       	sbiw	r24, 0x01	; 1
- 6a8:	f1 f7       	brne	.-4      	; 0x6a6 <CAR_ESP4+0x76>
- 6aa:	00 c0       	rjmp	.+0      	; 0x6ac <CAR_ESP4+0x7c>
- 6ac:	00 00       	nop
- 6ae:	80 e0       	ldi	r24, 0x00	; 0
- 6b0:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
- 6b4:	89 ef       	ldi	r24, 0xF9	; 249
- 6b6:	90 e0       	ldi	r25, 0x00	; 0
- 6b8:	01 97       	sbiw	r24, 0x01	; 1
- 6ba:	f1 f7       	brne	.-4      	; 0x6b8 <CAR_ESP4+0x88>
- 6bc:	00 c0       	rjmp	.+0      	; 0x6be <CAR_ESP4+0x8e>
- 6be:	00 00       	nop
- 6c0:	80 e0       	ldi	r24, 0x00	; 0
- 6c2:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
- 6c6:	89 ef       	ldi	r24, 0xF9	; 249
- 6c8:	90 e0       	ldi	r25, 0x00	; 0
- 6ca:	01 97       	sbiw	r24, 0x01	; 1
- 6cc:	f1 f7       	brne	.-4      	; 0x6ca <CAR_ESP4+0x9a>
- 6ce:	00 c0       	rjmp	.+0      	; 0x6d0 <CAR_ESP4+0xa0>
- 6d0:	00 00       	nop
- 6d2:	08 95       	ret
+00000636 <CAR_ESP4>:
+ 636:	80 e6       	ldi	r24, 0x60	; 96
+ 638:	0e 94 63 04 	call	0x8c6	; 0x8c6 <ENVIA_CMD>
+ 63c:	89 ef       	ldi	r24, 0xF9	; 249
+ 63e:	90 e0       	ldi	r25, 0x00	; 0
+ 640:	01 97       	sbiw	r24, 0x01	; 1
+ 642:	f1 f7       	brne	.-4      	; 0x640 <CAR_ESP4+0xa>
+ 644:	00 c0       	rjmp	.+0      	; 0x646 <CAR_ESP4+0x10>
+ 646:	00 00       	nop
+ 648:	80 e0       	ldi	r24, 0x00	; 0
+ 64a:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
+ 64e:	89 ef       	ldi	r24, 0xF9	; 249
+ 650:	90 e0       	ldi	r25, 0x00	; 0
+ 652:	01 97       	sbiw	r24, 0x01	; 1
+ 654:	f1 f7       	brne	.-4      	; 0x652 <CAR_ESP4+0x1c>
+ 656:	00 c0       	rjmp	.+0      	; 0x658 <CAR_ESP4+0x22>
+ 658:	00 00       	nop
+ 65a:	80 e0       	ldi	r24, 0x00	; 0
+ 65c:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
+ 660:	89 ef       	ldi	r24, 0xF9	; 249
+ 662:	90 e0       	ldi	r25, 0x00	; 0
+ 664:	01 97       	sbiw	r24, 0x01	; 1
+ 666:	f1 f7       	brne	.-4      	; 0x664 <CAR_ESP4+0x2e>
+ 668:	00 c0       	rjmp	.+0      	; 0x66a <CAR_ESP4+0x34>
+ 66a:	00 00       	nop
+ 66c:	80 e0       	ldi	r24, 0x00	; 0
+ 66e:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
+ 672:	89 ef       	ldi	r24, 0xF9	; 249
+ 674:	90 e0       	ldi	r25, 0x00	; 0
+ 676:	01 97       	sbiw	r24, 0x01	; 1
+ 678:	f1 f7       	brne	.-4      	; 0x676 <CAR_ESP4+0x40>
+ 67a:	00 c0       	rjmp	.+0      	; 0x67c <CAR_ESP4+0x46>
+ 67c:	00 00       	nop
+ 67e:	8c e0       	ldi	r24, 0x0C	; 12
+ 680:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
+ 684:	89 ef       	ldi	r24, 0xF9	; 249
+ 686:	90 e0       	ldi	r25, 0x00	; 0
+ 688:	01 97       	sbiw	r24, 0x01	; 1
+ 68a:	f1 f7       	brne	.-4      	; 0x688 <CAR_ESP4+0x52>
+ 68c:	00 c0       	rjmp	.+0      	; 0x68e <CAR_ESP4+0x58>
+ 68e:	00 00       	nop
+ 690:	8c e0       	ldi	r24, 0x0C	; 12
+ 692:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
+ 696:	89 ef       	ldi	r24, 0xF9	; 249
+ 698:	90 e0       	ldi	r25, 0x00	; 0
+ 69a:	01 97       	sbiw	r24, 0x01	; 1
+ 69c:	f1 f7       	brne	.-4      	; 0x69a <CAR_ESP4+0x64>
+ 69e:	00 c0       	rjmp	.+0      	; 0x6a0 <CAR_ESP4+0x6a>
+ 6a0:	00 00       	nop
+ 6a2:	80 e0       	ldi	r24, 0x00	; 0
+ 6a4:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
+ 6a8:	89 ef       	ldi	r24, 0xF9	; 249
+ 6aa:	90 e0       	ldi	r25, 0x00	; 0
+ 6ac:	01 97       	sbiw	r24, 0x01	; 1
+ 6ae:	f1 f7       	brne	.-4      	; 0x6ac <CAR_ESP4+0x76>
+ 6b0:	00 c0       	rjmp	.+0      	; 0x6b2 <CAR_ESP4+0x7c>
+ 6b2:	00 00       	nop
+ 6b4:	80 e0       	ldi	r24, 0x00	; 0
+ 6b6:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
+ 6ba:	89 ef       	ldi	r24, 0xF9	; 249
+ 6bc:	90 e0       	ldi	r25, 0x00	; 0
+ 6be:	01 97       	sbiw	r24, 0x01	; 1
+ 6c0:	f1 f7       	brne	.-4      	; 0x6be <CAR_ESP4+0x88>
+ 6c2:	00 c0       	rjmp	.+0      	; 0x6c4 <CAR_ESP4+0x8e>
+ 6c4:	00 00       	nop
+ 6c6:	80 e0       	ldi	r24, 0x00	; 0
+ 6c8:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
+ 6cc:	89 ef       	ldi	r24, 0xF9	; 249
+ 6ce:	90 e0       	ldi	r25, 0x00	; 0
+ 6d0:	01 97       	sbiw	r24, 0x01	; 1
+ 6d2:	f1 f7       	brne	.-4      	; 0x6d0 <CAR_ESP4+0x9a>
+ 6d4:	00 c0       	rjmp	.+0      	; 0x6d6 <CAR_ESP4+0xa0>
+ 6d6:	00 00       	nop
+ 6d8:	08 95       	ret
 
 Disassembly of section .text.CAR_ESP5:
 
-000006d4 <CAR_ESP5>:
- 6d4:	88 e6       	ldi	r24, 0x68	; 104
- 6d6:	0e 94 60 04 	call	0x8c0	; 0x8c0 <ENVIA_CMD>
- 6da:	89 ef       	ldi	r24, 0xF9	; 249
- 6dc:	90 e0       	ldi	r25, 0x00	; 0
- 6de:	01 97       	sbiw	r24, 0x01	; 1
- 6e0:	f1 f7       	brne	.-4      	; 0x6de <CAR_ESP5+0xa>
- 6e2:	00 c0       	rjmp	.+0      	; 0x6e4 <CAR_ESP5+0x10>
- 6e4:	00 00       	nop
- 6e6:	82 e0       	ldi	r24, 0x02	; 2
- 6e8:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
- 6ec:	89 ef       	ldi	r24, 0xF9	; 249
- 6ee:	90 e0       	ldi	r25, 0x00	; 0
- 6f0:	01 97       	sbiw	r24, 0x01	; 1
- 6f2:	f1 f7       	brne	.-4      	; 0x6f0 <CAR_ESP5+0x1c>
- 6f4:	00 c0       	rjmp	.+0      	; 0x6f6 <CAR_ESP5+0x22>
- 6f6:	00 00       	nop
- 6f8:	87 e0       	ldi	r24, 0x07	; 7
- 6fa:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
- 6fe:	89 ef       	ldi	r24, 0xF9	; 249
- 700:	90 e0       	ldi	r25, 0x00	; 0
- 702:	01 97       	sbiw	r24, 0x01	; 1
- 704:	f1 f7       	brne	.-4      	; 0x702 <CAR_ESP5+0x2e>
- 706:	00 c0       	rjmp	.+0      	; 0x708 <CAR_ESP5+0x34>
- 708:	00 00       	nop
- 70a:	85 e0       	ldi	r24, 0x05	; 5
- 70c:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
- 710:	89 ef       	ldi	r24, 0xF9	; 249
- 712:	90 e0       	ldi	r25, 0x00	; 0
- 714:	01 97       	sbiw	r24, 0x01	; 1
- 716:	f1 f7       	brne	.-4      	; 0x714 <CAR_ESP5+0x40>
- 718:	00 c0       	rjmp	.+0      	; 0x71a <CAR_ESP5+0x46>
- 71a:	00 00       	nop
- 71c:	87 e0       	ldi	r24, 0x07	; 7
- 71e:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
- 722:	89 ef       	ldi	r24, 0xF9	; 249
- 724:	90 e0       	ldi	r25, 0x00	; 0
- 726:	01 97       	sbiw	r24, 0x01	; 1
- 728:	f1 f7       	brne	.-4      	; 0x726 <CAR_ESP5+0x52>
- 72a:	00 c0       	rjmp	.+0      	; 0x72c <CAR_ESP5+0x58>
- 72c:	00 00       	nop
- 72e:	82 e0       	ldi	r24, 0x02	; 2
- 730:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
- 734:	89 ef       	ldi	r24, 0xF9	; 249
- 736:	90 e0       	ldi	r25, 0x00	; 0
- 738:	01 97       	sbiw	r24, 0x01	; 1
- 73a:	f1 f7       	brne	.-4      	; 0x738 <CAR_ESP5+0x64>
- 73c:	00 c0       	rjmp	.+0      	; 0x73e <CAR_ESP5+0x6a>
- 73e:	00 00       	nop
- 740:	8e e0       	ldi	r24, 0x0E	; 14
- 742:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
- 746:	89 ef       	ldi	r24, 0xF9	; 249
- 748:	90 e0       	ldi	r25, 0x00	; 0
- 74a:	01 97       	sbiw	r24, 0x01	; 1
- 74c:	f1 f7       	brne	.-4      	; 0x74a <CAR_ESP5+0x76>
- 74e:	00 c0       	rjmp	.+0      	; 0x750 <CAR_ESP5+0x7c>
- 750:	00 00       	nop
- 752:	82 e0       	ldi	r24, 0x02	; 2
- 754:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
- 758:	89 ef       	ldi	r24, 0xF9	; 249
- 75a:	90 e0       	ldi	r25, 0x00	; 0
- 75c:	01 97       	sbiw	r24, 0x01	; 1
- 75e:	f1 f7       	brne	.-4      	; 0x75c <CAR_ESP5+0x88>
- 760:	00 c0       	rjmp	.+0      	; 0x762 <CAR_ESP5+0x8e>
- 762:	00 00       	nop
- 764:	82 e0       	ldi	r24, 0x02	; 2
- 766:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
- 76a:	89 ef       	ldi	r24, 0xF9	; 249
- 76c:	90 e0       	ldi	r25, 0x00	; 0
- 76e:	01 97       	sbiw	r24, 0x01	; 1
- 770:	f1 f7       	brne	.-4      	; 0x76e <CAR_ESP5+0x9a>
- 772:	00 c0       	rjmp	.+0      	; 0x774 <CAR_ESP5+0xa0>
- 774:	00 00       	nop
- 776:	08 95       	ret
+000006da <CAR_ESP5>:
+ 6da:	88 e6       	ldi	r24, 0x68	; 104
+ 6dc:	0e 94 63 04 	call	0x8c6	; 0x8c6 <ENVIA_CMD>
+ 6e0:	89 ef       	ldi	r24, 0xF9	; 249
+ 6e2:	90 e0       	ldi	r25, 0x00	; 0
+ 6e4:	01 97       	sbiw	r24, 0x01	; 1
+ 6e6:	f1 f7       	brne	.-4      	; 0x6e4 <CAR_ESP5+0xa>
+ 6e8:	00 c0       	rjmp	.+0      	; 0x6ea <CAR_ESP5+0x10>
+ 6ea:	00 00       	nop
+ 6ec:	82 e0       	ldi	r24, 0x02	; 2
+ 6ee:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
+ 6f2:	89 ef       	ldi	r24, 0xF9	; 249
+ 6f4:	90 e0       	ldi	r25, 0x00	; 0
+ 6f6:	01 97       	sbiw	r24, 0x01	; 1
+ 6f8:	f1 f7       	brne	.-4      	; 0x6f6 <CAR_ESP5+0x1c>
+ 6fa:	00 c0       	rjmp	.+0      	; 0x6fc <CAR_ESP5+0x22>
+ 6fc:	00 00       	nop
+ 6fe:	87 e0       	ldi	r24, 0x07	; 7
+ 700:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
+ 704:	89 ef       	ldi	r24, 0xF9	; 249
+ 706:	90 e0       	ldi	r25, 0x00	; 0
+ 708:	01 97       	sbiw	r24, 0x01	; 1
+ 70a:	f1 f7       	brne	.-4      	; 0x708 <CAR_ESP5+0x2e>
+ 70c:	00 c0       	rjmp	.+0      	; 0x70e <CAR_ESP5+0x34>
+ 70e:	00 00       	nop
+ 710:	85 e0       	ldi	r24, 0x05	; 5
+ 712:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
+ 716:	89 ef       	ldi	r24, 0xF9	; 249
+ 718:	90 e0       	ldi	r25, 0x00	; 0
+ 71a:	01 97       	sbiw	r24, 0x01	; 1
+ 71c:	f1 f7       	brne	.-4      	; 0x71a <CAR_ESP5+0x40>
+ 71e:	00 c0       	rjmp	.+0      	; 0x720 <CAR_ESP5+0x46>
+ 720:	00 00       	nop
+ 722:	87 e0       	ldi	r24, 0x07	; 7
+ 724:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
+ 728:	89 ef       	ldi	r24, 0xF9	; 249
+ 72a:	90 e0       	ldi	r25, 0x00	; 0
+ 72c:	01 97       	sbiw	r24, 0x01	; 1
+ 72e:	f1 f7       	brne	.-4      	; 0x72c <CAR_ESP5+0x52>
+ 730:	00 c0       	rjmp	.+0      	; 0x732 <CAR_ESP5+0x58>
+ 732:	00 00       	nop
+ 734:	82 e0       	ldi	r24, 0x02	; 2
+ 736:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
+ 73a:	89 ef       	ldi	r24, 0xF9	; 249
+ 73c:	90 e0       	ldi	r25, 0x00	; 0
+ 73e:	01 97       	sbiw	r24, 0x01	; 1
+ 740:	f1 f7       	brne	.-4      	; 0x73e <CAR_ESP5+0x64>
+ 742:	00 c0       	rjmp	.+0      	; 0x744 <CAR_ESP5+0x6a>
+ 744:	00 00       	nop
+ 746:	8e e0       	ldi	r24, 0x0E	; 14
+ 748:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
+ 74c:	89 ef       	ldi	r24, 0xF9	; 249
+ 74e:	90 e0       	ldi	r25, 0x00	; 0
+ 750:	01 97       	sbiw	r24, 0x01	; 1
+ 752:	f1 f7       	brne	.-4      	; 0x750 <CAR_ESP5+0x76>
+ 754:	00 c0       	rjmp	.+0      	; 0x756 <CAR_ESP5+0x7c>
+ 756:	00 00       	nop
+ 758:	82 e0       	ldi	r24, 0x02	; 2
+ 75a:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
+ 75e:	89 ef       	ldi	r24, 0xF9	; 249
+ 760:	90 e0       	ldi	r25, 0x00	; 0
+ 762:	01 97       	sbiw	r24, 0x01	; 1
+ 764:	f1 f7       	brne	.-4      	; 0x762 <CAR_ESP5+0x88>
+ 766:	00 c0       	rjmp	.+0      	; 0x768 <CAR_ESP5+0x8e>
+ 768:	00 00       	nop
+ 76a:	82 e0       	ldi	r24, 0x02	; 2
+ 76c:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
+ 770:	89 ef       	ldi	r24, 0xF9	; 249
+ 772:	90 e0       	ldi	r25, 0x00	; 0
+ 774:	01 97       	sbiw	r24, 0x01	; 1
+ 776:	f1 f7       	brne	.-4      	; 0x774 <CAR_ESP5+0x9a>
+ 778:	00 c0       	rjmp	.+0      	; 0x77a <CAR_ESP5+0xa0>
+ 77a:	00 00       	nop
+ 77c:	08 95       	ret
 
 Disassembly of section .text.CAR_ESP6:
 
-00000778 <CAR_ESP6>:
- 778:	80 e7       	ldi	r24, 0x70	; 112
- 77a:	0e 94 60 04 	call	0x8c0	; 0x8c0 <ENVIA_CMD>
- 77e:	89 ef       	ldi	r24, 0xF9	; 249
- 780:	90 e0       	ldi	r25, 0x00	; 0
- 782:	01 97       	sbiw	r24, 0x01	; 1
- 784:	f1 f7       	brne	.-4      	; 0x782 <CAR_ESP6+0xa>
- 786:	00 c0       	rjmp	.+0      	; 0x788 <CAR_ESP6+0x10>
- 788:	00 00       	nop
- 78a:	84 e0       	ldi	r24, 0x04	; 4
- 78c:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
- 790:	89 ef       	ldi	r24, 0xF9	; 249
- 792:	90 e0       	ldi	r25, 0x00	; 0
- 794:	01 97       	sbiw	r24, 0x01	; 1
- 796:	f1 f7       	brne	.-4      	; 0x794 <CAR_ESP6+0x1c>
- 798:	00 c0       	rjmp	.+0      	; 0x79a <CAR_ESP6+0x22>
- 79a:	00 00       	nop
- 79c:	8e e0       	ldi	r24, 0x0E	; 14
- 79e:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
- 7a2:	89 ef       	ldi	r24, 0xF9	; 249
- 7a4:	90 e0       	ldi	r25, 0x00	; 0
- 7a6:	01 97       	sbiw	r24, 0x01	; 1
- 7a8:	f1 f7       	brne	.-4      	; 0x7a6 <CAR_ESP6+0x2e>
- 7aa:	00 c0       	rjmp	.+0      	; 0x7ac <CAR_ESP6+0x34>
- 7ac:	00 00       	nop
- 7ae:	8f e1       	ldi	r24, 0x1F	; 31
- 7b0:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
- 7b4:	89 ef       	ldi	r24, 0xF9	; 249
- 7b6:	90 e0       	ldi	r25, 0x00	; 0
- 7b8:	01 97       	sbiw	r24, 0x01	; 1
- 7ba:	f1 f7       	brne	.-4      	; 0x7b8 <CAR_ESP6+0x40>
- 7bc:	00 c0       	rjmp	.+0      	; 0x7be <CAR_ESP6+0x46>
- 7be:	00 00       	nop
- 7c0:	85 e1       	ldi	r24, 0x15	; 21
- 7c2:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
- 7c6:	89 ef       	ldi	r24, 0xF9	; 249
- 7c8:	90 e0       	ldi	r25, 0x00	; 0
- 7ca:	01 97       	sbiw	r24, 0x01	; 1
- 7cc:	f1 f7       	brne	.-4      	; 0x7ca <CAR_ESP6+0x52>
- 7ce:	00 c0       	rjmp	.+0      	; 0x7d0 <CAR_ESP6+0x58>
- 7d0:	00 00       	nop
- 7d2:	8f e1       	ldi	r24, 0x1F	; 31
- 7d4:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
- 7d8:	89 ef       	ldi	r24, 0xF9	; 249
- 7da:	90 e0       	ldi	r25, 0x00	; 0
- 7dc:	01 97       	sbiw	r24, 0x01	; 1
- 7de:	f1 f7       	brne	.-4      	; 0x7dc <CAR_ESP6+0x64>
- 7e0:	00 c0       	rjmp	.+0      	; 0x7e2 <CAR_ESP6+0x6a>
- 7e2:	00 00       	nop
- 7e4:	8f e1       	ldi	r24, 0x1F	; 31
- 7e6:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
- 7ea:	89 ef       	ldi	r24, 0xF9	; 249
- 7ec:	90 e0       	ldi	r25, 0x00	; 0
- 7ee:	01 97       	sbiw	r24, 0x01	; 1
- 7f0:	f1 f7       	brne	.-4      	; 0x7ee <CAR_ESP6+0x76>
- 7f2:	00 c0       	rjmp	.+0      	; 0x7f4 <CAR_ESP6+0x7c>
- 7f4:	00 00       	nop
- 7f6:	8e e0       	ldi	r24, 0x0E	; 14
- 7f8:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
- 7fc:	89 ef       	ldi	r24, 0xF9	; 249
- 7fe:	90 e0       	ldi	r25, 0x00	; 0
- 800:	01 97       	sbiw	r24, 0x01	; 1
- 802:	f1 f7       	brne	.-4      	; 0x800 <CAR_ESP6+0x88>
- 804:	00 c0       	rjmp	.+0      	; 0x806 <CAR_ESP6+0x8e>
- 806:	00 00       	nop
- 808:	84 e0       	ldi	r24, 0x04	; 4
- 80a:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
- 80e:	89 ef       	ldi	r24, 0xF9	; 249
- 810:	90 e0       	ldi	r25, 0x00	; 0
- 812:	01 97       	sbiw	r24, 0x01	; 1
- 814:	f1 f7       	brne	.-4      	; 0x812 <CAR_ESP6+0x9a>
- 816:	00 c0       	rjmp	.+0      	; 0x818 <CAR_ESP6+0xa0>
- 818:	00 00       	nop
- 81a:	08 95       	ret
+0000077e <CAR_ESP6>:
+ 77e:	80 e7       	ldi	r24, 0x70	; 112
+ 780:	0e 94 63 04 	call	0x8c6	; 0x8c6 <ENVIA_CMD>
+ 784:	89 ef       	ldi	r24, 0xF9	; 249
+ 786:	90 e0       	ldi	r25, 0x00	; 0
+ 788:	01 97       	sbiw	r24, 0x01	; 1
+ 78a:	f1 f7       	brne	.-4      	; 0x788 <CAR_ESP6+0xa>
+ 78c:	00 c0       	rjmp	.+0      	; 0x78e <CAR_ESP6+0x10>
+ 78e:	00 00       	nop
+ 790:	84 e0       	ldi	r24, 0x04	; 4
+ 792:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
+ 796:	89 ef       	ldi	r24, 0xF9	; 249
+ 798:	90 e0       	ldi	r25, 0x00	; 0
+ 79a:	01 97       	sbiw	r24, 0x01	; 1
+ 79c:	f1 f7       	brne	.-4      	; 0x79a <CAR_ESP6+0x1c>
+ 79e:	00 c0       	rjmp	.+0      	; 0x7a0 <CAR_ESP6+0x22>
+ 7a0:	00 00       	nop
+ 7a2:	8e e0       	ldi	r24, 0x0E	; 14
+ 7a4:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
+ 7a8:	89 ef       	ldi	r24, 0xF9	; 249
+ 7aa:	90 e0       	ldi	r25, 0x00	; 0
+ 7ac:	01 97       	sbiw	r24, 0x01	; 1
+ 7ae:	f1 f7       	brne	.-4      	; 0x7ac <CAR_ESP6+0x2e>
+ 7b0:	00 c0       	rjmp	.+0      	; 0x7b2 <CAR_ESP6+0x34>
+ 7b2:	00 00       	nop
+ 7b4:	8f e1       	ldi	r24, 0x1F	; 31
+ 7b6:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
+ 7ba:	89 ef       	ldi	r24, 0xF9	; 249
+ 7bc:	90 e0       	ldi	r25, 0x00	; 0
+ 7be:	01 97       	sbiw	r24, 0x01	; 1
+ 7c0:	f1 f7       	brne	.-4      	; 0x7be <CAR_ESP6+0x40>
+ 7c2:	00 c0       	rjmp	.+0      	; 0x7c4 <CAR_ESP6+0x46>
+ 7c4:	00 00       	nop
+ 7c6:	85 e1       	ldi	r24, 0x15	; 21
+ 7c8:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
+ 7cc:	89 ef       	ldi	r24, 0xF9	; 249
+ 7ce:	90 e0       	ldi	r25, 0x00	; 0
+ 7d0:	01 97       	sbiw	r24, 0x01	; 1
+ 7d2:	f1 f7       	brne	.-4      	; 0x7d0 <CAR_ESP6+0x52>
+ 7d4:	00 c0       	rjmp	.+0      	; 0x7d6 <CAR_ESP6+0x58>
+ 7d6:	00 00       	nop
+ 7d8:	8f e1       	ldi	r24, 0x1F	; 31
+ 7da:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
+ 7de:	89 ef       	ldi	r24, 0xF9	; 249
+ 7e0:	90 e0       	ldi	r25, 0x00	; 0
+ 7e2:	01 97       	sbiw	r24, 0x01	; 1
+ 7e4:	f1 f7       	brne	.-4      	; 0x7e2 <CAR_ESP6+0x64>
+ 7e6:	00 c0       	rjmp	.+0      	; 0x7e8 <CAR_ESP6+0x6a>
+ 7e8:	00 00       	nop
+ 7ea:	8f e1       	ldi	r24, 0x1F	; 31
+ 7ec:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
+ 7f0:	89 ef       	ldi	r24, 0xF9	; 249
+ 7f2:	90 e0       	ldi	r25, 0x00	; 0
+ 7f4:	01 97       	sbiw	r24, 0x01	; 1
+ 7f6:	f1 f7       	brne	.-4      	; 0x7f4 <CAR_ESP6+0x76>
+ 7f8:	00 c0       	rjmp	.+0      	; 0x7fa <CAR_ESP6+0x7c>
+ 7fa:	00 00       	nop
+ 7fc:	8e e0       	ldi	r24, 0x0E	; 14
+ 7fe:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
+ 802:	89 ef       	ldi	r24, 0xF9	; 249
+ 804:	90 e0       	ldi	r25, 0x00	; 0
+ 806:	01 97       	sbiw	r24, 0x01	; 1
+ 808:	f1 f7       	brne	.-4      	; 0x806 <CAR_ESP6+0x88>
+ 80a:	00 c0       	rjmp	.+0      	; 0x80c <CAR_ESP6+0x8e>
+ 80c:	00 00       	nop
+ 80e:	84 e0       	ldi	r24, 0x04	; 4
+ 810:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
+ 814:	89 ef       	ldi	r24, 0xF9	; 249
+ 816:	90 e0       	ldi	r25, 0x00	; 0
+ 818:	01 97       	sbiw	r24, 0x01	; 1
+ 81a:	f1 f7       	brne	.-4      	; 0x818 <CAR_ESP6+0x9a>
+ 81c:	00 c0       	rjmp	.+0      	; 0x81e <CAR_ESP6+0xa0>
+ 81e:	00 00       	nop
+ 820:	08 95       	ret
 
 Disassembly of section .text.CAR_ESP7:
 
-0000081c <CAR_ESP7>:
- 81c:	88 e7       	ldi	r24, 0x78	; 120
- 81e:	0e 94 60 04 	call	0x8c0	; 0x8c0 <ENVIA_CMD>
- 822:	89 ef       	ldi	r24, 0xF9	; 249
- 824:	90 e0       	ldi	r25, 0x00	; 0
- 826:	01 97       	sbiw	r24, 0x01	; 1
- 828:	f1 f7       	brne	.-4      	; 0x826 <CAR_ESP7+0xa>
- 82a:	00 c0       	rjmp	.+0      	; 0x82c <CAR_ESP7+0x10>
- 82c:	00 00       	nop
- 82e:	82 e0       	ldi	r24, 0x02	; 2
- 830:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
- 834:	89 ef       	ldi	r24, 0xF9	; 249
- 836:	90 e0       	ldi	r25, 0x00	; 0
- 838:	01 97       	sbiw	r24, 0x01	; 1
- 83a:	f1 f7       	brne	.-4      	; 0x838 <CAR_ESP7+0x1c>
- 83c:	00 c0       	rjmp	.+0      	; 0x83e <CAR_ESP7+0x22>
- 83e:	00 00       	nop
- 840:	85 e0       	ldi	r24, 0x05	; 5
- 842:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
- 846:	89 ef       	ldi	r24, 0xF9	; 249
- 848:	90 e0       	ldi	r25, 0x00	; 0
- 84a:	01 97       	sbiw	r24, 0x01	; 1
- 84c:	f1 f7       	brne	.-4      	; 0x84a <CAR_ESP7+0x2e>
- 84e:	00 c0       	rjmp	.+0      	; 0x850 <CAR_ESP7+0x34>
- 850:	00 00       	nop
- 852:	87 e1       	ldi	r24, 0x17	; 23
- 854:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
- 858:	89 ef       	ldi	r24, 0xF9	; 249
- 85a:	90 e0       	ldi	r25, 0x00	; 0
- 85c:	01 97       	sbiw	r24, 0x01	; 1
- 85e:	f1 f7       	brne	.-4      	; 0x85c <CAR_ESP7+0x40>
- 860:	00 c0       	rjmp	.+0      	; 0x862 <CAR_ESP7+0x46>
- 862:	00 00       	nop
- 864:	87 e1       	ldi	r24, 0x17	; 23
- 866:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
- 86a:	89 ef       	ldi	r24, 0xF9	; 249
- 86c:	90 e0       	ldi	r25, 0x00	; 0
- 86e:	01 97       	sbiw	r24, 0x01	; 1
- 870:	f1 f7       	brne	.-4      	; 0x86e <CAR_ESP7+0x52>
- 872:	00 c0       	rjmp	.+0      	; 0x874 <CAR_ESP7+0x58>
- 874:	00 00       	nop
- 876:	8e e1       	ldi	r24, 0x1E	; 30
- 878:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
- 87c:	89 ef       	ldi	r24, 0xF9	; 249
- 87e:	90 e0       	ldi	r25, 0x00	; 0
- 880:	01 97       	sbiw	r24, 0x01	; 1
- 882:	f1 f7       	brne	.-4      	; 0x880 <CAR_ESP7+0x64>
- 884:	00 c0       	rjmp	.+0      	; 0x886 <CAR_ESP7+0x6a>
- 886:	00 00       	nop
- 888:	82 e0       	ldi	r24, 0x02	; 2
- 88a:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
- 88e:	89 ef       	ldi	r24, 0xF9	; 249
- 890:	90 e0       	ldi	r25, 0x00	; 0
- 892:	01 97       	sbiw	r24, 0x01	; 1
- 894:	f1 f7       	brne	.-4      	; 0x892 <CAR_ESP7+0x76>
- 896:	00 c0       	rjmp	.+0      	; 0x898 <CAR_ESP7+0x7c>
- 898:	00 00       	nop
- 89a:	82 e0       	ldi	r24, 0x02	; 2
- 89c:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
- 8a0:	89 ef       	ldi	r24, 0xF9	; 249
- 8a2:	90 e0       	ldi	r25, 0x00	; 0
- 8a4:	01 97       	sbiw	r24, 0x01	; 1
- 8a6:	f1 f7       	brne	.-4      	; 0x8a4 <CAR_ESP7+0x88>
- 8a8:	00 c0       	rjmp	.+0      	; 0x8aa <CAR_ESP7+0x8e>
- 8aa:	00 00       	nop
- 8ac:	82 e0       	ldi	r24, 0x02	; 2
- 8ae:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
- 8b2:	89 ef       	ldi	r24, 0xF9	; 249
- 8b4:	90 e0       	ldi	r25, 0x00	; 0
- 8b6:	01 97       	sbiw	r24, 0x01	; 1
- 8b8:	f1 f7       	brne	.-4      	; 0x8b6 <CAR_ESP7+0x9a>
- 8ba:	00 c0       	rjmp	.+0      	; 0x8bc <CAR_ESP7+0xa0>
- 8bc:	00 00       	nop
- 8be:	08 95       	ret
+00000822 <CAR_ESP7>:
+ 822:	88 e7       	ldi	r24, 0x78	; 120
+ 824:	0e 94 63 04 	call	0x8c6	; 0x8c6 <ENVIA_CMD>
+ 828:	89 ef       	ldi	r24, 0xF9	; 249
+ 82a:	90 e0       	ldi	r25, 0x00	; 0
+ 82c:	01 97       	sbiw	r24, 0x01	; 1
+ 82e:	f1 f7       	brne	.-4      	; 0x82c <CAR_ESP7+0xa>
+ 830:	00 c0       	rjmp	.+0      	; 0x832 <CAR_ESP7+0x10>
+ 832:	00 00       	nop
+ 834:	82 e0       	ldi	r24, 0x02	; 2
+ 836:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
+ 83a:	89 ef       	ldi	r24, 0xF9	; 249
+ 83c:	90 e0       	ldi	r25, 0x00	; 0
+ 83e:	01 97       	sbiw	r24, 0x01	; 1
+ 840:	f1 f7       	brne	.-4      	; 0x83e <CAR_ESP7+0x1c>
+ 842:	00 c0       	rjmp	.+0      	; 0x844 <CAR_ESP7+0x22>
+ 844:	00 00       	nop
+ 846:	85 e0       	ldi	r24, 0x05	; 5
+ 848:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
+ 84c:	89 ef       	ldi	r24, 0xF9	; 249
+ 84e:	90 e0       	ldi	r25, 0x00	; 0
+ 850:	01 97       	sbiw	r24, 0x01	; 1
+ 852:	f1 f7       	brne	.-4      	; 0x850 <CAR_ESP7+0x2e>
+ 854:	00 c0       	rjmp	.+0      	; 0x856 <CAR_ESP7+0x34>
+ 856:	00 00       	nop
+ 858:	87 e1       	ldi	r24, 0x17	; 23
+ 85a:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
+ 85e:	89 ef       	ldi	r24, 0xF9	; 249
+ 860:	90 e0       	ldi	r25, 0x00	; 0
+ 862:	01 97       	sbiw	r24, 0x01	; 1
+ 864:	f1 f7       	brne	.-4      	; 0x862 <CAR_ESP7+0x40>
+ 866:	00 c0       	rjmp	.+0      	; 0x868 <CAR_ESP7+0x46>
+ 868:	00 00       	nop
+ 86a:	87 e1       	ldi	r24, 0x17	; 23
+ 86c:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
+ 870:	89 ef       	ldi	r24, 0xF9	; 249
+ 872:	90 e0       	ldi	r25, 0x00	; 0
+ 874:	01 97       	sbiw	r24, 0x01	; 1
+ 876:	f1 f7       	brne	.-4      	; 0x874 <CAR_ESP7+0x52>
+ 878:	00 c0       	rjmp	.+0      	; 0x87a <CAR_ESP7+0x58>
+ 87a:	00 00       	nop
+ 87c:	8e e1       	ldi	r24, 0x1E	; 30
+ 87e:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
+ 882:	89 ef       	ldi	r24, 0xF9	; 249
+ 884:	90 e0       	ldi	r25, 0x00	; 0
+ 886:	01 97       	sbiw	r24, 0x01	; 1
+ 888:	f1 f7       	brne	.-4      	; 0x886 <CAR_ESP7+0x64>
+ 88a:	00 c0       	rjmp	.+0      	; 0x88c <CAR_ESP7+0x6a>
+ 88c:	00 00       	nop
+ 88e:	82 e0       	ldi	r24, 0x02	; 2
+ 890:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
+ 894:	89 ef       	ldi	r24, 0xF9	; 249
+ 896:	90 e0       	ldi	r25, 0x00	; 0
+ 898:	01 97       	sbiw	r24, 0x01	; 1
+ 89a:	f1 f7       	brne	.-4      	; 0x898 <CAR_ESP7+0x76>
+ 89c:	00 c0       	rjmp	.+0      	; 0x89e <CAR_ESP7+0x7c>
+ 89e:	00 00       	nop
+ 8a0:	82 e0       	ldi	r24, 0x02	; 2
+ 8a2:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
+ 8a6:	89 ef       	ldi	r24, 0xF9	; 249
+ 8a8:	90 e0       	ldi	r25, 0x00	; 0
+ 8aa:	01 97       	sbiw	r24, 0x01	; 1
+ 8ac:	f1 f7       	brne	.-4      	; 0x8aa <CAR_ESP7+0x88>
+ 8ae:	00 c0       	rjmp	.+0      	; 0x8b0 <CAR_ESP7+0x8e>
+ 8b0:	00 00       	nop
+ 8b2:	82 e0       	ldi	r24, 0x02	; 2
+ 8b4:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
+ 8b8:	89 ef       	ldi	r24, 0xF9	; 249
+ 8ba:	90 e0       	ldi	r25, 0x00	; 0
+ 8bc:	01 97       	sbiw	r24, 0x01	; 1
+ 8be:	f1 f7       	brne	.-4      	; 0x8bc <CAR_ESP7+0x9a>
+ 8c0:	00 c0       	rjmp	.+0      	; 0x8c2 <CAR_ESP7+0xa0>
+ 8c2:	00 00       	nop
+ 8c4:	08 95       	ret
 
 Disassembly of section .text.str_len:
 
-0000098c <str_len>:
+00000992 <str_len>:
 char mensaje7[] = "PLANTAS!";
 
 
 //FUNCION PARA OBTENER EL NUMERO DE CARACTERES REALES EN EL TEXTO
 static uint8_t str_len(const char *s)
 {
- 98c:	cf 92       	push	r12
- 98e:	df 92       	push	r13
- 990:	ef 92       	push	r14
- 992:	6b 01       	movw	r12, r22
- 994:	e8 2e       	mov	r14, r24
+ 992:	cf 92       	push	r12
+ 994:	df 92       	push	r13
+ 996:	ef 92       	push	r14
+ 998:	6b 01       	movw	r12, r22
+ 99a:	e8 2e       	mov	r14, r24
 	uint8_t n = 0U;
- 996:	80 e0       	ldi	r24, 0x00	; 0
+ 99c:	80 e0       	ldi	r24, 0x00	; 0
 	while(s[n] != '\0' ) {n++;}
- 998:	01 c0       	rjmp	.+2      	; 0x99c <str_len+0x10>
- 99a:	8f 5f       	subi	r24, 0xFF	; 255
- 99c:	4e 2d       	mov	r20, r14
- 99e:	96 01       	movw	r18, r12
- 9a0:	28 0f       	add	r18, r24
- 9a2:	31 1d       	adc	r19, r1
- 9a4:	41 1d       	adc	r20, r1
- 9a6:	f9 01       	movw	r30, r18
- 9a8:	94 91       	lpm	r25, Z
- 9aa:	47 fd       	sbrc	r20, 7
- 9ac:	90 81       	ld	r25, Z
- 9ae:	91 11       	cpse	r25, r1
- 9b0:	f4 cf       	rjmp	.-24     	; 0x99a <str_len+0xe>
+ 99e:	01 c0       	rjmp	.+2      	; 0x9a2 <str_len+0x10>
+ 9a0:	8f 5f       	subi	r24, 0xFF	; 255
+ 9a2:	4e 2d       	mov	r20, r14
+ 9a4:	96 01       	movw	r18, r12
+ 9a6:	28 0f       	add	r18, r24
+ 9a8:	31 1d       	adc	r19, r1
+ 9aa:	41 1d       	adc	r20, r1
+ 9ac:	f9 01       	movw	r30, r18
+ 9ae:	94 91       	lpm	r25, Z
+ 9b0:	47 fd       	sbrc	r20, 7
+ 9b2:	90 81       	ld	r25, Z
+ 9b4:	91 11       	cpse	r25, r1
+ 9b6:	f4 cf       	rjmp	.-24     	; 0x9a0 <str_len+0xe>
 	return n;
 	
 }
- 9b2:	ef 90       	pop	r14
- 9b4:	df 90       	pop	r13
- 9b6:	cf 90       	pop	r12
- 9b8:	08 95       	ret
+ 9b8:	ef 90       	pop	r14
+ 9ba:	df 90       	pop	r13
+ 9bc:	cf 90       	pop	r12
+ 9be:	08 95       	ret
 
 Disassembly of section .text.lcd_prepare_scroll_name:
 
-000002e0 <lcd_prepare_scroll_name>:
+000002e6 <lcd_prepare_scroll_name>:
 
 static void lcd_prepare_scroll_name(void)
 {
- 2e0:	1f 93       	push	r17
- 2e2:	cf 93       	push	r28
- 2e4:	df 93       	push	r29
- 2e6:	cd b7       	in	r28, 0x3d	; 61
- 2e8:	de b7       	in	r29, 0x3e	; 62
- 2ea:	a8 97       	sbiw	r28, 0x28	; 40
- 2ec:	0f b6       	in	r0, 0x3f	; 63
- 2ee:	f8 94       	cli
- 2f0:	de bf       	out	0x3e, r29	; 62
- 2f2:	0f be       	out	0x3f, r0	; 63
- 2f4:	cd bf       	out	0x3d, r28	; 61
+ 2e6:	1f 93       	push	r17
+ 2e8:	cf 93       	push	r28
+ 2ea:	df 93       	push	r29
+ 2ec:	cd b7       	in	r28, 0x3d	; 61
+ 2ee:	de b7       	in	r29, 0x3e	; 62
+ 2f0:	a8 97       	sbiw	r28, 0x28	; 40
+ 2f2:	0f b6       	in	r0, 0x3f	; 63
+ 2f4:	f8 94       	cli
+ 2f6:	de bf       	out	0x3e, r29	; 62
+ 2f8:	0f be       	out	0x3f, r0	; 63
+ 2fa:	cd bf       	out	0x3d, r28	; 61
 	char linea1[40];
 	for (uint8_t i = 0U; i<40U; i++){
- 2f6:	80 e0       	ldi	r24, 0x00	; 0
- 2f8:	09 c0       	rjmp	.+18     	; 0x30c <lcd_prepare_scroll_name+0x2c>
+ 2fc:	80 e0       	ldi	r24, 0x00	; 0
+ 2fe:	09 c0       	rjmp	.+18     	; 0x312 <lcd_prepare_scroll_name+0x2c>
 		linea1[i] = ' ';
- 2fa:	e1 e0       	ldi	r30, 0x01	; 1
- 2fc:	f0 e0       	ldi	r31, 0x00	; 0
- 2fe:	ec 0f       	add	r30, r28
- 300:	fd 1f       	adc	r31, r29
- 302:	e8 0f       	add	r30, r24
- 304:	f1 1d       	adc	r31, r1
- 306:	90 e2       	ldi	r25, 0x20	; 32
- 308:	90 83       	st	Z, r25
+ 300:	e1 e0       	ldi	r30, 0x01	; 1
+ 302:	f0 e0       	ldi	r31, 0x00	; 0
+ 304:	ec 0f       	add	r30, r28
+ 306:	fd 1f       	adc	r31, r29
+ 308:	e8 0f       	add	r30, r24
+ 30a:	f1 1d       	adc	r31, r1
+ 30c:	90 e2       	ldi	r25, 0x20	; 32
+ 30e:	90 83       	st	Z, r25
 }
 
 static void lcd_prepare_scroll_name(void)
 {
 	char linea1[40];
 	for (uint8_t i = 0U; i<40U; i++){
- 30a:	8f 5f       	subi	r24, 0xFF	; 255
- 30c:	88 32       	cpi	r24, 0x28	; 40
- 30e:	a8 f3       	brcs	.-22     	; 0x2fa <lcd_prepare_scroll_name+0x1a>
+ 310:	8f 5f       	subi	r24, 0xFF	; 255
+ 312:	88 32       	cpi	r24, 0x28	; 40
+ 314:	a8 f3       	brcs	.-22     	; 0x300 <lcd_prepare_scroll_name+0x1a>
 		linea1[i] = ' ';
 	}
 	
 	//CALCULA LA LONGITUD DEL TEXTO
 	const uint8_t len = str_len(mensaje);
- 310:	60 e6       	ldi	r22, 0x60	; 96
- 312:	70 e0       	ldi	r23, 0x00	; 0
- 314:	80 e8       	ldi	r24, 0x80	; 128
- 316:	0e 94 c6 04 	call	0x98c	; 0x98c <str_len>
+ 316:	60 e6       	ldi	r22, 0x60	; 96
+ 318:	70 e0       	ldi	r23, 0x00	; 0
+ 31a:	80 e8       	ldi	r24, 0x80	; 128
+ 31c:	0e 94 c9 04 	call	0x992	; 0x992 <str_len>
 	const uint8_t to_copy = (len < 40U) ? len: 40U;					//COPIA EL MENSAJE DENTRO DE LAS 40 PRIMERAS POSICIONES
- 31a:	89 32       	cpi	r24, 0x29	; 41
- 31c:	08 f0       	brcs	.+2      	; 0x320 <lcd_prepare_scroll_name+0x40>
- 31e:	88 e2       	ldi	r24, 0x28	; 40
+ 320:	89 32       	cpi	r24, 0x29	; 41
+ 322:	08 f0       	brcs	.+2      	; 0x326 <lcd_prepare_scroll_name+0x40>
+ 324:	88 e2       	ldi	r24, 0x28	; 40
 	for (uint8_t i = 0U; i<to_copy; i++){
- 320:	90 e0       	ldi	r25, 0x00	; 0
- 322:	0e c0       	rjmp	.+28     	; 0x340 <lcd_prepare_scroll_name+0x60>
+ 326:	90 e0       	ldi	r25, 0x00	; 0
+ 328:	0e c0       	rjmp	.+28     	; 0x346 <lcd_prepare_scroll_name+0x60>
 		linea1[i] = mensaje[i];
- 324:	29 2f       	mov	r18, r25
- 326:	30 e0       	ldi	r19, 0x00	; 0
- 328:	f9 01       	movw	r30, r18
- 32a:	e0 5a       	subi	r30, 0xA0	; 160
- 32c:	ff 4f       	sbci	r31, 0xFF	; 255
- 32e:	40 81       	ld	r20, Z
- 330:	e1 e0       	ldi	r30, 0x01	; 1
- 332:	f0 e0       	ldi	r31, 0x00	; 0
- 334:	ec 0f       	add	r30, r28
- 336:	fd 1f       	adc	r31, r29
- 338:	e2 0f       	add	r30, r18
- 33a:	f3 1f       	adc	r31, r19
- 33c:	40 83       	st	Z, r20
+ 32a:	29 2f       	mov	r18, r25
+ 32c:	30 e0       	ldi	r19, 0x00	; 0
+ 32e:	f9 01       	movw	r30, r18
+ 330:	e0 5a       	subi	r30, 0xA0	; 160
+ 332:	ff 4f       	sbci	r31, 0xFF	; 255
+ 334:	40 81       	ld	r20, Z
+ 336:	e1 e0       	ldi	r30, 0x01	; 1
+ 338:	f0 e0       	ldi	r31, 0x00	; 0
+ 33a:	ec 0f       	add	r30, r28
+ 33c:	fd 1f       	adc	r31, r29
+ 33e:	e2 0f       	add	r30, r18
+ 340:	f3 1f       	adc	r31, r19
+ 342:	40 83       	st	Z, r20
 	}
 	
 	//CALCULA LA LONGITUD DEL TEXTO
 	const uint8_t len = str_len(mensaje);
 	const uint8_t to_copy = (len < 40U) ? len: 40U;					//COPIA EL MENSAJE DENTRO DE LAS 40 PRIMERAS POSICIONES
 	for (uint8_t i = 0U; i<to_copy; i++){
- 33e:	9f 5f       	subi	r25, 0xFF	; 255
- 340:	98 17       	cp	r25, r24
- 342:	80 f3       	brcs	.-32     	; 0x324 <lcd_prepare_scroll_name+0x44>
+ 344:	9f 5f       	subi	r25, 0xFF	; 255
+ 346:	98 17       	cp	r25, r24
+ 348:	80 f3       	brcs	.-32     	; 0x32a <lcd_prepare_scroll_name+0x44>
 		linea1[i] = mensaje[i];
 	}
 	
 	//ESCRIBE LAS 40 POSICIONES DE LA LINEA EN DDRAM
 	//PRIMERO ESCRIBIMOS LAS VISIBLES
 	POS_LINEA1(0);
- 344:	80 e0       	ldi	r24, 0x00	; 0
- 346:	0e 94 4f 05 	call	0xa9e	; 0xa9e <POS_LINEA1>
+ 34a:	80 e0       	ldi	r24, 0x00	; 0
+ 34c:	0e 94 52 05 	call	0xaa4	; 0xaa4 <POS_LINEA1>
 	for(uint8_t i = 0U; i<16U; i++){
- 34a:	10 e0       	ldi	r17, 0x00	; 0
- 34c:	0a c0       	rjmp	.+20     	; 0x362 <lcd_prepare_scroll_name+0x82>
+ 350:	10 e0       	ldi	r17, 0x00	; 0
+ 352:	0a c0       	rjmp	.+20     	; 0x368 <lcd_prepare_scroll_name+0x82>
 		ENVIA_DATO(linea1[i]);
- 34e:	e1 e0       	ldi	r30, 0x01	; 1
- 350:	f0 e0       	ldi	r31, 0x00	; 0
- 352:	ec 0f       	add	r30, r28
- 354:	fd 1f       	adc	r31, r29
- 356:	e1 0f       	add	r30, r17
- 358:	f1 1d       	adc	r31, r1
- 35a:	80 81       	ld	r24, Z
- 35c:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
+ 354:	e1 e0       	ldi	r30, 0x01	; 1
+ 356:	f0 e0       	ldi	r31, 0x00	; 0
+ 358:	ec 0f       	add	r30, r28
+ 35a:	fd 1f       	adc	r31, r29
+ 35c:	e1 0f       	add	r30, r17
+ 35e:	f1 1d       	adc	r31, r1
+ 360:	80 81       	ld	r24, Z
+ 362:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
 	}
 	
 	//ESCRIBE LAS 40 POSICIONES DE LA LINEA EN DDRAM
 	//PRIMERO ESCRIBIMOS LAS VISIBLES
 	POS_LINEA1(0);
 	for(uint8_t i = 0U; i<16U; i++){
- 360:	1f 5f       	subi	r17, 0xFF	; 255
- 362:	10 31       	cpi	r17, 0x10	; 16
- 364:	a0 f3       	brcs	.-24     	; 0x34e <lcd_prepare_scroll_name+0x6e>
+ 366:	1f 5f       	subi	r17, 0xFF	; 255
+ 368:	10 31       	cpi	r17, 0x10	; 16
+ 36a:	a0 f3       	brcs	.-24     	; 0x354 <lcd_prepare_scroll_name+0x6e>
 		ENVIA_DATO(linea1[i]);
 	}
 	POS_LINEA1(16);
- 366:	80 e1       	ldi	r24, 0x10	; 16
- 368:	0e 94 4f 05 	call	0xa9e	; 0xa9e <POS_LINEA1>
+ 36c:	80 e1       	ldi	r24, 0x10	; 16
+ 36e:	0e 94 52 05 	call	0xaa4	; 0xaa4 <POS_LINEA1>
 	for(uint8_t i = 16U; i<40U; i++){
- 36c:	10 e1       	ldi	r17, 0x10	; 16
- 36e:	0a c0       	rjmp	.+20     	; 0x384 <lcd_prepare_scroll_name+0xa4>
+ 372:	10 e1       	ldi	r17, 0x10	; 16
+ 374:	0a c0       	rjmp	.+20     	; 0x38a <lcd_prepare_scroll_name+0xa4>
 		ENVIA_DATO(linea1[i]);
- 370:	e1 e0       	ldi	r30, 0x01	; 1
- 372:	f0 e0       	ldi	r31, 0x00	; 0
- 374:	ec 0f       	add	r30, r28
- 376:	fd 1f       	adc	r31, r29
- 378:	e1 0f       	add	r30, r17
- 37a:	f1 1d       	adc	r31, r1
- 37c:	80 81       	ld	r24, Z
- 37e:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
+ 376:	e1 e0       	ldi	r30, 0x01	; 1
+ 378:	f0 e0       	ldi	r31, 0x00	; 0
+ 37a:	ec 0f       	add	r30, r28
+ 37c:	fd 1f       	adc	r31, r29
+ 37e:	e1 0f       	add	r30, r17
+ 380:	f1 1d       	adc	r31, r1
+ 382:	80 81       	ld	r24, Z
+ 384:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
 	POS_LINEA1(0);
 	for(uint8_t i = 0U; i<16U; i++){
 		ENVIA_DATO(linea1[i]);
 	}
 	POS_LINEA1(16);
 	for(uint8_t i = 16U; i<40U; i++){
- 382:	1f 5f       	subi	r17, 0xFF	; 255
- 384:	18 32       	cpi	r17, 0x28	; 40
- 386:	a0 f3       	brcs	.-24     	; 0x370 <lcd_prepare_scroll_name+0x90>
+ 388:	1f 5f       	subi	r17, 0xFF	; 255
+ 38a:	18 32       	cpi	r17, 0x28	; 40
+ 38c:	a0 f3       	brcs	.-24     	; 0x376 <lcd_prepare_scroll_name+0x90>
 		ENVIA_DATO(linea1[i]);
 	}
 	REGRESO_CASA();	
- 388:	0e 94 4b 05 	call	0xa96	; 0xa96 <REGRESO_CASA>
+ 38e:	0e 94 4e 05 	call	0xa9c	; 0xa9c <REGRESO_CASA>
 }
- 38c:	a8 96       	adiw	r28, 0x28	; 40
- 38e:	0f b6       	in	r0, 0x3f	; 63
- 390:	f8 94       	cli
- 392:	de bf       	out	0x3e, r29	; 62
- 394:	0f be       	out	0x3f, r0	; 63
- 396:	cd bf       	out	0x3d, r28	; 61
- 398:	df 91       	pop	r29
- 39a:	cf 91       	pop	r28
- 39c:	1f 91       	pop	r17
- 39e:	08 95       	ret
+ 392:	a8 96       	adiw	r28, 0x28	; 40
+ 394:	0f b6       	in	r0, 0x3f	; 63
+ 396:	f8 94       	cli
+ 398:	de bf       	out	0x3e, r29	; 62
+ 39a:	0f be       	out	0x3f, r0	; 63
+ 39c:	cd bf       	out	0x3d, r28	; 61
+ 39e:	df 91       	pop	r29
+ 3a0:	cf 91       	pop	r28
+ 3a2:	1f 91       	pop	r17
+ 3a4:	08 95       	ret
 
 Disassembly of section .text.__vector_1:
 
-00000a0c <__vector_1>:
+00000a12 <__vector_1>:
 
 
 ISR(INT0_vect){
- a0c:	1f 92       	push	r1
- a0e:	0f 92       	push	r0
- a10:	0f b6       	in	r0, 0x3f	; 63
- a12:	0f 92       	push	r0
- a14:	11 24       	eor	r1, r1
- a16:	8f 93       	push	r24
+ a12:	1f 92       	push	r1
+ a14:	0f 92       	push	r0
+ a16:	0f b6       	in	r0, 0x3f	; 63
+ a18:	0f 92       	push	r0
+ a1a:	11 24       	eor	r1, r1
+ a1c:	8f 93       	push	r24
 	
 			
 	flag = 1U;														//ACTIVAMOS INTERRUPCION INT0
- a18:	81 e0       	ldi	r24, 0x01	; 1
- a1a:	80 93 c0 00 	sts	0x00C0, r24	; 0x8000c0 <flag>
+ a1e:	81 e0       	ldi	r24, 0x01	; 1
+ a20:	80 93 c0 00 	sts	0x00C0, r24	; 0x8000c0 <flag>
 	GICR &= (uint8_t)~(1U << INT0);									//ACTIREBOTE POR SOFTWARE	DESHABILITA TEMPORALMENTE INT0
- a1e:	8b b7       	in	r24, 0x3b	; 59
- a20:	8f 7b       	andi	r24, 0xBF	; 191
- a22:	8b bf       	out	0x3b, r24	; 59
+ a24:	8b b7       	in	r24, 0x3b	; 59
+ a26:	8f 7b       	andi	r24, 0xBF	; 191
+ a28:	8b bf       	out	0x3b, r24	; 59
 }
- a24:	8f 91       	pop	r24
- a26:	0f 90       	pop	r0
- a28:	0f be       	out	0x3f, r0	; 63
- a2a:	0f 90       	pop	r0
- a2c:	1f 90       	pop	r1
- a2e:	18 95       	reti
+ a2a:	8f 91       	pop	r24
+ a2c:	0f 90       	pop	r0
+ a2e:	0f be       	out	0x3f, r0	; 63
+ a30:	0f 90       	pop	r0
+ a32:	1f 90       	pop	r1
+ a34:	18 95       	reti
 
 Disassembly of section .text.__vector_2:
 
-00000a30 <__vector_2>:
+00000a36 <__vector_2>:
 
 ISR(INT1_vect){
- a30:	1f 92       	push	r1
- a32:	0f 92       	push	r0
- a34:	0f b6       	in	r0, 0x3f	; 63
- a36:	0f 92       	push	r0
- a38:	11 24       	eor	r1, r1
- a3a:	8f 93       	push	r24
+ a36:	1f 92       	push	r1
+ a38:	0f 92       	push	r0
+ a3a:	0f b6       	in	r0, 0x3f	; 63
+ a3c:	0f 92       	push	r0
+ a3e:	11 24       	eor	r1, r1
+ a40:	8f 93       	push	r24
 	
 	flag1 = 1U;														//ACTIVAMOS INTERRUPCION INT1
- a3c:	81 e0       	ldi	r24, 0x01	; 1
- a3e:	80 93 bf 00 	sts	0x00BF, r24	; 0x8000bf <flag1>
+ a42:	81 e0       	ldi	r24, 0x01	; 1
+ a44:	80 93 bf 00 	sts	0x00BF, r24	; 0x8000bf <flag1>
 	GICR &= (uint8_t)~(1U << INT1);									//ACTIREBOTE POR SOFTWARE	DESHABILITA TEMPORALMENTE INT1
- a42:	8b b7       	in	r24, 0x3b	; 59
- a44:	8f 77       	andi	r24, 0x7F	; 127
- a46:	8b bf       	out	0x3b, r24	; 59
+ a48:	8b b7       	in	r24, 0x3b	; 59
+ a4a:	8f 77       	andi	r24, 0x7F	; 127
+ a4c:	8b bf       	out	0x3b, r24	; 59
 }
- a48:	8f 91       	pop	r24
- a4a:	0f 90       	pop	r0
- a4c:	0f be       	out	0x3f, r0	; 63
- a4e:	0f 90       	pop	r0
- a50:	1f 90       	pop	r1
- a52:	18 95       	reti
+ a4e:	8f 91       	pop	r24
+ a50:	0f 90       	pop	r0
+ a52:	0f be       	out	0x3f, r0	; 63
+ a54:	0f 90       	pop	r0
+ a56:	1f 90       	pop	r1
+ a58:	18 95       	reti
 
 Disassembly of section .text.__vector_18:
 
-00000a54 <__vector_18>:
+00000a5a <__vector_18>:
 
 ISR(INT2_vect){
- a54:	1f 92       	push	r1
- a56:	0f 92       	push	r0
- a58:	0f b6       	in	r0, 0x3f	; 63
- a5a:	0f 92       	push	r0
- a5c:	11 24       	eor	r1, r1
- a5e:	8f 93       	push	r24
+ a5a:	1f 92       	push	r1
+ a5c:	0f 92       	push	r0
+ a5e:	0f b6       	in	r0, 0x3f	; 63
+ a60:	0f 92       	push	r0
+ a62:	11 24       	eor	r1, r1
+ a64:	8f 93       	push	r24
 	
 	flag2 = 1U;														//ACTIVAMOS INTERRUPCION INT2
- a60:	81 e0       	ldi	r24, 0x01	; 1
- a62:	80 93 be 00 	sts	0x00BE, r24	; 0x8000be <flag2>
+ a66:	81 e0       	ldi	r24, 0x01	; 1
+ a68:	80 93 be 00 	sts	0x00BE, r24	; 0x8000be <flag2>
 	GICR &= (uint8_t)~(1U << INT2);									//ANTIREBORE POR SOFTWARE	DESHABILITA TEMPORALMENTE INT2
- a66:	8b b7       	in	r24, 0x3b	; 59
- a68:	8f 7d       	andi	r24, 0xDF	; 223
- a6a:	8b bf       	out	0x3b, r24	; 59
+ a6c:	8b b7       	in	r24, 0x3b	; 59
+ a6e:	8f 7d       	andi	r24, 0xDF	; 223
+ a70:	8b bf       	out	0x3b, r24	; 59
 	
 }
- a6c:	8f 91       	pop	r24
- a6e:	0f 90       	pop	r0
- a70:	0f be       	out	0x3f, r0	; 63
- a72:	0f 90       	pop	r0
- a74:	1f 90       	pop	r1
- a76:	18 95       	reti
+ a72:	8f 91       	pop	r24
+ a74:	0f 90       	pop	r0
+ a76:	0f be       	out	0x3f, r0	; 63
+ a78:	0f 90       	pop	r0
+ a7a:	1f 90       	pop	r1
+ a7c:	18 95       	reti
 
 Disassembly of section .text.main:
 
@@ -1358,30 +1358,30 @@ int main (void){
   fa:	78 94       	sei
 	
 	LCD_INICIALIZA();												//INICIALIZAMOS LCD
-  fc:	0e 94 f3 04 	call	0x9e6	; 0x9e6 <LCD_INICIALIZA>
+  fc:	0e 94 f6 04 	call	0x9ec	; 0x9ec <LCD_INICIALIZA>
 	LIMPIA_LCD();													//LIMPIA LCD
- 100:	0e 94 47 05 	call	0xa8e	; 0xa8e <LIMPIA_LCD>
+ 100:	0e 94 4a 05 	call	0xa94	; 0xa94 <LIMPIA_LCD>
 	
 	lcd_prepare_scroll_name();										//FUNCION PARA CARGAR  NOMBRES
- 104:	0e 94 70 01 	call	0x2e0	; 0x2e0 <lcd_prepare_scroll_name>
+ 104:	0e 94 73 01 	call	0x2e6	; 0x2e6 <lcd_prepare_scroll_name>
 	
 	
 	CAR_ESP0();
- 108:	0e 94 d0 01 	call	0x3a0	; 0x3a0 <CAR_ESP0>
+ 108:	0e 94 d3 01 	call	0x3a6	; 0x3a6 <CAR_ESP0>
 	CAR_ESP1();
- 10c:	0e 94 22 02 	call	0x444	; 0x444 <CAR_ESP1>
+ 10c:	0e 94 25 02 	call	0x44a	; 0x44a <CAR_ESP1>
 	CAR_ESP2();
- 110:	0e 94 74 02 	call	0x4e8	; 0x4e8 <CAR_ESP2>
+ 110:	0e 94 77 02 	call	0x4ee	; 0x4ee <CAR_ESP2>
 	CAR_ESP3();
- 114:	0e 94 c6 02 	call	0x58c	; 0x58c <CAR_ESP3>
+ 114:	0e 94 c9 02 	call	0x592	; 0x592 <CAR_ESP3>
 	CAR_ESP4();
- 118:	0e 94 18 03 	call	0x630	; 0x630 <CAR_ESP4>
+ 118:	0e 94 1b 03 	call	0x636	; 0x636 <CAR_ESP4>
 	CAR_ESP5();
- 11c:	0e 94 6a 03 	call	0x6d4	; 0x6d4 <CAR_ESP5>
+ 11c:	0e 94 6d 03 	call	0x6da	; 0x6da <CAR_ESP5>
 	CAR_ESP6();
- 120:	0e 94 bc 03 	call	0x778	; 0x778 <CAR_ESP6>
+ 120:	0e 94 bf 03 	call	0x77e	; 0x77e <CAR_ESP6>
 	CAR_ESP7();	
- 124:	0e 94 0e 04 	call	0x81c	; 0x81c <CAR_ESP7>
+ 124:	0e 94 11 04 	call	0x822	; 0x822 <CAR_ESP7>
 	
 	
 	//DESPLAZAMIENTO INFINITO
@@ -1399,39 +1399,39 @@ int main (void){
  132:	10 92 c0 00 	sts	0x00C0, r1	; 0x8000c0 <flag>
 						
 			LIMPIA_LCD();											//MUESTRA MENSAJE DE LA INTERRUPCION
- 136:	0e 94 47 05 	call	0xa8e	; 0xa8e <LIMPIA_LCD>
+ 136:	0e 94 4a 05 	call	0xa94	; 0xa94 <LIMPIA_LCD>
 			POS_LINEA1(0);
  13a:	80 e0       	ldi	r24, 0x00	; 0
- 13c:	0e 94 4f 05 	call	0xa9e	; 0xa9e <POS_LINEA1>
+ 13c:	0e 94 52 05 	call	0xaa4	; 0xaa4 <POS_LINEA1>
 			ENVIA_CADENA(mensaje2);
  140:	8c e9       	ldi	r24, 0x9C	; 156
  142:	90 e0       	ldi	r25, 0x00	; 0
- 144:	0e 94 dd 04 	call	0x9ba	; 0x9ba <ENVIA_CADENA>
+ 144:	0e 94 e0 04 	call	0x9c0	; 0x9c0 <ENVIA_CADENA>
 			POS_LINEA2(0);
  148:	80 e0       	ldi	r24, 0x00	; 0
- 14a:	0e 94 53 05 	call	0xaa6	; 0xaa6 <POS_LINEA2>
+ 14a:	0e 94 56 05 	call	0xaac	; 0xaac <POS_LINEA2>
 			ENVIA_CADENA(mensaje3);
  14e:	87 eb       	ldi	r24, 0xB7	; 183
  150:	90 e0       	ldi	r25, 0x00	; 0
- 152:	0e 94 dd 04 	call	0x9ba	; 0x9ba <ENVIA_CADENA>
+ 152:	0e 94 e0 04 	call	0x9c0	; 0x9c0 <ENVIA_CADENA>
 			POS_LINEA2(8);
  156:	88 e0       	ldi	r24, 0x08	; 8
- 158:	0e 94 53 05 	call	0xaa6	; 0xaa6 <POS_LINEA2>
+ 158:	0e 94 56 05 	call	0xaac	; 0xaac <POS_LINEA2>
 			ENVIA_DATO(0);
  15c:	80 e0       	ldi	r24, 0x00	; 0
- 15e:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
+ 15e:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
 			POS_LINEA2(10);
  162:	8a e0       	ldi	r24, 0x0A	; 10
- 164:	0e 94 53 05 	call	0xaa6	; 0xaa6 <POS_LINEA2>
+ 164:	0e 94 56 05 	call	0xaac	; 0xaac <POS_LINEA2>
 			ENVIA_DATO(4);
  168:	84 e0       	ldi	r24, 0x04	; 4
- 16a:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
+ 16a:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
 			POS_LINEA2(12);
  16e:	8c e0       	ldi	r24, 0x0C	; 12
- 170:	0e 94 53 05 	call	0xaa6	; 0xaa6 <POS_LINEA2>
+ 170:	0e 94 56 05 	call	0xaac	; 0xaac <POS_LINEA2>
 			ENVIA_DATO(5);			
  174:	85 e0       	ldi	r24, 0x05	; 5
- 176:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
+ 176:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
 	#else
 		//round up by default
 		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
@@ -1451,9 +1451,9 @@ int main (void){
 			
 			
 			LIMPIA_LCD();											//RESTAURA EL NOMBRE PARA EL DESPLAZAMIENTO
- 18c:	0e 94 47 05 	call	0xa8e	; 0xa8e <LIMPIA_LCD>
+ 18c:	0e 94 4a 05 	call	0xa94	; 0xa94 <LIMPIA_LCD>
 			lcd_prepare_scroll_name();
- 190:	0e 94 70 01 	call	0x2e0	; 0x2e0 <lcd_prepare_scroll_name>
+ 190:	0e 94 73 01 	call	0x2e6	; 0x2e6 <lcd_prepare_scroll_name>
 			shifts = 0U;											//REINICIA EL CONTEO DE DESPLAZAMIENTOS
 			
 			GIFR |= (1U << INTF0);									//LIMPIAMOS LA BANDERA DE INT0 EN CASO DE RESIDUO 
@@ -1489,51 +1489,51 @@ int main (void){
  1ae:	10 92 bf 00 	sts	0x00BF, r1	; 0x8000bf <flag1>
 			
 			LIMPIA_LCD();											//MUESTRA MENSAJE DE LA INTERRUPCION
- 1b2:	0e 94 47 05 	call	0xa8e	; 0xa8e <LIMPIA_LCD>
+ 1b2:	0e 94 4a 05 	call	0xa94	; 0xa94 <LIMPIA_LCD>
 			POS_LINEA1(0);
  1b6:	80 e0       	ldi	r24, 0x00	; 0
- 1b8:	0e 94 4f 05 	call	0xa9e	; 0xa9e <POS_LINEA1>
+ 1b8:	0e 94 52 05 	call	0xaa4	; 0xaa4 <POS_LINEA1>
 			ENVIA_CADENA(mensaje4);
  1bc:	8e e7       	ldi	r24, 0x7E	; 126
  1be:	90 e0       	ldi	r25, 0x00	; 0
- 1c0:	0e 94 dd 04 	call	0x9ba	; 0x9ba <ENVIA_CADENA>
+ 1c0:	0e 94 e0 04 	call	0x9c0	; 0x9c0 <ENVIA_CADENA>
 			POS_LINEA2(0);
  1c4:	80 e0       	ldi	r24, 0x00	; 0
- 1c6:	0e 94 53 05 	call	0xaa6	; 0xaa6 <POS_LINEA2>
+ 1c6:	0e 94 56 05 	call	0xaac	; 0xaac <POS_LINEA2>
 			ENVIA_CADENA(mensaje5);
  1ca:	80 eb       	ldi	r24, 0xB0	; 176
  1cc:	90 e0       	ldi	r25, 0x00	; 0
- 1ce:	0e 94 dd 04 	call	0x9ba	; 0x9ba <ENVIA_CADENA>
+ 1ce:	0e 94 e0 04 	call	0x9c0	; 0x9c0 <ENVIA_CADENA>
 			POS_LINEA2(7);
  1d2:	87 e0       	ldi	r24, 0x07	; 7
- 1d4:	0e 94 53 05 	call	0xaa6	; 0xaa6 <POS_LINEA2>
+ 1d4:	0e 94 56 05 	call	0xaac	; 0xaac <POS_LINEA2>
 			ENVIA_DATO(5);
  1d8:	85 e0       	ldi	r24, 0x05	; 5
- 1da:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
+ 1da:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
 			POS_LINEA2(8);
  1de:	88 e0       	ldi	r24, 0x08	; 8
- 1e0:	0e 94 53 05 	call	0xaa6	; 0xaa6 <POS_LINEA2>
+ 1e0:	0e 94 56 05 	call	0xaac	; 0xaac <POS_LINEA2>
 			ENVIA_DATO(7);
  1e4:	87 e0       	ldi	r24, 0x07	; 7
- 1e6:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
+ 1e6:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
 			POS_LINEA2(9);
  1ea:	89 e0       	ldi	r24, 0x09	; 9
- 1ec:	0e 94 53 05 	call	0xaa6	; 0xaa6 <POS_LINEA2>
+ 1ec:	0e 94 56 05 	call	0xaac	; 0xaac <POS_LINEA2>
 			ENVIA_DATO(1);			
  1f0:	81 e0       	ldi	r24, 0x01	; 1
- 1f2:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
+ 1f2:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
 			POS_LINEA2(10);
  1f6:	8a e0       	ldi	r24, 0x0A	; 10
- 1f8:	0e 94 53 05 	call	0xaa6	; 0xaa6 <POS_LINEA2>
+ 1f8:	0e 94 56 05 	call	0xaac	; 0xaac <POS_LINEA2>
 			ENVIA_DATO(7);
  1fc:	87 e0       	ldi	r24, 0x07	; 7
- 1fe:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
+ 1fe:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
 			POS_LINEA2(11);
  202:	8b e0       	ldi	r24, 0x0B	; 11
- 204:	0e 94 53 05 	call	0xaa6	; 0xaa6 <POS_LINEA2>
+ 204:	0e 94 56 05 	call	0xaac	; 0xaac <POS_LINEA2>
 			ENVIA_DATO(7);
  208:	87 e0       	ldi	r24, 0x07	; 7
- 20a:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
+ 20a:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
  20e:	2f e7       	ldi	r18, 0x7F	; 127
  210:	8a e1       	ldi	r24, 0x1A	; 26
  212:	96 e0       	ldi	r25, 0x06	; 6
@@ -1548,9 +1548,9 @@ int main (void){
 			_delay_ms(2000);
 					
 			LIMPIA_LCD();											//RESTAURA EL NOMBRE PARA EL DESPLAZAMIENTO
- 220:	0e 94 47 05 	call	0xa8e	; 0xa8e <LIMPIA_LCD>
+ 220:	0e 94 4a 05 	call	0xa94	; 0xa94 <LIMPIA_LCD>
 			lcd_prepare_scroll_name();
- 224:	0e 94 70 01 	call	0x2e0	; 0x2e0 <lcd_prepare_scroll_name>
+ 224:	0e 94 73 01 	call	0x2e6	; 0x2e6 <lcd_prepare_scroll_name>
 			shifts = 0U;											//REINICIA EL CONTEO DE DESPLAZAMIENTOS
 			
 			GIFR |= (1U << INTF1);									//LIMPIAMOS LA BANDERA DE INT0 EN CASO DE RESIDUO
@@ -1585,45 +1585,45 @@ int main (void){
  242:	10 92 be 00 	sts	0x00BE, r1	; 0x8000be <flag2>
 			
 			LIMPIA_LCD();											//MUESTRA MENSAJE DE LA INTERRUPCION
- 246:	0e 94 47 05 	call	0xa8e	; 0xa8e <LIMPIA_LCD>
+ 246:	0e 94 4a 05 	call	0xa94	; 0xa94 <LIMPIA_LCD>
 			POS_LINEA1(0);
  24a:	80 e0       	ldi	r24, 0x00	; 0
- 24c:	0e 94 4f 05 	call	0xa9e	; 0xa9e <POS_LINEA1>
+ 24c:	0e 94 52 05 	call	0xaa4	; 0xaa4 <POS_LINEA1>
 			ENVIA_CADENA(mensaje6);
  250:	8e e8       	ldi	r24, 0x8E	; 142
  252:	90 e0       	ldi	r25, 0x00	; 0
- 254:	0e 94 dd 04 	call	0x9ba	; 0x9ba <ENVIA_CADENA>
+ 254:	0e 94 e0 04 	call	0x9c0	; 0x9c0 <ENVIA_CADENA>
 			POS_LINEA2(0);
  258:	80 e0       	ldi	r24, 0x00	; 0
- 25a:	0e 94 53 05 	call	0xaa6	; 0xaa6 <POS_LINEA2>
+ 25a:	0e 94 56 05 	call	0xaac	; 0xaac <POS_LINEA2>
 			ENVIA_CADENA(mensaje7);
  25e:	87 ea       	ldi	r24, 0xA7	; 167
  260:	90 e0       	ldi	r25, 0x00	; 0
- 262:	0e 94 dd 04 	call	0x9ba	; 0x9ba <ENVIA_CADENA>
+ 262:	0e 94 e0 04 	call	0x9c0	; 0x9c0 <ENVIA_CADENA>
 			POS_LINEA2(9);
  266:	89 e0       	ldi	r24, 0x09	; 9
- 268:	0e 94 53 05 	call	0xaa6	; 0xaa6 <POS_LINEA2>
+ 268:	0e 94 56 05 	call	0xaac	; 0xaac <POS_LINEA2>
 			ENVIA_DATO(3);
  26c:	83 e0       	ldi	r24, 0x03	; 3
- 26e:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
+ 26e:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
 			POS_LINEA2(10);
  272:	8a e0       	ldi	r24, 0x0A	; 10
- 274:	0e 94 53 05 	call	0xaa6	; 0xaa6 <POS_LINEA2>
+ 274:	0e 94 56 05 	call	0xaac	; 0xaac <POS_LINEA2>
 			ENVIA_DATO(0);
  278:	80 e0       	ldi	r24, 0x00	; 0
- 27a:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
+ 27a:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
 			POS_LINEA2(11);
  27e:	8b e0       	ldi	r24, 0x0B	; 11
- 280:	0e 94 53 05 	call	0xaa6	; 0xaa6 <POS_LINEA2>
+ 280:	0e 94 56 05 	call	0xaac	; 0xaac <POS_LINEA2>
 			ENVIA_DATO(0);
  284:	80 e0       	ldi	r24, 0x00	; 0
- 286:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
+ 286:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
 			POS_LINEA2(12);
  28a:	8c e0       	ldi	r24, 0x0C	; 12
- 28c:	0e 94 53 05 	call	0xaa6	; 0xaa6 <POS_LINEA2>
+ 28c:	0e 94 56 05 	call	0xaac	; 0xaac <POS_LINEA2>
 			ENVIA_DATO(6);
  290:	86 e0       	ldi	r24, 0x06	; 6
- 292:	0e 94 93 04 	call	0x926	; 0x926 <ENVIA_DATO>
+ 292:	0e 94 96 04 	call	0x92c	; 0x92c <ENVIA_DATO>
  296:	2f e7       	ldi	r18, 0x7F	; 127
  298:	8a e1       	ldi	r24, 0x1A	; 26
  29a:	96 e0       	ldi	r25, 0x06	; 6
@@ -1636,9 +1636,9 @@ int main (void){
 			_delay_ms(2000);
 			
 			LIMPIA_LCD();											//RESTAURA EL NOMBRE PARA EL DESPLAZAMIENTO
- 2a8:	0e 94 47 05 	call	0xa8e	; 0xa8e <LIMPIA_LCD>
+ 2a8:	0e 94 4a 05 	call	0xa94	; 0xa94 <LIMPIA_LCD>
 			lcd_prepare_scroll_name();
- 2ac:	0e 94 70 01 	call	0x2e0	; 0x2e0 <lcd_prepare_scroll_name>
+ 2ac:	0e 94 73 01 	call	0x2e6	; 0x2e6 <lcd_prepare_scroll_name>
 			shifts = 0U;											//REINICIA EL CONTEO DE DESPLAZAMIENTOS
 			
 			GIFR |= (1U << INTF2);									//LIMPIAMOS LA BANDERA DE INT0 EN CASO DE RESIDUO
@@ -1661,56 +1661,59 @@ int main (void){
 			GICR |= (1U << INT2);									//VUELVE A HABILITAR INT0
 			continue;												//CONTINUA AL SIGUIENTE CICLO SIN DESPLAZAR
  2be:	35 cf       	rjmp	.-406    	; 0x12a <main+0x76>
- 2c0:	87 ea       	ldi	r24, 0xA7	; 167
- 2c2:	91 e6       	ldi	r25, 0x61	; 97
- 2c4:	01 97       	sbiw	r24, 0x01	; 1
- 2c6:	f1 f7       	brne	.-4      	; 0x2c4 <__EEPROM_REGION_LENGTH__+0xc4>
- 2c8:	00 c0       	rjmp	.+0      	; 0x2ca <__EEPROM_REGION_LENGTH__+0xca>
- 2ca:	00 00       	nop
+ 2c0:	2f e5       	ldi	r18, 0x5F	; 95
+ 2c2:	8a ee       	ldi	r24, 0xEA	; 234
+ 2c4:	90 e0       	ldi	r25, 0x00	; 0
+ 2c6:	21 50       	subi	r18, 0x01	; 1
+ 2c8:	80 40       	sbci	r24, 0x00	; 0
+ 2ca:	90 40       	sbci	r25, 0x00	; 0
+ 2cc:	e1 f7       	brne	.-8      	; 0x2c6 <__EEPROM_REGION_LENGTH__+0xc6>
+ 2ce:	00 c0       	rjmp	.+0      	; 0x2d0 <__EEPROM_REGION_LENGTH__+0xd0>
+ 2d0:	00 00       	nop
 		}
 		//MODO NORMAL SIN INTERRUPCION	
-		_delay_ms(100);												//VELOCIDAD DE SCROLL
+		_delay_ms(300);												//VELOCIDAD DE SCROLL
 		DESPLAZAMIENTO_PIZQUIERDA();								//FUNCION PARA DESPLAZAR POR IZQUIERDA
- 2cc:	0e 94 57 05 	call	0xaae	; 0xaae <DESPLAZAMIENTO_PIZQUIERDA>
+ 2d2:	0e 94 5a 05 	call	0xab4	; 0xab4 <DESPLAZAMIENTO_PIZQUIERDA>
 		shifts++;
- 2d0:	cf 5f       	subi	r28, 0xFF	; 255
+ 2d6:	cf 5f       	subi	r28, 0xFF	; 255
 		if (shifts >= 40U){
- 2d2:	c8 32       	cpi	r28, 0x28	; 40
- 2d4:	08 f4       	brcc	.+2      	; 0x2d8 <__EEPROM_REGION_LENGTH__+0xd8>
- 2d6:	29 cf       	rjmp	.-430    	; 0x12a <main+0x76>
+ 2d8:	c8 32       	cpi	r28, 0x28	; 40
+ 2da:	08 f4       	brcc	.+2      	; 0x2de <__EEPROM_REGION_LENGTH__+0xde>
+ 2dc:	26 cf       	rjmp	.-436    	; 0x12a <main+0x76>
 			REGRESO_CASA();
- 2d8:	0e 94 4b 05 	call	0xa96	; 0xa96 <REGRESO_CASA>
+ 2de:	0e 94 4e 05 	call	0xa9c	; 0xa9c <REGRESO_CASA>
 			shifts = 0U;
- 2dc:	c0 e0       	ldi	r28, 0x00	; 0
- 2de:	25 cf       	rjmp	.-438    	; 0x12a <main+0x76>
+ 2e2:	c0 e0       	ldi	r28, 0x00	; 0
+ 2e4:	22 cf       	rjmp	.-444    	; 0x12a <main+0x76>
 
 Disassembly of section .text.__dummy_fini:
 
-00000abe <_fini>:
- abe:	08 95       	ret
+00000ac4 <_fini>:
+ ac4:	08 95       	ret
 
 Disassembly of section .text.__dummy_funcs_on_exit:
 
-00000ac0 <__funcs_on_exit>:
- ac0:	08 95       	ret
+00000ac6 <__funcs_on_exit>:
+ ac6:	08 95       	ret
 
 Disassembly of section .text.__dummy_simulator_exit:
 
-00000ac2 <__simulator_exit>:
- ac2:	08 95       	ret
+00000ac8 <__simulator_exit>:
+ ac8:	08 95       	ret
 
 Disassembly of section .text.exit:
 
-00000a78 <exit>:
- a78:	ec 01       	movw	r28, r24
- a7a:	0e 94 60 05 	call	0xac0	; 0xac0 <__funcs_on_exit>
- a7e:	0e 94 5f 05 	call	0xabe	; 0xabe <_fini>
- a82:	ce 01       	movw	r24, r28
- a84:	0e 94 61 05 	call	0xac2	; 0xac2 <__simulator_exit>
+00000a7e <exit>:
+ a7e:	ec 01       	movw	r28, r24
+ a80:	0e 94 63 05 	call	0xac6	; 0xac6 <__funcs_on_exit>
+ a84:	0e 94 62 05 	call	0xac4	; 0xac4 <_fini>
  a88:	ce 01       	movw	r24, r28
- a8a:	0e 94 5d 05 	call	0xaba	; 0xaba <_Exit>
+ a8a:	0e 94 64 05 	call	0xac8	; 0xac8 <__simulator_exit>
+ a8e:	ce 01       	movw	r24, r28
+ a90:	0e 94 60 05 	call	0xac0	; 0xac0 <_Exit>
 
 Disassembly of section .text._Exit:
 
-00000aba <_Exit>:
- aba:	0e 94 58 00 	call	0xb0	; 0xb0 <_exit>
+00000ac0 <_Exit>:
+ ac0:	0e 94 58 00 	call	0xb0	; 0xb0 <_exit>
