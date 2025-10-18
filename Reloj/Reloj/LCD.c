@@ -1,5 +1,7 @@
+#define CPU_F 1000000UL
 #include "LCD.h"
 #include <util/delay.h>
+
 
 // Implementación de funciones
 void LCD_INICIALIZA(void)
