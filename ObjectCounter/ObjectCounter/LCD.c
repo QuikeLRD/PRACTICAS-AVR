@@ -6,7 +6,7 @@ void LCD_INICIALIZA(void)
 {
 	ENVIA_CMD(0x02);
 	ENVIA_CMD(0x28); // DL = 0 comunicacion de 4 bits, N = 1 Pantalla de 2 lineas, F = 0 Caracteres de 5x7 puntos
-	ENVIA_CMD(0x0E); // D=1 Display ON Cursor OFF
+	ENVIA_CMD(0x0C); // D=1 Display ON Cursor OFF
 	ENVIA_CMD(0x06); // I/D = 1 Incremento Automatico S=0
 	ENVIA_CMD(0x01); // Limpia LCD
 	ENVIA_CMD(0x80);

@@ -4,8 +4,6 @@
 //CONFIGURAR REGISTROS PARA EL TECLADO
 //REGISTROS DE TIMER PARA EL CONTADOR
 
-
-
 #define  F_CPU 1000000UL
 #include <avr/io.h>
 #include <avr/iom16.h>
@@ -46,6 +44,14 @@ void clearArray(char* myArray, short sizeOfMyArray){
 }
 
 
+ISR(TIMER0_OVF_vect){
+	
+	PORTB ^= (1 << PB5);																		//CAMBIA DE ESTADO CADA INTERUPCION
+	TCNT0 = 256-productos;																				//CARGAMOS EL REGISTRO A 1 DEL DESBORDAMIENTO
+	
+}
+
+
 
 int main(void)
 {
@@ -54,6 +60,21 @@ int main(void)
 	DDRD = 0xF0U;																				//TECLADO PD0->PD3 (ENTRADA)  PD4->PD7 (SALIDA)
 	PORTD = COL1;
 	
+	//CONFIGURACION DE GPIO
+	DDRB |= (1 << PB5);																			//CONFIGURAMOS PB5 COMO SALIDA
+	DDRB &= ~(1 << PB0);																		//CONFIGURAMOS PB0 COMO ENTRADA
+	PORTB |=  (1 << PB0);																		// PULL-UP INTERNO											
+	
+	PORTB &= ~(1 << PB5);																		//INICIA APAGADO
+	//CONFIGURACION DE REGISTROS DEL TIMER0
+	TCCR0 = 0; 
+	TCCR0 |= (1 << CS02)|(1 << CS01)|(0 << CS00);												//FUENTE EXTERNA POR FLANCO DE BAJADA
+	
+	TIFR |= (1<<TOV0);																			//LIMPIAMOS BANDERA
+	TIMSK |= (1 << TOIE0);																		//HABILITAMOS INTERRUPCION T0
+	sei();
+	
+	//INICIO
 	LCD_INICIALIZA();
 	LIMPIA_LCD();
 	
@@ -63,7 +84,6 @@ int main(void)
 	ENVIA_CADENA(mensaje1);
 	_delay_ms(800);
 	LIMPIA_LCD();
-	
 	
 		
     while(1)
@@ -75,7 +95,6 @@ int main(void)
 			sprintf(BUF, "%c", tecla);															//GUARDA EL CARACTER EN UN STRING BUFFER
 			strcat(PRO, BUF);																	//CONCATENA EL CARACTER AL STRING QUE GUARDA EL DATO
 			LIMPIA_LCD();
-			REGRESO_CASA();																		//REGRESAMOS A CASA LA LCD
 			ENVIA_CADENA(PRO);																	//IMPRIMI EN PANTALLA LA CADENA CONCATENADA
 			
 			_delay_ms(200);																		//ANTIREBOTE PARA NO ESCRIBIR MUCHAS VECES																	
@@ -87,28 +106,27 @@ int main(void)
 				clearArray(BUF,16);																//LIMPIAMOS BUFFER
 				LIMPIA_LCD();
 				sign = 1;																		//VARIABLE DE CONTROL
-				_delay_ms(200);
+				_delay_ms(100);
 				productos = atoi(DATO);															//CONVIERTE MI CADENA A ENTERO
-		}
-		
-		else {
-				LIMPIA_LCD();											
-				clearArray(PRO,16);																//LIMPIAMOS ALMACENADOR DE TECLADO
-				clearArray(BUF,16);
-	
+				TCNT0 = 256-productos;															//CARGAMOS EL TIMER PARA QUE SE DESBORDE CON EL SIGUIENTE PULSO
+				TIFR |= (1 << TOV0);
+				sei();
 		}
 		BARRE_TECLADO();
-		_delay_ms(5);
+		_delay_ms(3);
 		
 		
-		
-		REGRESO_CASA();
+		if(sign == 1){
 		sprintf(DATO_LCD, "%d", productos);														//CONVIERTO MI NUMERO A CADENA PARA MOSTRAR EN LA LCD															
 		POS_LINEA1(0);
 		ENVIA_CADENA(mensaje3);
 		POS_LINEA1(10);
 		ENVIA_CADENA(DATO_LCD);
-		_delay_ms(250);
+		_delay_ms(100);
+		}
+		
+		tecla = ' ';
+		
 		
 				
 	}
