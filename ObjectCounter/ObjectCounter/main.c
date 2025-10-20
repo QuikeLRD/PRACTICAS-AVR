@@ -20,8 +20,9 @@
 char mensaje[]  = "Contador de";
 char mensaje1[] = "Productos";
 char mensaje3[] = "Productos: ";
-
-
+char mensaje4[]	= "Producto";
+char mensaje5[] = "Terminado";
+char espacio[] = "   ";
 //VARIABLES PARA EL TECLADO
 char tecla;																						//ALMACENA EL CARACTER DETECTADO		
 char tecla_anterior = ' ';
@@ -29,12 +30,19 @@ char cursor_pos = 0;
 
 
 //VARIABLES PARA ALMAENAR LA CUENTA
- char BUF[16];																					//BUFER PARA RECIBIR CADA CARACTER QUE LE ESCRIBAMOS
- char PRO[16];																					//ALMACENA EL CARACTER FINAL CONCATENADO
- uint16_t productos;																			//NUMERO DE PRODUCTOS
- char DATO[16];																					//DATO DEL NUMERO DE PRODUCTOS A GUARDAR
- char DATO_LCD[16];																				//DATO MOSTRADO EN CADENA PARA LA LCD
- uint16_t sign;																					//VARIABLE DE CONTROL
+char BUF[16];																					//BUFER PARA RECIBIR CADA CARACTER QUE LE ESCRIBAMOS
+char PRO[16];																					//ALMACENA EL CARACTER FINAL CONCATENADO
+char DATO[16];																					//DATO DEL NUMERO DE PRODUCTOS A GUARDAR
+char DATO_LCD[16];																				//DATO MOSTRADO EN CADENA PARA LA LCD
+char CONTEO_RE[16];																				//CONTEO RESTANTE
+uint16_t productos;																				//NUMERO DE PRODUCTOS
+volatile uint8_t sign;																			//VARIABLE DE CONTROL
+uint16_t cuenta;																				//VARIABLE PARA CONTAR
+uint16_t restante;																				//VARIABLE QUE INDICA CUANTOS PRODUCTOS QUEDAN												
+static uint8_t last_tcnt = 0xFF;																// última lectura de TCNT0
+static uint16_t last_restante = 0xFFFF;															// último valor mostrado
+
+
 
 //LIMPIA LOS ARREGLOS QUE SE NECESITEN
 void clearArray(char* myArray, short sizeOfMyArray){
@@ -47,7 +55,8 @@ void clearArray(char* myArray, short sizeOfMyArray){
 ISR(TIMER0_OVF_vect){
 	
 	PORTB ^= (1 << PB5);																		//CAMBIA DE ESTADO CADA INTERUPCION
-	TCNT0 = 256-productos;																				//CARGAMOS EL REGISTRO A 1 DEL DESBORDAMIENTO
+	TCNT0 = cuenta;																				//REARMAMOS EL TIMER0
+	sign = 3;																					//BANDERA DE CONTROL PARA MOSTRAR PRODUCTO	
 	
 }
 
@@ -105,25 +114,53 @@ int main(void)
 				clearArray(PRO,16);																//LIMPIAMOS ALMACENADOR DE TECLADO	
 				clearArray(BUF,16);																//LIMPIAMOS BUFFER
 				LIMPIA_LCD();
-				sign = 1;																		//VARIABLE DE CONTROL
+																								//VARIABLE DE CONTROL
 				_delay_ms(100);
 				productos = atoi(DATO);															//CONVIERTE MI CADENA A ENTERO
-				TCNT0 = 256-productos;															//CARGAMOS EL TIMER PARA QUE SE DESBORDE CON EL SIGUIENTE PULSO
-				TIFR |= (1 << TOV0);
-				sei();
+				cuenta = 256-productos;
+				TCNT0 = cuenta;																	//CARGAMOS EL TIMER PARA QUE SE DESBORDE CON EL SIGUIENTE PULSO
+				//productos = 2
+				//256-productos = 254
+				//256-254 = 2	
+				TIFR |= (1 << TOV0);															//POR SI ACASO LIMPIAMOS LAS BANDERAS
+				POS_LINEA1(0);
+				ENVIA_CADENA(mensaje3);
+				last_tcnt = TCNT0;
+				last_restante = 0xFFFF;															// fuerza una primera actualización
+				sei();		
+				sign = 1;
+								
+				
 		}
 		BARRE_TECLADO();
 		_delay_ms(3);
 		
-		
 		if(sign == 1){
-		sprintf(DATO_LCD, "%d", productos);														//CONVIERTO MI NUMERO A CADENA PARA MOSTRAR EN LA LCD															
-		POS_LINEA1(0);
-		ENVIA_CADENA(mensaje3);
-		POS_LINEA1(10);
-		ENVIA_CADENA(DATO_LCD);
-		_delay_ms(100);
+			
+			sprintf(DATO_LCD, "%d", productos);
+			restante = 256 - TCNT0;																//OBTENEMOS LOS PRODUCTOS QUE RESTAN
+			POS_LINEA1(10);
+			ENVIA_CADENA(espacio);
+			sprintf(CONTEO_RE,"%d",restante);													//CONVIERTO EL RESTANTE A CADENA
+			POS_LINEA1(10);
+			ENVIA_CADENA(CONTEO_RE);
+			_delay_ms(800);							
 		}
+			
+		if (sign == 3){
+			TIMSK &= ~(1 << TOIE0);																//DETENEMOS EL TIMER
+			TCCR0 = 0;			
+			LIMPIA_LCD();
+			POS_LINEA1(5);
+			ENVIA_CADENA(mensaje4);
+			POS_LINEA2(5);
+			ENVIA_CADENA(mensaje5);	
+			_delay_ms(500);		
+			sign = 2;
+			
+		}
+		
+		
 		
 		tecla = ' ';
 		
