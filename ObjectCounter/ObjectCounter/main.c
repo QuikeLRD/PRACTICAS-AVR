@@ -39,7 +39,7 @@ uint16_t productos;																				//NUMERO DE PRODUCTOS
 volatile uint8_t sign;																			//VARIABLE DE CONTROL
 uint16_t cuenta;																				//VARIABLE PARA CONTAR
 uint16_t restante;																				//VARIABLE QUE INDICA CUANTOS PRODUCTOS QUEDAN												
-static uint8_t last_tcnt = 0xFF;																// última lectura de TCNT0
+static uint8_t last_tcnt = 0;																// última lectura de TCNT0
 static uint16_t last_restante = 0xFFFF;															// último valor mostrado
 
 
@@ -125,8 +125,7 @@ int main(void)
 				TIFR |= (1 << TOV0);															//POR SI ACASO LIMPIAMOS LAS BANDERAS
 				POS_LINEA1(0);
 				ENVIA_CADENA(mensaje3);
-				last_tcnt = TCNT0;
-				last_restante = 0xFFFF;															// fuerza una primera actualización
+				
 				sei();		
 				sign = 1;
 								
@@ -134,7 +133,14 @@ int main(void)
 		}
 		BARRE_TECLADO();
 		_delay_ms(3);
-		
+			
+			//4 productos
+			//TNT0 = 252
+			
+			//GUARDAR EL VALOR ANTES DE IMPRIMIR
+			//TNT0 = 255
+			//
+			//
 		if(sign == 1){
 			
 			sprintf(DATO_LCD, "%d", productos);
