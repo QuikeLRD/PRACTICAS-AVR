@@ -80,14 +80,14 @@ LINKER_SCRIPT_DEP+=
 ./LCD.o: .././LCD.c
 	@echo Building file: $<
 	@echo Invoking: XC8 C Compiler : 2.36
-	$(QUOTE)Q:\Archivosx86\MPLAB Compiler\bin\xc8-cc.exe$(QUOTE)  -mcpu=ATmega16  -mdfp="Q:\Archivosx86\MicrochipStudio7\7.0\Packs\atmel\ATmega_DFP\1.7.374\xc8"  -c -x c -funsigned-char -funsigned-bitfields -mext=cci -D__ATmega16__ -DDEBUG  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)Q:\Programas\XcCompiler\bin\xc8-cc.exe$(QUOTE)  -mcpu=ATmega16  -mdfp="Q:\Programas\MicrochipStudio\7.0\Packs\atmel\ATmega_DFP\1.7.374\xc8"  -c -x c -funsigned-char -funsigned-bitfields -mext=cci -D__ATmega16__ -DDEBUG  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
 ./main.o: .././main.c
 	@echo Building file: $<
 	@echo Invoking: XC8 C Compiler : 2.36
-	$(QUOTE)Q:\Archivosx86\MPLAB Compiler\bin\xc8-cc.exe$(QUOTE)  -mcpu=ATmega16  -mdfp="Q:\Archivosx86\MicrochipStudio7\7.0\Packs\atmel\ATmega_DFP\1.7.374\xc8"  -c -x c -funsigned-char -funsigned-bitfields -mext=cci -D__ATmega16__ -DDEBUG  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	$(QUOTE)Q:\Programas\XcCompiler\bin\xc8-cc.exe$(QUOTE)  -mcpu=ATmega16  -mdfp="Q:\Programas\MicrochipStudio\7.0\Packs\atmel\ATmega_DFP\1.7.374\xc8"  -c -x c -funsigned-char -funsigned-bitfields -mext=cci -D__ATmega16__ -DDEBUG  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
@@ -117,11 +117,11 @@ all: $(OUTPUT_FILE_PATH) $(ADDITIONAL_DEPENDENCIES)
 $(OUTPUT_FILE_PATH): $(OBJS) $(USER_OBJS) $(OUTPUT_FILE_DEP) $(LIB_DEP) $(LINKER_SCRIPT_DEP)
 	@echo Building target: $@
 	@echo Invoking:  XC8 C Linker : 2.36
-	$(QUOTE)Q:\Archivosx86\MPLAB Compiler\bin\xc8-cc.exe$(QUOTE) -o$(OUTPUT_FILE_PATH_AS_ARGS) $(OBJS_AS_ARGS) $(USER_OBJS) $(LIBS) -mcpu=ATmega16  -mdfp="Q:\Archivosx86\MicrochipStudio7\7.0\Packs\atmel\ATmega_DFP\1.7.374\xc8"  -Wl,-Map="Clock.map" -funsigned-char -funsigned-bitfields -Wl,--start-group -Wl,-lm  -Wl,--end-group -Wl,--gc-sections -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums --memorysummary,memoryfile.xml  
+	$(QUOTE)Q:\Programas\XcCompiler\bin\xc8-cc.exe$(QUOTE) -o$(OUTPUT_FILE_PATH_AS_ARGS) $(OBJS_AS_ARGS) $(USER_OBJS) $(LIBS) -mcpu=ATmega16  -mdfp="Q:\Programas\MicrochipStudio\7.0\Packs\atmel\ATmega_DFP\1.7.374\xc8"  -Wl,-Map="Clock.map" -funsigned-char -funsigned-bitfields -Wl,--start-group -Wl,-lm  -Wl,--end-group -Wl,--gc-sections -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums --memorysummary,memoryfile.xml  
 	@echo Finished building target: $@
-	"Q:\Archivosx86\MPLAB Compiler\bin\avr-objcopy.exe" -O ihex -R .eeprom -R .fuse -R .lock -R .signature -R .user_signatures  "Clock.elf" "Clock.hex"
-	"Q:\Archivosx86\MPLAB Compiler\bin\avr-objcopy.exe" -j .eeprom --set-section-flags=.eeprom=alloc,load --change-section-lma .eeprom=0 --no-change-warnings -O ihex "Clock.elf" "Clock.eep" || exit 0
-	"Q:\Archivosx86\MPLAB Compiler\bin\avr-objdump.exe" -h -S "Clock.elf" > "Clock.lss"
+	"Q:\Programas\XcCompiler\bin\avr-objcopy.exe" -O ihex -R .eeprom -R .fuse -R .lock -R .signature -R .user_signatures  "Clock.elf" "Clock.hex"
+	"Q:\Programas\XcCompiler\bin\avr-objcopy.exe" -j .eeprom --set-section-flags=.eeprom=alloc,load --change-section-lma .eeprom=0 --no-change-warnings -O ihex "Clock.elf" "Clock.eep" || exit 0
+	"Q:\Programas\XcCompiler\bin\avr-objdump.exe" -h -S "Clock.elf" > "Clock.lss"
 	
 	
 
