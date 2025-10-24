@@ -15,23 +15,23 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY
   5 .debug_aranges 00000138  00000000  00000000  0000224c  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_info   000032d0  00000000  00000000  00002384  2**0
+  6 .debug_info   0000335d  00000000  00000000  00002384  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_abbrev 00000917  00000000  00000000  00005654  2**0
+  7 .debug_abbrev 00000917  00000000  00000000  000056e1  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_line   00000ed7  00000000  00000000  00005f6b  2**0
+  8 .debug_line   00000efb  00000000  00000000  00005ff8  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_frame  00000270  00000000  00000000  00006e44  2**2
+  9 .debug_frame  00000270  00000000  00000000  00006ef4  2**2
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_str    00000218  00000000  00000000  000070b4  2**0
+ 10 .debug_str    00000218  00000000  00000000  00007164  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_loc    00001ca6  00000000  00000000  000072cc  2**0
+ 11 .debug_loc    00001ca6  00000000  00000000  0000737c  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_ranges 00000108  00000000  00000000  00008f72  2**0
+ 12 .debug_ranges 00000108  00000000  00000000  00009022  2**0
                   CONTENTS, READONLY, DEBUGGING
  13 .text         00000004  0000205e  0000205e  00002172  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 14 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  0000907c  2**2
+ 14 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  0000912c  2**2
                   CONTENTS, READONLY, DEBUGGING
  15 .text.LEE_TECLADO 000000c2  00001638  00001638  0000174c  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
@@ -679,10 +679,10 @@ Disassembly of section .text.debounce_timer1_init:
 
 00001f34 <debounce_timer1_init>:
 
-/* --- Timer1 (debounce) helpers --- */
+//DEBOUNCE
 static void debounce_timer1_init(void)
 {
-    // Timer1 CTC mode (WGM12 = 1)
+    // CONFIGURAMOS TIMER1
     TCCR1A = 0;
     1f34:	1f bc       	out	0x2f, r1	; 47
     TCCR1B = (1 << WGM12);
@@ -694,8 +694,8 @@ static void debounce_timer1_init(void)
     if (ticks == 0) ticks = 1;
     if (ticks > 0xFFFF) ticks = 0xFFFF;
     OCR1A = (uint16_t)(ticks - 1);
-    1f3a:	84 e3       	ldi	r24, 0x34	; 52
-    1f3c:	9c e0       	ldi	r25, 0x0C	; 12
+    1f3a:	8e e4       	ldi	r24, 0x4E	; 78
+    1f3c:	92 e1       	ldi	r25, 0x12	; 18
     1f3e:	9b bd       	out	0x2b, r25	; 43
     1f40:	8a bd       	out	0x2a, r24	; 42
 
@@ -925,7 +925,7 @@ int main(void)
  910:	de bf       	out	0x3e, r29	; 62
  912:	0f be       	out	0x3f, r0	; 63
  914:	cd bf       	out	0x3d, r28	; 61
-    // Configuraciones LCD/teclado tal como usas
+    // Configuraciones LCD
     DDRC = 0xFFU;
  916:	8f ef       	ldi	r24, 0xFF	; 255
  918:	84 bb       	out	0x14, r24	; 20
@@ -1309,7 +1309,7 @@ int main(void)
  ba2:	80 91 e1 00 	lds	r24, 0x00E1	; 0x8000e1 <sign>
  ba6:	83 30       	cpi	r24, 0x03	; 3
  ba8:	f9 f4       	brne	.+62     	; 0xbe8 <main+0x2e6>
-            // ya terminado: asegurar INT2 deshabilitado y mostrar mensaje una vez
+            
             GICR &= ~(1 << INT2);
  baa:	8b b7       	in	r24, 0x3b	; 59
  bac:	8f 7d       	andi	r24, 0xDF	; 223

@@ -1,9 +1,4 @@
-/*
-  Conteo con sensor IR en PB2 (INT2) + debounce por software (Timer1 one-shot)
-  ATmega16, F_CPU = 1 MHz (ajusta si necesario).
-  Sensor -> PB2 (INT2). Se asume activo LOW (lleva la línea a 0 cuando detecta).
-  Si tu sensor es activo HIGH, cambia MCUCSR |= (1<<ISC2) para detectar rising edge.
-*/
+//PRACTICA CONTADOR DE OBJETOS
 
 #define F_CPU 1000000UL
 #include <avr/io.h>
@@ -15,9 +10,9 @@
 #include "LCD.h"
 #include "Keyboard.h"
 
-#define DEBOUNCE_MS 200
+#define DEBOUNCE_MS 300
 
-/* Mensajes y buffers (como en tu código) */
+//VARIABLES 
 char mensaje[]  = "Contador de";
 char mensaje1[] = "Productos";
 char mensaje3[] = "Productos: ";
@@ -30,15 +25,15 @@ char PRO[16];
 char DATO[16];
 char CONTEO_RE[16];
 
-/* Estado y contadores */
+//ESTADO DE CONTADORES
 volatile uint16_t productos = 0;
 volatile uint16_t software_count = 0;
 volatile uint8_t sign = 0; // 0 idle, 1 counting, 3 finished
 
-/* --- Timer1 (debounce) helpers --- */
+//DEBOUNCE
 static void debounce_timer1_init(void)
 {
-    // Timer1 CTC mode (WGM12 = 1)
+    // CONFIGURAMOS TIMER1
     TCCR1A = 0;
     TCCR1B = (1 << WGM12);
 
@@ -117,7 +112,7 @@ void clearArray(char* myArray, short sizeOfMyArray){
 /* --- main --- */
 int main(void)
 {
-    // Configuraciones LCD/teclado tal como usas
+    // Configuraciones LCD
     DDRC = 0xFFU;
     DDRD = 0xF0U;
     PORTD = COL1;
@@ -218,7 +213,7 @@ int main(void)
         }
 
         if (sign == 3) {
-            // ya terminado: asegurar INT2 deshabilitado y mostrar mensaje una vez
+            
             GICR &= ~(1 << INT2);
             LIMPIA_LCD();
             POS_LINEA1(5);
