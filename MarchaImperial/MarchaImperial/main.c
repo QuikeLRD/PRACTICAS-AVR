@@ -1,35 +1,14 @@
 /*
-PRACTICA 6 PUNTO1
-SE SOLICITA REALIZAR UN GENERADOR DE FUNCIONES QUE MEDIANTE UN INTEGRADOR 
-MUESTRE UNA SEÑAL SENOIDAL DE 1KHZ, 10KHZ AND 100KHZ
-
-DADO QUE NO ES POSIBLE CUBRIR TODOS LOS VALORES CON LA MISMA CONFIGURACION
-PARA 10K Y 100K SE USARA UN PRESCALER DE 8MHZ
-
- */ 
+PRACTICA 6 PUNTO2
+*/ 
 #define F_CPU 8000000UL
 #include <avr/io.h>																		//DEFINE INT AND OUT FROM AVR
 #include <avr/interrupt.h>																//DEFINE INTERRUPT 
 #include <util/delay.h>
-
-																	
-
-ISR(TIMER0_COMP_vect){
-	
-	
-}
-
-
-
+												
 int main(void)
 {
-	//VALORES DEL OCR
-	const uint8_t OCR_1KHZ	 = 61;
-	const uint8_t OCR_10KHZ	 = 49;
-	const uint8_t OCR_100KHZ =  4;
 	
-	uint8_t selec;
-	uint8_t selec_anterior = 0xFF;
 	
 	//CONFIGURAMOS ENTRADAS Y SALIDAS	
 	DDRB |= (1 <<PB3);																	//PB3 OUTPUT
@@ -107,6 +86,6 @@ int main(void)
 
 //RESULTADOS REALES:
 
-//CASE 1: 1.225kHz	 
+//CASE 1: 1.225kHz	 0.124khz
 //CASE 0: 12.507 KHZ
 //CASE 3: 0.124 Khz
