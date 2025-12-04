@@ -39,7 +39,7 @@ SUBDIRS :=
 C_SRCS +=  \
 ../Keyboard.c \
 ../LCD.c \
-../main.c
+../main2.c
 
 
 PREPROCESSING_SRCS += 
@@ -51,22 +51,22 @@ ASM_SRCS +=
 OBJS +=  \
 Keyboard.o \
 LCD.o \
-main.o
+main2.o
 
 OBJS_AS_ARGS +=  \
 Keyboard.o \
 LCD.o \
-main.o
+main2.o
 
 C_DEPS +=  \
 Keyboard.d \
 LCD.d \
-main.d
+main2.d
 
 C_DEPS_AS_ARGS +=  \
 Keyboard.d \
 LCD.d \
-main.d
+main2.d
 
 OUTPUT_FILE_PATH +=ComparadorAnalogico.elf
 
@@ -96,7 +96,7 @@ LINKER_SCRIPT_DEP+=
 	@echo Finished building: $<
 	
 
-./main.o: .././main.c
+./main2.o: .././main2.c
 	@echo Building file: $<
 	@echo Invoking: XC8 C Compiler : 2.36
 	$(QUOTE)C:\Program Files\Microchip\xc8\v2.36\bin\xc8-cc.exe$(QUOTE)  -mcpu=ATmega16  -mdfp="C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\xc8"  -c -x c -funsigned-char -funsigned-bitfields -mext=cci -D__ATmega16__ -DDEBUG  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 

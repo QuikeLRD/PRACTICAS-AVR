@@ -41,7 +41,8 @@ REVISION HISTORY:
 volatile uint8_t comp_flag = 0;                           // FLAG SET BY ISR TO SIGNAL COMPARATOR EVENT
 
 // ========================== LCD MESSAGE BUFFERS ===================================
-char mensaje1[] = "INTERRUPCION";                         // INTERRUPT MESSAGE
+char mensaje1[] = "SE HA ALCANZADO";                         // INTERRUPT MESSAGE
+char mensaje4[] = "  EL UMBRAL";
 char mensaje2[] = "PRACTICA";                             // STARTUP MESSAGE LINE 1
 char mensaje3[] = "COMPARADOR";                           // STARTUP MESSAGE LINE 2
 
@@ -57,8 +58,11 @@ int main(void)
 	// ============================ HARDWARE INITIALIZATION =========================
 	DDRC    = 0xFFU;                                      // LCD: ALL OUTPUTS
 	DDRB   &= ~((1 << PB2)|(1 << PB3));                   // AIN0 (PB2) & AIN1 (PB3) AS INPUTS
-	PORTB  &= ~((1 << PB2)|(1 << PB3));                   // DISABLE PULL-UPS ON ANALOG INPUTS
+	DDRA |= (1 << PA0);									  // A0 AS OUTPUT
 
+	PORTB  &= ~((1 << PB2)|(1 << PB3));                   // DISABLE PULL-UPS ON ANALOG INPUTS
+	PORTA  &= ~(1 << PA0);								  // PA0 OFF	
+	
 	ADCSRA &= ~(1 << ADEN);                               // DISABLE ADC MODULE
 	SFIOR  &= ~(1 << ACME);                               // DISABLE ADC MULTIPLEXER FOR COMPARATOR
 	ACSR   |= (1 << ACI);                                 // CLEAR COMPARATOR INTERRUPT FLAG
@@ -90,10 +94,15 @@ int main(void)
 		if (comp_flag)
 		{
 			LIMPIA_LCD();
+			PORTA |= (1 << PA0);						 // PA0 ON
 			POS_LINEA1(0);
 			ENVIA_CADENA(mensaje1);                      // SHOW INTERRUPT MESSAGE
-			_delay_ms(800);
+			POS_LINEA2(0);
+			ENVIA_CADENA(mensaje4);                      // SHOW INTERRUPT MESSAGE
+			
+			_delay_ms(1000);
 			LIMPIA_LCD();
+			PORTA &= ~(1 << PA0);						 // PA0 OFF
 			comp_flag = 0;                               // RESET FLAG FOR FUTURE EVENTS
 			ACSR |= (1 << ACI);                          // OPTIONAL: CLEAR HARDWARE INTERRUPT FLAG
 		}
