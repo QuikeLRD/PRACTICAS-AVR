@@ -1,113 +1,113 @@
 /*
-======================================================================================
-PROJECT:       SERVO MOTOR PWM CONTROL 
-COMPANY:       UPIITA-IPN.
-FILE:          SERVOCONTROL_PWM.C
-AUTHOR:        [LERDO CRISOSTOMO LUIS ENRIQUE]
-DATE:          [29/11/2025]
-
-DESCRIPTION:
--------------
-THIS PROJECT IMPLEMENTS A USER-INTERACTIVE DC MOTOR SPEED CONTROL SYSTEM USING PWM
-
-- THE SYSTEM IS BASED ON AN ATMEGA16 MCU RUNNING AT 1MHZ.
-- USER INPUTS ARE PROVIDED VIA A MATRIX KEYPAD.
-- REAL-TIME FEEDBACK IS SHOWN ON AN LCD DISPLAY.
-- PWM DUTY CYCLE CAN BE SET BY ENTERING A PERCENTAGE VALUE ON THE KEYPAD.
-- RESET AND VALUE ENTRY OPERATIONS ARE MANAGED BY INT2 (PB2) HARDWARE INTERRUPT.
-
-REVISION HISTORY:
------------------
-- [DATE] [AUTHOR/DEPT]: INITIAL VERSION.
-
-======================================================================================
+ Simple sweep calibration for continuous-rotation / unknown servo.
+ Shows pulse_us on LCD and applies pulses from 1000..2000us.
+ Use with caution: monitor Vbat and stop if servo/heats.
 */
 
 #define F_CPU 1000000UL
 #include <avr/io.h>
-#include <avr/interrupt.h>
-#include <avr/iom16.h>
 #include <util/delay.h>
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 #include "LCD.h"
+
+
 #include "Keyboard.h"
 
-// ======================== INTERRUPT AND STATE FLAGS ===============================
-static volatile uint8_t  flag  = 0U;                                               // INT2 (PB2) TRIGGER FLAG
-volatile uint8_t         sign;                                                     // CONTROL VARIABLE FOR INPUT STATE
+#define TOP_VAL 312U        // OCR1A for ~20ms with prescaler=64 @1MHz
+#define PERIOD_US 20000UL
 
-// ========================== LCD MESSAGE BUFFERS ===================================
-char mensaje1[]  = "CONTROL DE UN";
-char mensaje2[]  = "SERVO MOTOR";
-char mensaje3[]  = "ANGULO: ";
-char mensaje4[]  = "NUEVO PWM:";
+char mensaje2[]="Neutral";
 
-// ======================= KEYPAD AND DISPLAY BUFFERS ===============================
-char BUF[16];                                                                      // TEMPORARY BUFFER FOR KEYPRESS
-char PRO[16];                                                                      // BUFFER USED FOR CONCATENATED NUMERICAL ENTRY
-char PORCENTAJE[16];                                                               // STORES FINAL USER-ENTERED DUTY STRING
-char CYCLE_DUTY[16];                                                               // FOR FORMATTED LCD DISPLAY (E.G., "75%")
-char S_porcentaje[] = "%";                                                         // PERCENT SYMBOL STRING
-
-// ================================ GLOBAL VARIABLES ================================
-uint16_t P_motor;                                                                  // MOTOR DUTY CYCLE (AS INTEGER %)
-char     tecla;                                                                    // KEY RECEIVED FROM KEYPAD
-
-// ================== UTILITY: CLEARS SPECIFIED CHAR ARRAY ==========================
-void clearArray(char* myArray, short sizeOfMyArray) {
-	memset(myArray, 0, sizeof(char) * sizeOfMyArray);                              // CLEARS THE MEMORY REGION
+static uint16_t pulse_us_to_OCR1B(uint16_t pulse_us)
+{
+    uint32_t ticks = (uint32_t)pulse_us * (TOP_VAL + 1) / PERIOD_US;
+    if (ticks == 0) return 0;
+    return (uint16_t)(ticks - 1);
 }
 
-// ======================== EXTERNAL INTERRUPT: INT2 (PB2) ==========================
-ISR(INT2_vect) {
-	flag = 1;                                                                      // SET FLAG TO RESTART DATA ENTRY AFTER USER INTERRUPTION
-	GICR &= (uint8_t)~(1 << INT2);                                                 // DISABLE INT2 UNTIL PROCESSED IN MAIN LOOP
+void timer1_init_mode15(void)
+{
+    // PD4 = OC1B output
+    DDRD |= (1 << PD4);
+
+    // WGM13..0 = 1111 (mode 15, TOP = OCR1A)
+    TCCR1A = (1<<WGM11) | (1<<WGM10);
+    TCCR1B = (1<<WGM13) | (1<<WGM12);
+
+    // Non-inverting OC1B (clear on compare)
+    TCCR1A |= (1<<COM1B1);
+    TCCR1A &= ~(1<<COM1B0);
+
+    // Prescaler = 64
+    TCCR1B |= (1<<CS11) | (1<<CS10);
+
+    OCR1A = TOP_VAL; // period
 }
 
-int main(void) {
-	// ============================ HARDWARE INITIALIZATION =========================
-	DDRC = 0xFFU;                                                                  // LCD: ALL OUTPUTS
-	DDRD = 0xF0U;                                                                  // KEYPAD: PD0->PD3 INPUT, PD4->PD7 OUTPUT
-	PORTD = COL1;
-
-	DDRB  |=  (1 << PB3);                                                          // 0C0  AS OUTPUT
-	DDRD  |=  (1 << PD5);														   // 0C1A AS OUTPUT 
-	DDRD  |=  (1 << PD4);														   // OC1B AS OUTPUT	 
-	DDRB  &= ~(1 << PB2);                                                          // PB2 AS INPUT (INT2)
-	
-	PORTB &= ~(1 << PB3);                                                          // PWM0 START LOW
-	PORTB &= ~(1 << PD5);                                                          // PWM1 START LOW
-	PORTB &= ~(1 << PD4);														   // PWM1 START LOW
-	PORTB |=  (1 << PB2);                                                          // ENABLE PULL-UP RESISTOR ON PB2
-	
-	
-	//SETINGS  TIMER1
-	TCCR1A |= (1 << WGM10);														   // PWM FAST MODE 15			
-	TCCR1A |= (1 << WGM11);																		
-	TCCR1B |= (1 << WGM12);
-	TCCR1B |= (1 << WGM13);
-
-	//PRESCALER
-	TCCR1B &= ~(1 << CS12);														  //PRESCALER 64
-	TCCR1B |=  (1 << CS11);
-	TCCR1B |=  (1 << CS10);
-	//PWM MODE
-	TCCR1A |=  (1 << COM1A1);													  //PWM NON INVERTED MODE
-	TCCR1A &= ~(1 << COM1A0);													
-	
-   TCCR1A |=   (1 << COM1B1);
-   TCCR1A &=  ~(1 << COM1B0);
-	
-	
-	OCR1A = 312;
-	OCR1B = 19;																 	
-	
-	
-
-while(1)
+int main(void)
 {
 	
-}
+
+
+    DDRC = 0xFFU;                                                                  // LCD: ALL OUTPUTS
+    DDRD = 0xF0U;                                                                  // KEYPAD: PD0->PD3 INPUT, PD4->PD7 OUTPUT
+    PORTD = COL1;
+
+    char buf[16];
+    LCD_INICIALIZA();
+    LIMPIA_LCD();
+
+    // inicializa Timer1 para PWM modo 15
+    timer1_init_mode15();
+
+    // safety neutral initially
+    OCR1B = pulse_us_to_OCR1B(1500);
+    _delay_ms(1000);
+
+    // Sweep params
+    const uint16_t start_us = 1000;
+    const uint16_t end_us = 2000;
+    const uint16_t step_us = 10;   // incremento
+    const uint16_t hold_ms = 200;  // tiempo para observar
+
+    while (1)
+    {
+        // sweep ascend
+        for (uint16_t us = start_us; us <= end_us; us += step_us) {
+            OCR1B = pulse_us_to_OCR1B(us);
+            LIMPIA_LCD();
+            POS_LINEA1(0);
+            snprintf(buf, sizeof(buf), "Pulse: %4uus", (unsigned)us);
+            ENVIA_CADENA(buf);
+            POS_LINEA2(0);
+            snprintf(buf, sizeof(buf), "OCR1B=%3u", (unsigned)OCR1B);
+            ENVIA_CADENA(buf);
+            _delay_ms(hold_ms);
+        }
+
+        // neutral pause
+        OCR1B = pulse_us_to_OCR1B(1500);
+        LIMPIA_LCD();
+        POS_LINEA1(0);
+        ENVIA_CADENA(mensaje2);
+        _delay_ms(1000);
+
+        // sweep descend
+        for (uint16_t us = end_us; us >= start_us; us -= step_us) {
+            OCR1B = pulse_us_to_OCR1B(us);
+            LIMPIA_LCD();
+            POS_LINEA1(0);
+            snprintf(buf, sizeof(buf), "Pulse: %4uus", (unsigned)us);
+            ENVIA_CADENA(buf);
+            POS_LINEA2(0);
+            snprintf(buf, sizeof(buf), "OCR1B=%3u", (unsigned)OCR1B);
+            ENVIA_CADENA(buf);
+            _delay_ms(hold_ms);
+            if (us <= start_us) break;
+        }
+
+        // neutral pause again
+        OCR1B = pulse_us_to_OCR1B(1500);
+        _delay_ms(1000);
+    }
 }
