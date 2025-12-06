@@ -12,10 +12,13 @@ main.d main.o: .././main.c \
  q:\programas\xccompiler\avr\avr\include\avr\common.h \
  q:\programas\xccompiler\avr\avr\include\avr\fuse.h \
  q:\programas\xccompiler\avr\avr\include\avr\lock.h \
+ q:\programas\xccompiler\avr\avr\include\avr\interrupt.h \
  q:\programas\xccompiler\avr\avr\include\util\delay.h \
  q:\programas\xccompiler\avr\avr\include\util\delay_basic.h \
  q:\programas\xccompiler\avr\avr\include\math.h \
- q:\programas\xccompiler\avr\avr\include\stdio.h .././LCD.h \
+ q:\programas\xccompiler\avr\avr\include\stdio.h \
+ q:\programas\xccompiler\avr\avr\include\stdlib.h \
+ q:\programas\xccompiler\avr\avr\include\string.h .././LCD.h \
  .././Keyboard.h
 
 q:\programas\xccompiler\avr\avr\include\avr\io.h:
@@ -44,6 +47,8 @@ q:\programas\xccompiler\avr\avr\include\avr\fuse.h:
 
 q:\programas\xccompiler\avr\avr\include\avr\lock.h:
 
+q:\programas\xccompiler\avr\avr\include\avr\interrupt.h:
+
 q:\programas\xccompiler\avr\avr\include\util\delay.h:
 
 q:\programas\xccompiler\avr\avr\include\util\delay_basic.h:
@@ -51,6 +56,10 @@ q:\programas\xccompiler\avr\avr\include\util\delay_basic.h:
 q:\programas\xccompiler\avr\avr\include\math.h:
 
 q:\programas\xccompiler\avr\avr\include\stdio.h:
+
+q:\programas\xccompiler\avr\avr\include\stdlib.h:
+
+q:\programas\xccompiler\avr\avr\include\string.h:
 
 .././LCD.h:
 
