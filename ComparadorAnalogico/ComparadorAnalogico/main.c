@@ -58,10 +58,10 @@ int main(void)
 	// ============================ HARDWARE INITIALIZATION =========================
 	DDRC    = 0xFFU;                                      // LCD: ALL OUTPUTS
 	DDRB   &= ~((1 << PB2)|(1 << PB3));                   // AIN0 (PB2) & AIN1 (PB3) AS INPUTS
-	DDRA |= (1 << PA0);									  // A0 AS OUTPUT
+	DDRB |= (1 << PB4);									  // A0 AS OUTPUT
 
 	PORTB  &= ~((1 << PB2)|(1 << PB3));                   // DISABLE PULL-UPS ON ANALOG INPUTS
-	PORTA  &= ~(1 << PA0);								  // PA0 OFF	
+	PORTA  &= ~(1 << PB4);								  // PA0 OFF	
 	
 	ADCSRA &= ~(1 << ADEN);                               // DISABLE ADC MODULE
 	SFIOR  &= ~(1 << ACME);                               // DISABLE ADC MULTIPLEXER FOR COMPARATOR
@@ -94,7 +94,7 @@ int main(void)
 		if (comp_flag)
 		{
 			LIMPIA_LCD();
-			PORTA |= (1 << PA0);						 // PA0 ON
+			PORTB |= (1 << PB4);						 // PA0 ON
 			POS_LINEA1(0);
 			ENVIA_CADENA(mensaje1);                      // SHOW INTERRUPT MESSAGE
 			POS_LINEA2(0);
@@ -102,7 +102,7 @@ int main(void)
 			
 			_delay_ms(1000);
 			LIMPIA_LCD();
-			PORTA &= ~(1 << PA0);						 // PA0 OFF
+			PORTB &= ~(1 << PB4);						 // PA0 OFF
 			comp_flag = 0;                               // RESET FLAG FOR FUTURE EVENTS
 			ACSR |= (1 << ACI);                          // OPTIONAL: CLEAR HARDWARE INTERRUPT FLAG
 		}

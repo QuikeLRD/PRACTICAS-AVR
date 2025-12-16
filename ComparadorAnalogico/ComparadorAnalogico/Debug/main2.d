@@ -1,56 +1,56 @@
 main2.d main2.o: .././main2.c \
- c:\program\ files\microchip\xc8\v2.36\avr\avr\include\avr\io.h \
- c:\program\ files\microchip\xc8\v2.36\avr\avr\include\avr\sfr_defs.h \
- c:\program\ files\microchip\xc8\v2.36\avr\avr\include\inttypes.h \
- c:\program\ files\microchip\xc8\v2.36\avr\avr\include\features.h \
- c:\program\ files\microchip\xc8\v2.36\avr\lib\gcc\avr\5.4.0\include\stdint.h \
- c:\program\ files\microchip\xc8\v2.36\avr\avr\include\stdint.h \
- c:\program\ files\microchip\xc8\v2.36\avr\avr\include\bits\alltypes.h \
- c:\program\ files\microchip\xc8\v2.36\avr\avr\include\bits\stdint.h \
- C:/Program\ Files\ (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/xc8/avr/include/avr/iom16.h \
- c:\program\ files\microchip\xc8\v2.36\avr\avr\include\avr\portpins.h \
- c:\program\ files\microchip\xc8\v2.36\avr\avr\include\avr\common.h \
- c:\program\ files\microchip\xc8\v2.36\avr\avr\include\avr\fuse.h \
- c:\program\ files\microchip\xc8\v2.36\avr\avr\include\avr\lock.h \
- c:\program\ files\microchip\xc8\v2.36\avr\avr\include\avr\interrupt.h \
- c:\program\ files\microchip\xc8\v2.36\avr\avr\include\util\delay.h \
- c:\program\ files\microchip\xc8\v2.36\avr\avr\include\util\delay_basic.h \
- c:\program\ files\microchip\xc8\v2.36\avr\avr\include\math.h .././LCD.h \
+ q:\programas\xccompiler\avr\avr\include\avr\io.h \
+ q:\programas\xccompiler\avr\avr\include\avr\sfr_defs.h \
+ q:\programas\xccompiler\avr\avr\include\inttypes.h \
+ q:\programas\xccompiler\avr\avr\include\features.h \
+ q:\programas\xccompiler\avr\lib\gcc\avr\5.4.0\include\stdint.h \
+ q:\programas\xccompiler\avr\avr\include\stdint.h \
+ q:\programas\xccompiler\avr\avr\include\bits\alltypes.h \
+ q:\programas\xccompiler\avr\avr\include\bits\stdint.h \
+ Q:/Programas/MicrochipStudio/7.0/Packs/atmel/ATmega_DFP/1.7.374/xc8/avr/include/avr/iom16.h \
+ q:\programas\xccompiler\avr\avr\include\avr\portpins.h \
+ q:\programas\xccompiler\avr\avr\include\avr\common.h \
+ q:\programas\xccompiler\avr\avr\include\avr\fuse.h \
+ q:\programas\xccompiler\avr\avr\include\avr\lock.h \
+ q:\programas\xccompiler\avr\avr\include\avr\interrupt.h \
+ q:\programas\xccompiler\avr\avr\include\util\delay.h \
+ q:\programas\xccompiler\avr\avr\include\util\delay_basic.h \
+ q:\programas\xccompiler\avr\avr\include\math.h .././LCD.h \
  .././Keyboard.h
 
-c:\program\ files\microchip\xc8\v2.36\avr\avr\include\avr\io.h:
+q:\programas\xccompiler\avr\avr\include\avr\io.h:
 
-c:\program\ files\microchip\xc8\v2.36\avr\avr\include\avr\sfr_defs.h:
+q:\programas\xccompiler\avr\avr\include\avr\sfr_defs.h:
 
-c:\program\ files\microchip\xc8\v2.36\avr\avr\include\inttypes.h:
+q:\programas\xccompiler\avr\avr\include\inttypes.h:
 
-c:\program\ files\microchip\xc8\v2.36\avr\avr\include\features.h:
+q:\programas\xccompiler\avr\avr\include\features.h:
 
-c:\program\ files\microchip\xc8\v2.36\avr\lib\gcc\avr\5.4.0\include\stdint.h:
+q:\programas\xccompiler\avr\lib\gcc\avr\5.4.0\include\stdint.h:
 
-c:\program\ files\microchip\xc8\v2.36\avr\avr\include\stdint.h:
+q:\programas\xccompiler\avr\avr\include\stdint.h:
 
-c:\program\ files\microchip\xc8\v2.36\avr\avr\include\bits\alltypes.h:
+q:\programas\xccompiler\avr\avr\include\bits\alltypes.h:
 
-c:\program\ files\microchip\xc8\v2.36\avr\avr\include\bits\stdint.h:
+q:\programas\xccompiler\avr\avr\include\bits\stdint.h:
 
-C:/Program\ Files\ (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/xc8/avr/include/avr/iom16.h:
+Q:/Programas/MicrochipStudio/7.0/Packs/atmel/ATmega_DFP/1.7.374/xc8/avr/include/avr/iom16.h:
 
-c:\program\ files\microchip\xc8\v2.36\avr\avr\include\avr\portpins.h:
+q:\programas\xccompiler\avr\avr\include\avr\portpins.h:
 
-c:\program\ files\microchip\xc8\v2.36\avr\avr\include\avr\common.h:
+q:\programas\xccompiler\avr\avr\include\avr\common.h:
 
-c:\program\ files\microchip\xc8\v2.36\avr\avr\include\avr\fuse.h:
+q:\programas\xccompiler\avr\avr\include\avr\fuse.h:
 
-c:\program\ files\microchip\xc8\v2.36\avr\avr\include\avr\lock.h:
+q:\programas\xccompiler\avr\avr\include\avr\lock.h:
 
-c:\program\ files\microchip\xc8\v2.36\avr\avr\include\avr\interrupt.h:
+q:\programas\xccompiler\avr\avr\include\avr\interrupt.h:
 
-c:\program\ files\microchip\xc8\v2.36\avr\avr\include\util\delay.h:
+q:\programas\xccompiler\avr\avr\include\util\delay.h:
 
-c:\program\ files\microchip\xc8\v2.36\avr\avr\include\util\delay_basic.h:
+q:\programas\xccompiler\avr\avr\include\util\delay_basic.h:
 
-c:\program\ files\microchip\xc8\v2.36\avr\avr\include\math.h:
+q:\programas\xccompiler\avr\avr\include\math.h:
 
 .././LCD.h:
 
