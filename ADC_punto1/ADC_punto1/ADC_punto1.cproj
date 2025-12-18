@@ -97,7 +97,7 @@
     <Compile Include="LCD.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="main.c">
+    <Compile Include="main2.c">
       <SubType>compile</SubType>
     </Compile>
   </ItemGroup>
