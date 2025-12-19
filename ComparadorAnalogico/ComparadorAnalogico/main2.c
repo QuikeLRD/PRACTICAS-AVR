@@ -115,11 +115,12 @@ int main(void)
 			LIMPIA_LCD();
 			OCR1A = 200;             // SET DUTY CYCLE TO 50% WHEN EVENT OCCURS
 			// Option: add display message or signal LED if desired
+			_delay_ms(5000);
+			OCR1A = 0;
 
 			comp_flag = 0;           // CLEAR FLAG FOR FUTURE EVENTS
 			ACSR |= (1 << ACI);      // CLEAR COMPARATOR INTERRUPT FLAG
 		}
-		// Extend with additional event handling if desired
 	}
 }
 
