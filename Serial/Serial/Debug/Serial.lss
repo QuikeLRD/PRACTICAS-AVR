@@ -1,0 +1,774 @@
+
+Serial.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         0000006c  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000000  00800060  00800060  000003f4  2**0
+                  ALLOC, LOAD, DATA
+  2 .comment      0000002f  00000000  00000000  000003f4  2**0
+                  CONTENTS, READONLY
+  3 .stack.descriptors.hdr 0000000e  00000000  00000000  00000423  2**0
+                  CONTENTS, READONLY
+  4 .debug_aranges 00000080  00000000  00000000  00000431  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   00000d82  00000000  00000000  000004b1  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 000006eb  00000000  00000000  00001233  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   000004f9  00000000  00000000  0000191e  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  000000f4  00000000  00000000  00001e18  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    000001af  00000000  00000000  00001f0c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    00000316  00000000  00000000  000020bb  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 00000070  00000000  00000000  000023d1  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .text         00000004  00000352  00000352  000003e6  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 13 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00002444  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 14 .text.LEE_TECLADO 000000d0  0000007c  0000007c  00000110  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 15 .text.BARRE_TECLADO 00000028  000002b4  000002b4  00000348  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 16 .text.USART_INIT 0000000e  00000318  00000318  000003ac  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 17 .text.USART_TX 00000008  00000332  00000332  000003c6  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 18 .text.USART_RX 0000000c  00000326  00000326  000003ba  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 19 .text.ENVIA_CMD 0000005a  000001e0  000001e0  00000274  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 20 .text.LCD_INICIALIZA 00000026  000002dc  000002dc  00000370  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 21 .text.ENVIA_DATO 0000004e  0000023a  0000023a  000002ce  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 22 .text.ENVIA_CADENA 0000002c  00000288  00000288  0000031c  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 23 .text.LIMPIA_LCD 00000008  0000033a  0000033a  000003ce  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 24 .text.POS_LINEA1 00000008  00000342  00000342  000003d6  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 25 .text.POS_LINEA2 00000008  0000034a  0000034a  000003de  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 26 .progmemx.data 0000000f  0000006c  0000006c  00000100  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, PROGMEMX
+ 27 .text.main    00000094  0000014c  0000014c  000001e0  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 28 .text.__dummy_fini 00000002  0000035a  0000035a  000003ee  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 29 .text.__dummy_funcs_on_exit 00000002  0000035c  0000035c  000003f0  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 30 .text.__dummy_simulator_exit 00000002  0000035e  0000035e  000003f2  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 31 .text.exit    00000016  00000302  00000302  00000396  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 32 .text._Exit   00000004  00000356  00000356  000003ea  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 2a 00 	jmp	0x54	; 0x54 <__ctors_end>
+   4:	0c 94 a9 01 	jmp	0x352	; 0x352 <__bad_interrupt>
+   8:	0c 94 a9 01 	jmp	0x352	; 0x352 <__bad_interrupt>
+   c:	0c 94 a9 01 	jmp	0x352	; 0x352 <__bad_interrupt>
+  10:	0c 94 a9 01 	jmp	0x352	; 0x352 <__bad_interrupt>
+  14:	0c 94 a9 01 	jmp	0x352	; 0x352 <__bad_interrupt>
+  18:	0c 94 a9 01 	jmp	0x352	; 0x352 <__bad_interrupt>
+  1c:	0c 94 a9 01 	jmp	0x352	; 0x352 <__bad_interrupt>
+  20:	0c 94 a9 01 	jmp	0x352	; 0x352 <__bad_interrupt>
+  24:	0c 94 a9 01 	jmp	0x352	; 0x352 <__bad_interrupt>
+  28:	0c 94 a9 01 	jmp	0x352	; 0x352 <__bad_interrupt>
+  2c:	0c 94 a9 01 	jmp	0x352	; 0x352 <__bad_interrupt>
+  30:	0c 94 a9 01 	jmp	0x352	; 0x352 <__bad_interrupt>
+  34:	0c 94 a9 01 	jmp	0x352	; 0x352 <__bad_interrupt>
+  38:	0c 94 a9 01 	jmp	0x352	; 0x352 <__bad_interrupt>
+  3c:	0c 94 a9 01 	jmp	0x352	; 0x352 <__bad_interrupt>
+  40:	0c 94 a9 01 	jmp	0x352	; 0x352 <__bad_interrupt>
+  44:	0c 94 a9 01 	jmp	0x352	; 0x352 <__bad_interrupt>
+  48:	0c 94 a9 01 	jmp	0x352	; 0x352 <__bad_interrupt>
+  4c:	0c 94 a9 01 	jmp	0x352	; 0x352 <__bad_interrupt>
+  50:	0c 94 a9 01 	jmp	0x352	; 0x352 <__bad_interrupt>
+
+00000054 <__ctors_end>:
+  54:	11 24       	eor	r1, r1
+  56:	1f be       	out	0x3f, r1	; 63
+  58:	cf e5       	ldi	r28, 0x5F	; 95
+  5a:	d4 e0       	ldi	r29, 0x04	; 4
+  5c:	de bf       	out	0x3e, r29	; 62
+  5e:	cd bf       	out	0x3d, r28	; 61
+  60:	0e 94 a6 00 	call	0x14c	; 0x14c <main>
+  64:	0c 94 81 01 	jmp	0x302	; 0x302 <exit>
+
+00000068 <_exit>:
+  68:	f8 94       	cli
+
+0000006a <__stop_program>:
+  6a:	ff cf       	rjmp	.-2      	; 0x6a <__stop_program>
+
+Disassembly of section .text:
+
+00000352 <__bad_interrupt>:
+ 352:	0c 94 00 00 	jmp	0	; 0x0 <__TEXT_REGION_ORIGIN__>
+
+Disassembly of section .text.LEE_TECLADO:
+
+0000007c <LEE_TECLADO>:
+char USART_RX(void);
+
+// =================== TECLADO ====================
+char LEE_TECLADO()
+{
+	switch(PORTB)
+  7c:	88 b3       	in	r24, 0x18	; 24
+  7e:	8f 3b       	cpi	r24, 0xBF	; 191
+  80:	99 f1       	breq	.+102    	; 0xe8 <LEE_TECLADO+0x6c>
+  82:	20 f4       	brcc	.+8      	; 0x8c <LEE_TECLADO+0x10>
+  84:	8f 37       	cpi	r24, 0x7F	; 127
+  86:	09 f4       	brne	.+2      	; 0x8a <LEE_TECLADO+0xe>
+  88:	43 c0       	rjmp	.+134    	; 0x110 <LEE_TECLADO+0x94>
+  8a:	56 c0       	rjmp	.+172    	; 0x138 <LEE_TECLADO+0xbc>
+  8c:	8f 3d       	cpi	r24, 0xDF	; 223
+  8e:	c1 f0       	breq	.+48     	; 0xc0 <LEE_TECLADO+0x44>
+  90:	8f 3e       	cpi	r24, 0xEF	; 239
+  92:	09 f0       	breq	.+2      	; 0x96 <LEE_TECLADO+0x1a>
+  94:	51 c0       	rjmp	.+162    	; 0x138 <LEE_TECLADO+0xbc>
+	{
+		case COL1:
+		switch(PINB & 0x0F)
+  96:	86 b3       	in	r24, 0x16	; 22
+  98:	8f 70       	andi	r24, 0x0F	; 15
+  9a:	8b 30       	cpi	r24, 0x0B	; 11
+  9c:	69 f0       	breq	.+26     	; 0xb8 <LEE_TECLADO+0x3c>
+  9e:	18 f4       	brcc	.+6      	; 0xa6 <LEE_TECLADO+0x2a>
+  a0:	87 30       	cpi	r24, 0x07	; 7
+  a2:	61 f0       	breq	.+24     	; 0xbc <LEE_TECLADO+0x40>
+  a4:	07 c0       	rjmp	.+14     	; 0xb4 <LEE_TECLADO+0x38>
+  a6:	8d 30       	cpi	r24, 0x0D	; 13
+  a8:	09 f4       	brne	.+2      	; 0xac <LEE_TECLADO+0x30>
+  aa:	48 c0       	rjmp	.+144    	; 0x13c <LEE_TECLADO+0xc0>
+  ac:	8e 30       	cpi	r24, 0x0E	; 14
+  ae:	11 f4       	brne	.+4      	; 0xb4 <LEE_TECLADO+0x38>
+		{
+			case FIL1: return '1';
+  b0:	81 e3       	ldi	r24, 0x31	; 49
+  b2:	08 95       	ret
+			case FIL2: return '0';
+			case FIL3: return '#';
+			case FIL4: return 'D';
+		} break;
+	}
+	return ' ';
+  b4:	80 e2       	ldi	r24, 0x20	; 32
+  b6:	08 95       	ret
+		case COL1:
+		switch(PINB & 0x0F)
+		{
+			case FIL1: return '1';
+			case FIL2: return '2';
+			case FIL3: return '3';
+  b8:	83 e3       	ldi	r24, 0x33	; 51
+  ba:	08 95       	ret
+			case FIL4: return 'A';
+  bc:	81 e4       	ldi	r24, 0x41	; 65
+  be:	08 95       	ret
+		} break;
+
+		case COL2:
+		switch(PINB & 0x0F)
+  c0:	86 b3       	in	r24, 0x16	; 22
+  c2:	8f 70       	andi	r24, 0x0F	; 15
+  c4:	8b 30       	cpi	r24, 0x0B	; 11
+  c6:	61 f0       	breq	.+24     	; 0xe0 <LEE_TECLADO+0x64>
+  c8:	18 f4       	brcc	.+6      	; 0xd0 <LEE_TECLADO+0x54>
+  ca:	87 30       	cpi	r24, 0x07	; 7
+  cc:	59 f0       	breq	.+22     	; 0xe4 <LEE_TECLADO+0x68>
+  ce:	06 c0       	rjmp	.+12     	; 0xdc <LEE_TECLADO+0x60>
+  d0:	8d 30       	cpi	r24, 0x0D	; 13
+  d2:	b1 f1       	breq	.+108    	; 0x140 <LEE_TECLADO+0xc4>
+  d4:	8e 30       	cpi	r24, 0x0E	; 14
+  d6:	11 f4       	brne	.+4      	; 0xdc <LEE_TECLADO+0x60>
+		{
+			case FIL1: return '4';
+  d8:	84 e3       	ldi	r24, 0x34	; 52
+  da:	08 95       	ret
+			case FIL2: return '0';
+			case FIL3: return '#';
+			case FIL4: return 'D';
+		} break;
+	}
+	return ' ';
+  dc:	80 e2       	ldi	r24, 0x20	; 32
+  de:	08 95       	ret
+		case COL2:
+		switch(PINB & 0x0F)
+		{
+			case FIL1: return '4';
+			case FIL2: return '5';
+			case FIL3: return '6';
+  e0:	86 e3       	ldi	r24, 0x36	; 54
+  e2:	08 95       	ret
+			case FIL4: return 'B';
+  e4:	82 e4       	ldi	r24, 0x42	; 66
+  e6:	08 95       	ret
+		} break;
+
+		case COL3:
+		switch(PINB & 0x0F)
+  e8:	86 b3       	in	r24, 0x16	; 22
+  ea:	8f 70       	andi	r24, 0x0F	; 15
+  ec:	8b 30       	cpi	r24, 0x0B	; 11
+  ee:	61 f0       	breq	.+24     	; 0x108 <LEE_TECLADO+0x8c>
+  f0:	18 f4       	brcc	.+6      	; 0xf8 <LEE_TECLADO+0x7c>
+  f2:	87 30       	cpi	r24, 0x07	; 7
+  f4:	59 f0       	breq	.+22     	; 0x10c <LEE_TECLADO+0x90>
+  f6:	06 c0       	rjmp	.+12     	; 0x104 <LEE_TECLADO+0x88>
+  f8:	8d 30       	cpi	r24, 0x0D	; 13
+  fa:	21 f1       	breq	.+72     	; 0x144 <LEE_TECLADO+0xc8>
+  fc:	8e 30       	cpi	r24, 0x0E	; 14
+  fe:	11 f4       	brne	.+4      	; 0x104 <LEE_TECLADO+0x88>
+		{
+			case FIL1: return '7';
+ 100:	87 e3       	ldi	r24, 0x37	; 55
+ 102:	08 95       	ret
+			case FIL2: return '0';
+			case FIL3: return '#';
+			case FIL4: return 'D';
+		} break;
+	}
+	return ' ';
+ 104:	80 e2       	ldi	r24, 0x20	; 32
+ 106:	08 95       	ret
+		case COL3:
+		switch(PINB & 0x0F)
+		{
+			case FIL1: return '7';
+			case FIL2: return '8';
+			case FIL3: return '9';
+ 108:	89 e3       	ldi	r24, 0x39	; 57
+ 10a:	08 95       	ret
+			case FIL4: return 'C';
+ 10c:	83 e4       	ldi	r24, 0x43	; 67
+ 10e:	08 95       	ret
+		} break;
+
+		case COL4:
+		switch(PINB & 0x0F)
+ 110:	86 b3       	in	r24, 0x16	; 22
+ 112:	8f 70       	andi	r24, 0x0F	; 15
+ 114:	8b 30       	cpi	r24, 0x0B	; 11
+ 116:	61 f0       	breq	.+24     	; 0x130 <LEE_TECLADO+0xb4>
+ 118:	18 f4       	brcc	.+6      	; 0x120 <LEE_TECLADO+0xa4>
+ 11a:	87 30       	cpi	r24, 0x07	; 7
+ 11c:	59 f0       	breq	.+22     	; 0x134 <LEE_TECLADO+0xb8>
+ 11e:	06 c0       	rjmp	.+12     	; 0x12c <LEE_TECLADO+0xb0>
+ 120:	8d 30       	cpi	r24, 0x0D	; 13
+ 122:	91 f0       	breq	.+36     	; 0x148 <LEE_TECLADO+0xcc>
+ 124:	8e 30       	cpi	r24, 0x0E	; 14
+ 126:	11 f4       	brne	.+4      	; 0x12c <LEE_TECLADO+0xb0>
+		{
+			case FIL1: return '*';
+ 128:	8a e2       	ldi	r24, 0x2A	; 42
+ 12a:	08 95       	ret
+			case FIL2: return '0';
+			case FIL3: return '#';
+			case FIL4: return 'D';
+		} break;
+	}
+	return ' ';
+ 12c:	80 e2       	ldi	r24, 0x20	; 32
+ 12e:	08 95       	ret
+		case COL4:
+		switch(PINB & 0x0F)
+		{
+			case FIL1: return '*';
+			case FIL2: return '0';
+			case FIL3: return '#';
+ 130:	83 e2       	ldi	r24, 0x23	; 35
+ 132:	08 95       	ret
+			case FIL4: return 'D';
+ 134:	84 e4       	ldi	r24, 0x44	; 68
+ 136:	08 95       	ret
+		} break;
+	}
+	return ' ';
+ 138:	80 e2       	ldi	r24, 0x20	; 32
+ 13a:	08 95       	ret
+	{
+		case COL1:
+		switch(PINB & 0x0F)
+		{
+			case FIL1: return '1';
+			case FIL2: return '2';
+ 13c:	82 e3       	ldi	r24, 0x32	; 50
+ 13e:	08 95       	ret
+
+		case COL2:
+		switch(PINB & 0x0F)
+		{
+			case FIL1: return '4';
+			case FIL2: return '5';
+ 140:	85 e3       	ldi	r24, 0x35	; 53
+ 142:	08 95       	ret
+
+		case COL3:
+		switch(PINB & 0x0F)
+		{
+			case FIL1: return '7';
+			case FIL2: return '8';
+ 144:	88 e3       	ldi	r24, 0x38	; 56
+ 146:	08 95       	ret
+
+		case COL4:
+		switch(PINB & 0x0F)
+		{
+			case FIL1: return '*';
+			case FIL2: return '0';
+ 148:	80 e3       	ldi	r24, 0x30	; 48
+			case FIL3: return '#';
+			case FIL4: return 'D';
+		} break;
+	}
+	return ' ';
+}
+ 14a:	08 95       	ret
+
+Disassembly of section .text.BARRE_TECLADO:
+
+000002b4 <BARRE_TECLADO>:
+
+void BARRE_TECLADO()
+{
+	switch(PORTB)
+ 2b4:	88 b3       	in	r24, 0x18	; 24
+ 2b6:	8f 3d       	cpi	r24, 0xDF	; 223
+ 2b8:	41 f0       	breq	.+16     	; 0x2ca <BARRE_TECLADO+0x16>
+ 2ba:	8f 3e       	cpi	r24, 0xEF	; 239
+ 2bc:	19 f0       	breq	.+6      	; 0x2c4 <BARRE_TECLADO+0x10>
+ 2be:	8f 3b       	cpi	r24, 0xBF	; 191
+ 2c0:	51 f4       	brne	.+20     	; 0x2d6 <BARRE_TECLADO+0x22>
+ 2c2:	06 c0       	rjmp	.+12     	; 0x2d0 <BARRE_TECLADO+0x1c>
+	{
+		case COL1: PORTB = COL2; break;
+ 2c4:	8f ed       	ldi	r24, 0xDF	; 223
+ 2c6:	88 bb       	out	0x18, r24	; 24
+ 2c8:	08 95       	ret
+		case COL2: PORTB = COL3; break;
+ 2ca:	8f eb       	ldi	r24, 0xBF	; 191
+ 2cc:	88 bb       	out	0x18, r24	; 24
+ 2ce:	08 95       	ret
+		case COL3: PORTB = COL4; break;
+ 2d0:	8f e7       	ldi	r24, 0x7F	; 127
+ 2d2:	88 bb       	out	0x18, r24	; 24
+ 2d4:	08 95       	ret
+		default:   PORTB = COL1;
+ 2d6:	8f ee       	ldi	r24, 0xEF	; 239
+ 2d8:	88 bb       	out	0x18, r24	; 24
+ 2da:	08 95       	ret
+
+Disassembly of section .text.USART_INIT:
+
+00000318 <USART_INIT>:
+}
+
+// =================== USART ====================
+void USART_INIT(void)
+{
+	UBRRL = 51; // 9600 bps @ 8 MHz
+ 318:	83 e3       	ldi	r24, 0x33	; 51
+ 31a:	89 b9       	out	0x09, r24	; 9
+	UCSRB = (1<<RXEN) | (1<<TXEN);
+ 31c:	88 e1       	ldi	r24, 0x18	; 24
+ 31e:	8a b9       	out	0x0a, r24	; 10
+	UCSRC = (1<<URSEL) | (1<<UCSZ1) | (1<<UCSZ0);
+ 320:	86 e8       	ldi	r24, 0x86	; 134
+ 322:	80 bd       	out	0x20, r24	; 32
+ 324:	08 95       	ret
+
+Disassembly of section .text.USART_TX:
+
+00000332 <USART_TX>:
+}
+
+void USART_TX(char dato)
+{
+	while(!(UCSRA & (1<<UDRE)));
+ 332:	5d 9b       	sbis	0x0b, 5	; 11
+ 334:	fe cf       	rjmp	.-4      	; 0x332 <USART_TX>
+	UDR = dato;
+ 336:	8c b9       	out	0x0c, r24	; 12
+ 338:	08 95       	ret
+
+Disassembly of section .text.USART_RX:
+
+00000326 <USART_RX>:
+}
+
+char USART_RX(void)
+{
+	if(UCSRA & (1<<RXC))
+ 326:	5f 9b       	sbis	0x0b, 7	; 11
+ 328:	02 c0       	rjmp	.+4      	; 0x32e <USART_RX+0x8>
+	return UDR;
+ 32a:	8c b1       	in	r24, 0x0c	; 12
+ 32c:	08 95       	ret
+	return 0;
+ 32e:	80 e0       	ldi	r24, 0x00	; 0
+}
+ 330:	08 95       	ret
+
+Disassembly of section .text.ENVIA_CMD:
+
+000001e0 <ENVIA_CMD>:
+	ENVIA_CMD(0x80);
+}
+
+void ENVIA_CMD(uint8_t dato)
+{
+	LCD_PUERTO = dato & 0xF0;
+ 1e0:	98 2f       	mov	r25, r24
+ 1e2:	90 7f       	andi	r25, 0xF0	; 240
+ 1e4:	95 bb       	out	0x15, r25	; 21
+	LCD_PUERTO &= ~(1<<LCD_RS);
+ 1e6:	95 b3       	in	r25, 0x15	; 21
+ 1e8:	9b 7f       	andi	r25, 0xFB	; 251
+ 1ea:	95 bb       	out	0x15, r25	; 21
+	LCD_PUERTO |= (1<<LCD_E);
+ 1ec:	95 b3       	in	r25, 0x15	; 21
+ 1ee:	98 60       	ori	r25, 0x08	; 8
+ 1f0:	95 bb       	out	0x15, r25	; 21
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 1f2:	ef ec       	ldi	r30, 0xCF	; 207
+ 1f4:	f7 e0       	ldi	r31, 0x07	; 7
+ 1f6:	31 97       	sbiw	r30, 0x01	; 1
+ 1f8:	f1 f7       	brne	.-4      	; 0x1f6 <ENVIA_CMD+0x16>
+ 1fa:	00 c0       	rjmp	.+0      	; 0x1fc <ENVIA_CMD+0x1c>
+ 1fc:	00 00       	nop
+	_delay_ms(1);
+	LCD_PUERTO &= ~(1<<LCD_E);
+ 1fe:	95 b3       	in	r25, 0x15	; 21
+ 200:	97 7f       	andi	r25, 0xF7	; 247
+ 202:	95 bb       	out	0x15, r25	; 21
+
+	LCD_PUERTO = (dato<<4) & 0xF0;
+ 204:	f0 e1       	ldi	r31, 0x10	; 16
+ 206:	8f 9f       	mul	r24, r31
+ 208:	c0 01       	movw	r24, r0
+ 20a:	11 24       	eor	r1, r1
+ 20c:	85 bb       	out	0x15, r24	; 21
+	LCD_PUERTO &= ~(1<<LCD_RS);
+ 20e:	85 b3       	in	r24, 0x15	; 21
+ 210:	8b 7f       	andi	r24, 0xFB	; 251
+ 212:	85 bb       	out	0x15, r24	; 21
+	LCD_PUERTO |= (1<<LCD_E);
+ 214:	85 b3       	in	r24, 0x15	; 21
+ 216:	88 60       	ori	r24, 0x08	; 8
+ 218:	85 bb       	out	0x15, r24	; 21
+ 21a:	8f ec       	ldi	r24, 0xCF	; 207
+ 21c:	97 e0       	ldi	r25, 0x07	; 7
+ 21e:	01 97       	sbiw	r24, 0x01	; 1
+ 220:	f1 f7       	brne	.-4      	; 0x21e <__EEPROM_REGION_LENGTH__+0x1e>
+ 222:	00 c0       	rjmp	.+0      	; 0x224 <__EEPROM_REGION_LENGTH__+0x24>
+ 224:	00 00       	nop
+	_delay_ms(1);
+	LCD_PUERTO &= ~(1<<LCD_E);
+ 226:	85 b3       	in	r24, 0x15	; 21
+ 228:	87 7f       	andi	r24, 0xF7	; 247
+ 22a:	85 bb       	out	0x15, r24	; 21
+ 22c:	ef e9       	ldi	r30, 0x9F	; 159
+ 22e:	ff e0       	ldi	r31, 0x0F	; 15
+ 230:	31 97       	sbiw	r30, 0x01	; 1
+ 232:	f1 f7       	brne	.-4      	; 0x230 <__EEPROM_REGION_LENGTH__+0x30>
+ 234:	00 c0       	rjmp	.+0      	; 0x236 <__EEPROM_REGION_LENGTH__+0x36>
+ 236:	00 00       	nop
+ 238:	08 95       	ret
+
+Disassembly of section .text.LCD_INICIALIZA:
+
+000002dc <LCD_INICIALIZA>:
+}
+
+// =================== LCD ====================
+void LCD_INICIALIZA()
+{
+	ENVIA_CMD(0x02);
+ 2dc:	82 e0       	ldi	r24, 0x02	; 2
+ 2de:	0e 94 f0 00 	call	0x1e0	; 0x1e0 <ENVIA_CMD>
+	ENVIA_CMD(0x28);
+ 2e2:	88 e2       	ldi	r24, 0x28	; 40
+ 2e4:	0e 94 f0 00 	call	0x1e0	; 0x1e0 <ENVIA_CMD>
+	ENVIA_CMD(0x0E);
+ 2e8:	8e e0       	ldi	r24, 0x0E	; 14
+ 2ea:	0e 94 f0 00 	call	0x1e0	; 0x1e0 <ENVIA_CMD>
+	ENVIA_CMD(0x06);
+ 2ee:	86 e0       	ldi	r24, 0x06	; 6
+ 2f0:	0e 94 f0 00 	call	0x1e0	; 0x1e0 <ENVIA_CMD>
+	ENVIA_CMD(0x01);
+ 2f4:	81 e0       	ldi	r24, 0x01	; 1
+ 2f6:	0e 94 f0 00 	call	0x1e0	; 0x1e0 <ENVIA_CMD>
+	ENVIA_CMD(0x80);
+ 2fa:	80 e8       	ldi	r24, 0x80	; 128
+ 2fc:	0e 94 f0 00 	call	0x1e0	; 0x1e0 <ENVIA_CMD>
+ 300:	08 95       	ret
+
+Disassembly of section .text.ENVIA_DATO:
+
+0000023a <ENVIA_DATO>:
+	_delay_ms(2);
+}
+
+void ENVIA_DATO(uint8_t dato)
+{
+	LCD_PUERTO = dato & 0xF0;
+ 23a:	98 2f       	mov	r25, r24
+ 23c:	90 7f       	andi	r25, 0xF0	; 240
+ 23e:	95 bb       	out	0x15, r25	; 21
+	LCD_PUERTO |= (1<<LCD_RS) | (1<<LCD_E);
+ 240:	95 b3       	in	r25, 0x15	; 21
+ 242:	9c 60       	ori	r25, 0x0C	; 12
+ 244:	95 bb       	out	0x15, r25	; 21
+ 246:	ef ec       	ldi	r30, 0xCF	; 207
+ 248:	f7 e0       	ldi	r31, 0x07	; 7
+ 24a:	31 97       	sbiw	r30, 0x01	; 1
+ 24c:	f1 f7       	brne	.-4      	; 0x24a <ENVIA_DATO+0x10>
+ 24e:	00 c0       	rjmp	.+0      	; 0x250 <ENVIA_DATO+0x16>
+ 250:	00 00       	nop
+	_delay_ms(1);
+	LCD_PUERTO &= ~(1<<LCD_E);
+ 252:	95 b3       	in	r25, 0x15	; 21
+ 254:	97 7f       	andi	r25, 0xF7	; 247
+ 256:	95 bb       	out	0x15, r25	; 21
+
+	LCD_PUERTO = (dato<<4) & 0xF0;
+ 258:	f0 e1       	ldi	r31, 0x10	; 16
+ 25a:	8f 9f       	mul	r24, r31
+ 25c:	c0 01       	movw	r24, r0
+ 25e:	11 24       	eor	r1, r1
+ 260:	85 bb       	out	0x15, r24	; 21
+	LCD_PUERTO |= (1<<LCD_RS) | (1<<LCD_E);
+ 262:	85 b3       	in	r24, 0x15	; 21
+ 264:	8c 60       	ori	r24, 0x0C	; 12
+ 266:	85 bb       	out	0x15, r24	; 21
+ 268:	8f ec       	ldi	r24, 0xCF	; 207
+ 26a:	97 e0       	ldi	r25, 0x07	; 7
+ 26c:	01 97       	sbiw	r24, 0x01	; 1
+ 26e:	f1 f7       	brne	.-4      	; 0x26c <ENVIA_DATO+0x32>
+ 270:	00 c0       	rjmp	.+0      	; 0x272 <ENVIA_DATO+0x38>
+ 272:	00 00       	nop
+	_delay_ms(1);
+	LCD_PUERTO &= ~(1<<LCD_E);
+ 274:	85 b3       	in	r24, 0x15	; 21
+ 276:	87 7f       	andi	r24, 0xF7	; 247
+ 278:	85 bb       	out	0x15, r24	; 21
+ 27a:	ef e9       	ldi	r30, 0x9F	; 159
+ 27c:	ff e0       	ldi	r31, 0x0F	; 15
+ 27e:	31 97       	sbiw	r30, 0x01	; 1
+ 280:	f1 f7       	brne	.-4      	; 0x27e <ENVIA_DATO+0x44>
+ 282:	00 c0       	rjmp	.+0      	; 0x284 <ENVIA_DATO+0x4a>
+ 284:	00 00       	nop
+ 286:	08 95       	ret
+
+Disassembly of section .text.ENVIA_CADENA:
+
+00000288 <ENVIA_CADENA>:
+	_delay_ms(2);
+}
+
+void ENVIA_CADENA(const char *dato)
+{
+ 288:	cf 92       	push	r12
+ 28a:	df 92       	push	r13
+ 28c:	ef 92       	push	r14
+ 28e:	6b 01       	movw	r12, r22
+ 290:	e8 2e       	mov	r14, r24
+	while(*dato) ENVIA_DATO(*dato++);
+ 292:	06 c0       	rjmp	.+12     	; 0x2a0 <ENVIA_CADENA+0x18>
+ 294:	9f ef       	ldi	r25, 0xFF	; 255
+ 296:	c9 1a       	sub	r12, r25
+ 298:	d9 0a       	sbc	r13, r25
+ 29a:	e9 0a       	sbc	r14, r25
+ 29c:	0e 94 1d 01 	call	0x23a	; 0x23a <ENVIA_DATO>
+ 2a0:	f6 01       	movw	r30, r12
+ 2a2:	84 91       	lpm	r24, Z
+ 2a4:	e7 fc       	sbrc	r14, 7
+ 2a6:	80 81       	ld	r24, Z
+ 2a8:	81 11       	cpse	r24, r1
+ 2aa:	f4 cf       	rjmp	.-24     	; 0x294 <ENVIA_CADENA+0xc>
+}
+ 2ac:	ef 90       	pop	r14
+ 2ae:	df 90       	pop	r13
+ 2b0:	cf 90       	pop	r12
+ 2b2:	08 95       	ret
+
+Disassembly of section .text.LIMPIA_LCD:
+
+0000033a <LIMPIA_LCD>:
+
+void LIMPIA_LCD(){ ENVIA_CMD(0x01); }
+ 33a:	81 e0       	ldi	r24, 0x01	; 1
+ 33c:	0e 94 f0 00 	call	0x1e0	; 0x1e0 <ENVIA_CMD>
+ 340:	08 95       	ret
+
+Disassembly of section .text.POS_LINEA1:
+
+00000342 <POS_LINEA1>:
+void POS_LINEA1(char pos){ ENVIA_CMD(0x80 | pos); }
+ 342:	80 68       	ori	r24, 0x80	; 128
+ 344:	0e 94 f0 00 	call	0x1e0	; 0x1e0 <ENVIA_CMD>
+ 348:	08 95       	ret
+
+Disassembly of section .text.POS_LINEA2:
+
+0000034a <POS_LINEA2>:
+void POS_LINEA2(char pos){ ENVIA_CMD(0xC0 | pos); }
+ 34a:	80 6c       	ori	r24, 0xC0	; 192
+ 34c:	0e 94 f0 00 	call	0x1e0	; 0x1e0 <ENVIA_CMD>
+ 350:	08 95       	ret
+
+Disassembly of section .text.main:
+
+0000014c <main>:
+
+// =================== MAIN ====================
+int main(void)
+{
+	DDRC = 0xFF;    // LCD
+ 14c:	8f ef       	ldi	r24, 0xFF	; 255
+ 14e:	84 bb       	out	0x14, r24	; 20
+	DDRB = 0xF0;    // Teclado en PORTB
+ 150:	80 ef       	ldi	r24, 0xF0	; 240
+ 152:	87 bb       	out	0x17, r24	; 23
+	PORTB = COL1;
+ 154:	8f ee       	ldi	r24, 0xEF	; 239
+ 156:	88 bb       	out	0x18, r24	; 24
+
+	LCD_INICIALIZA();
+ 158:	0e 94 6e 01 	call	0x2dc	; 0x2dc <LCD_INICIALIZA>
+	USART_INIT();
+ 15c:	0e 94 8c 01 	call	0x318	; 0x318 <USART_INIT>
+
+	LIMPIA_LCD();
+ 160:	0e 94 9d 01 	call	0x33a	; 0x33a <LIMPIA_LCD>
+	POS_LINEA1(0);
+ 164:	80 e0       	ldi	r24, 0x00	; 0
+ 166:	0e 94 a1 01 	call	0x342	; 0x342 <POS_LINEA1>
+
+	#if MICRO_ID == 1
+	ENVIA_CADENA("MICRO 1");
+	#else
+	ENVIA_CADENA("MICRO 2");
+ 16a:	6c e6       	ldi	r22, 0x6C	; 108
+ 16c:	70 e0       	ldi	r23, 0x00	; 0
+ 16e:	80 e0       	ldi	r24, 0x00	; 0
+ 170:	0e 94 44 01 	call	0x288	; 0x288 <ENVIA_CADENA>
+	#endif
+
+	POS_LINEA2(0);
+ 174:	80 e0       	ldi	r24, 0x00	; 0
+ 176:	0e 94 a5 01 	call	0x34a	; 0x34a <POS_LINEA2>
+	ENVIA_CADENA("Tecla:");
+ 17a:	64 e7       	ldi	r22, 0x74	; 116
+ 17c:	70 e0       	ldi	r23, 0x00	; 0
+ 17e:	80 e0       	ldi	r24, 0x00	; 0
+ 180:	0e 94 44 01 	call	0x288	; 0x288 <ENVIA_CADENA>
+
+	char tecla, rx;
+
+	while(1)
+	{
+		tecla = LEE_TECLADO();
+ 184:	0e 94 3e 00 	call	0x7c	; 0x7c <LEE_TECLADO>
+ 188:	c8 2f       	mov	r28, r24
+		if(tecla != ' ')
+ 18a:	80 32       	cpi	r24, 0x20	; 32
+ 18c:	91 f0       	breq	.+36     	; 0x1b2 <main+0x66>
+		{
+			POS_LINEA2(7);
+ 18e:	87 e0       	ldi	r24, 0x07	; 7
+ 190:	0e 94 a5 01 	call	0x34a	; 0x34a <POS_LINEA2>
+			ENVIA_DATO(tecla);
+ 194:	8c 2f       	mov	r24, r28
+ 196:	0e 94 1d 01 	call	0x23a	; 0x23a <ENVIA_DATO>
+			USART_TX(tecla);
+ 19a:	8c 2f       	mov	r24, r28
+ 19c:	0e 94 99 01 	call	0x332	; 0x332 <USART_TX>
+ 1a0:	2f ef       	ldi	r18, 0xFF	; 255
+ 1a2:	82 e5       	ldi	r24, 0x52	; 82
+ 1a4:	97 e0       	ldi	r25, 0x07	; 7
+ 1a6:	21 50       	subi	r18, 0x01	; 1
+ 1a8:	80 40       	sbci	r24, 0x00	; 0
+ 1aa:	90 40       	sbci	r25, 0x00	; 0
+ 1ac:	e1 f7       	brne	.-8      	; 0x1a6 <main+0x5a>
+ 1ae:	00 c0       	rjmp	.+0      	; 0x1b0 <main+0x64>
+ 1b0:	00 00       	nop
+			_delay_ms(300);
+		}
+
+		rx = USART_RX();
+ 1b2:	0e 94 93 01 	call	0x326	; 0x326 <USART_RX>
+ 1b6:	c8 2f       	mov	r28, r24
+		if(rx)
+ 1b8:	88 23       	and	r24, r24
+ 1ba:	31 f0       	breq	.+12     	; 0x1c8 <main+0x7c>
+		{
+			POS_LINEA1(9);
+ 1bc:	89 e0       	ldi	r24, 0x09	; 9
+ 1be:	0e 94 a1 01 	call	0x342	; 0x342 <POS_LINEA1>
+			ENVIA_DATO(rx);
+ 1c2:	8c 2f       	mov	r24, r28
+ 1c4:	0e 94 1d 01 	call	0x23a	; 0x23a <ENVIA_DATO>
+		}
+
+		BARRE_TECLADO();
+ 1c8:	0e 94 5a 01 	call	0x2b4	; 0x2b4 <BARRE_TECLADO>
+ 1cc:	2f ef       	ldi	r18, 0xFF	; 255
+ 1ce:	80 e7       	ldi	r24, 0x70	; 112
+ 1d0:	92 e0       	ldi	r25, 0x02	; 2
+ 1d2:	21 50       	subi	r18, 0x01	; 1
+ 1d4:	80 40       	sbci	r24, 0x00	; 0
+ 1d6:	90 40       	sbci	r25, 0x00	; 0
+ 1d8:	e1 f7       	brne	.-8      	; 0x1d2 <main+0x86>
+ 1da:	00 c0       	rjmp	.+0      	; 0x1dc <main+0x90>
+ 1dc:	00 00       	nop
+ 1de:	d2 cf       	rjmp	.-92     	; 0x184 <main+0x38>
+
+Disassembly of section .text.__dummy_fini:
+
+0000035a <_fini>:
+ 35a:	08 95       	ret
+
+Disassembly of section .text.__dummy_funcs_on_exit:
+
+0000035c <__funcs_on_exit>:
+ 35c:	08 95       	ret
+
+Disassembly of section .text.__dummy_simulator_exit:
+
+0000035e <__simulator_exit>:
+ 35e:	08 95       	ret
+
+Disassembly of section .text.exit:
+
+00000302 <exit>:
+ 302:	ec 01       	movw	r28, r24
+ 304:	0e 94 ae 01 	call	0x35c	; 0x35c <__funcs_on_exit>
+ 308:	0e 94 ad 01 	call	0x35a	; 0x35a <_fini>
+ 30c:	ce 01       	movw	r24, r28
+ 30e:	0e 94 af 01 	call	0x35e	; 0x35e <__simulator_exit>
+ 312:	ce 01       	movw	r24, r28
+ 314:	0e 94 ab 01 	call	0x356	; 0x356 <_Exit>
+
+Disassembly of section .text._Exit:
+
+00000356 <_Exit>:
+ 356:	0e 94 34 00 	call	0x68	; 0x68 <_exit>

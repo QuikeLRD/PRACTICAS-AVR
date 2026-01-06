@@ -1,4 +1,6 @@
-Keyboard.d Keyboard.o: .././Keyboard.c \
+main.d main.o: .././main.c \
+ q:\programas\xccompiler\avr\lib\gcc\avr\5.4.0\include\xc.h \
+ q:\programas\xccompiler\avr\lib\gcc\avr\5.4.0\include\cci.h \
  q:\programas\xccompiler\avr\avr\include\avr\io.h \
  q:\programas\xccompiler\avr\avr\include\avr\sfr_defs.h \
  q:\programas\xccompiler\avr\avr\include\inttypes.h \
@@ -11,7 +13,16 @@ Keyboard.d Keyboard.o: .././Keyboard.c \
  q:\programas\xccompiler\avr\avr\include\avr\portpins.h \
  q:\programas\xccompiler\avr\avr\include\avr\common.h \
  q:\programas\xccompiler\avr\avr\include\avr\fuse.h \
- q:\programas\xccompiler\avr\avr\include\avr\lock.h .././Keyboard.h
+ q:\programas\xccompiler\avr\avr\include\avr\lock.h \
+ q:\programas\xccompiler\avr\avr\include\util\delay.h \
+ q:\programas\xccompiler\avr\avr\include\util\delay_basic.h \
+ q:\programas\xccompiler\avr\avr\include\math.h \
+ q:\programas\xccompiler\avr\avr\include\stdlib.h \
+ q:\programas\xccompiler\avr\avr\include\avr\interrupt.h
+
+q:\programas\xccompiler\avr\lib\gcc\avr\5.4.0\include\xc.h:
+
+q:\programas\xccompiler\avr\lib\gcc\avr\5.4.0\include\cci.h:
 
 q:\programas\xccompiler\avr\avr\include\avr\io.h:
 
@@ -39,4 +50,12 @@ q:\programas\xccompiler\avr\avr\include\avr\fuse.h:
 
 q:\programas\xccompiler\avr\avr\include\avr\lock.h:
 
-.././Keyboard.h:
+q:\programas\xccompiler\avr\avr\include\util\delay.h:
+
+q:\programas\xccompiler\avr\avr\include\util\delay_basic.h:
+
+q:\programas\xccompiler\avr\avr\include\math.h:
+
+q:\programas\xccompiler\avr\avr\include\stdlib.h:
+
+q:\programas\xccompiler\avr\avr\include\avr\interrupt.h:
