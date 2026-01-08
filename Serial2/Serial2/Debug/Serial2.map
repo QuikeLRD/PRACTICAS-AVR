@@ -344,10 +344,10 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x0000000000000000      0xdb5
+.debug_info     0x0000000000000000      0xdb7
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x0000000000000000      0x52e C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/xc8/avr/lib/avr5/memx-const/crtatmega16.o
- .debug_info    0x000000000000052e      0x887 main.o
+ .debug_info    0x000000000000052e      0x889 main.o
 
 .debug_abbrev   0x0000000000000000      0x6eb
  *(.debug_abbrev)
@@ -396,7 +396,7 @@ END GROUP
 
 .debug_macro
  *(.debug_macro)
-OUTPUT(Serial.elf elf32-avr)
+OUTPUT(Serial2.elf elf32-avr)
 LOAD linker stubs
 LOAD data_init
 

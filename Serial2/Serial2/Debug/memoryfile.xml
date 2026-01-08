@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?> 
 <project>                                  
-  <executable name="ADC_punto1.elf">                 
+  <executable name="Serial2.elf">                 
     <memory name="program">              
       <units>bytes</units>                 
       <length>16384</length>                 
-      <used>8990</used>                     
-      <free>7394</free>                     
+      <used>863</used>                     
+      <free>15521</free>                     
     </memory>                              
     <memory name="data">                 
       <units>bytes</units>                 
       <length>1024</length>                 
-      <used>30</used>                     
-      <free>994</free>                     
+      <used>0</used>                     
+      <free>1024</free>                     
     </memory>                              
   </executable>                            
 </project>                                 

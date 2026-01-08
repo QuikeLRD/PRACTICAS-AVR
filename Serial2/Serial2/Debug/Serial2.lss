@@ -1,5 +1,5 @@
 
-Serial.elf:     file format elf32-avr
+Serial2.elf:     file format elf32-avr
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
@@ -13,23 +13,23 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY
   4 .debug_aranges 00000080  00000000  00000000  00000431  2**0
                   CONTENTS, READONLY, DEBUGGING
-  5 .debug_info   00000db5  00000000  00000000  000004b1  2**0
+  5 .debug_info   00000db7  00000000  00000000  000004b1  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_abbrev 000006eb  00000000  00000000  00001266  2**0
+  6 .debug_abbrev 000006eb  00000000  00000000  00001268  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_line   00000513  00000000  00000000  00001951  2**0
+  7 .debug_line   00000513  00000000  00000000  00001953  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_frame  000000f4  00000000  00000000  00001e64  2**2
+  8 .debug_frame  000000f4  00000000  00000000  00001e68  2**2
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_str    000001af  00000000  00000000  00001f58  2**0
+  9 .debug_str    000001af  00000000  00000000  00001f5c  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_loc    00000316  00000000  00000000  00002107  2**0
+ 10 .debug_loc    00000316  00000000  00000000  0000210b  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_ranges 00000070  00000000  00000000  0000241d  2**0
+ 11 .debug_ranges 00000070  00000000  00000000  00002421  2**0
                   CONTENTS, READONLY, DEBUGGING
  12 .text         00000004  00000352  00000352  000003e6  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 13 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00002490  2**2
+ 13 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00002494  2**2
                   CONTENTS, READONLY, DEBUGGING
  14 .text.LEE_TECLADO 000000d0  0000007c  0000007c  00000110  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
@@ -665,12 +665,12 @@ int main(void)
 
 	#if MICRO_ID == 1
 	ENVIA_CADENA("MICRO 1");
+	#else
+	ENVIA_CADENA("MICRO 2");
  16a:	6c e6       	ldi	r22, 0x6C	; 108
  16c:	70 e0       	ldi	r23, 0x00	; 0
  16e:	80 e0       	ldi	r24, 0x00	; 0
  170:	0e 94 44 01 	call	0x288	; 0x288 <ENVIA_CADENA>
-	#else
-	ENVIA_CADENA("MICRO 2");
 	#endif
 
 	POS_LINEA2(0);

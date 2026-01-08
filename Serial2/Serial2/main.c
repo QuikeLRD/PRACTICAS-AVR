@@ -5,7 +5,7 @@
 #include <avr/interrupt.h>
 
 // ================= CONFIGURA QUIÉN ES EL MICRO =================
-#define MICRO_ID 1        // CAMBIAR A 2 EN EL OTRO MICRO
+#define MICRO_ID 2        // CAMBIAR A 2 EN EL OTRO MICRO
 
 // =================== LCD ====================
 #define LCD_PUERTO PORTC

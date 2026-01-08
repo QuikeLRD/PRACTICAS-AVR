@@ -1,39 +1,10 @@
 /*
 ======================================================================================
-PROJECT:       PRACTICA 10B - MEDIDOR DE VOLTAJE CALIBRADO (SINCRONIZADO)
+PROJECT:       PRACTICA 10B - MEDIDOR DE VOLTAJE 0–25 V CON ATENUADOR PI (CALIBRADO)
 COMPANY:       UPIITA-IPN
-FILE:          ADC_PRACTICA10_CALIBRADO.C
+FILE:          ADC_PRACTICA10_ATENUADOR_PI_25V_CAL_LINEAL.C
 AUTHOR:        [LUIS ENRIQUE LERDO CRISOSTOMO]
 DATE:          [FECHA]
-
-DESCRIPTION:
--------------
-ESTE PROYECTO UTILIZA UN FACTOR DE ATENUACION CALIBRADO PARA MOSTRAR EN
-LA LCD EL VOLTAJE REAL DE UNA FUENTE DE 0 A 25?V CONECTADA AL ATENUADOR Y
-AL MICROCONTROLADOR ATMEGA16.
-
-DURANTE LA SIMULACION EN PROTEUS, SE MIDE LA RELACION:
-    k = V_ADC / V_FUENTE
-
-EL FACTOR DE ATENUACION (ATTEN_FACTOR = 1/k) ES AJUSTADO EN EL CÓDIGO
-PARA COINCIDIR CON LOS DATOS DE LA FUENTE Y DEL ADC.
-
-LA LCD PRESENTA:
-
-- LINEA 1: "Modo: 10 bits" O "Modo:  8 bits"
-- LINEA 2: "Vf=xx.xx V" (VOLTAJE REAL DE LA FUENTE).
-
-HARDWARE:
----------
-- ATmega16 a 1 MHz (cristal externo)
-- LCD conectada a PORTC (PC0–PC7).
-- Atenuador tipo ? conectando la fuente (0..25?V) al pin ADC2 (PA2).
-- Factores ajustados según medición en Proteus.
-
-REVISION HISTORY:
------------------
-- [FECHA] [LELC]: Versión inicial calibrada.
-
 ======================================================================================
 */
 
@@ -44,14 +15,40 @@ REVISION HISTORY:
 #include <stdio.h>
 #include "LCD.h"
 
+
+
+char mensaje1[] = "Modo: 10 bits";
+char mensaje2[] = "Modo:  8 bits";
+
 // ========================= CONSTANTES ANALOGICAS ==================================
 
-// Referencia de ADC (AVCC)
-#define ADC_VREF      5.0f
+// Referencia del ADC (AVCC real)
+#define ADC_VREF      5.00f      // ajusta si tu AVCC real no es 5.00 V
 
-// Factor de calibración ajustado en simulación:
-// k = V_ADC / V_FUENTE ? ATTEN_FACTOR = 1/k
-#define ATTEN_FACTOR  4.9f // Ajusta este valor con base en tus mediciones
+// Relación ideal del atenuador: Vfuente_ideal = Vadc * 5
+#define ATTEN_IDEAL   5.0f
+
+// ---- CALIBRACIÓN LINEAL ----
+// Primero calculas Vfuente_ideal = Vadc * ATTEN_IDEAL.
+// Luego aplicas una corrección lineal Vfuente = Vfuente_ideal * GAIN + OFFSET.
+//
+// GAIN y OFFSET los sacas de DOS puntos de medición:
+//
+// 1) Elimina momentáneamente cualquier corrección extra (pon GAIN=1, OFFSET=0).
+// 2) Elige dos voltajes de entrada (por ejemplo 12.3 V y 17.3 V).
+// 3) Anota lo que muestre la LCD en esos puntos: V1_med y V2_med.
+// 4) Calcula:
+//
+//     m = (V2_real - V1_real) / (V2_med - V1_med)
+//     b = V1_real - m * V1_med
+//
+// 5) Pon GAIN = m, OFFSET = b aquí.
+
+m = 1.6025;
+b = 232.99;
+
+#define GAIN    1.00f   // <-- AJUSTA CON TUS MEDICIONES
+#define OFFSET  0.00f   // <-- AJUSTA CON TUS MEDICIONES
 
 // ======================= PROTOTIPOS DE FUNCIONES ADC ==============================
 void     ADC_Init_10bit(void);
@@ -62,138 +59,126 @@ uint8_t  LeeSelector(void);
 
 // ============================== CONFIGURACION ADC =================================
 
-/* ----------------------------------------------------------------------------
-   ADC_Init_10bit
-   CONFIGURA EL ADC PARA MEDICION A 10 BITS EN EL CANAL ADC2.
------------------------------------------------------------------------------*/
 void ADC_Init_10bit(void)
 {
-    ADMUX = (1 << REFS0) | (1 << MUX1); // AVCC referencia, ADC2, ajuste a la derecha
+	// REFERENCIA = AVCC, AJUSTE A LA DERECHA, CANAL ADC2
+	ADMUX = (1 << REFS0) | (1 << MUX1);
 
-    ADCSRA = (1 << ADEN)  |   // Enable ADC
-             (1 << ADATE) |   // Auto-trigger (free running)
-             (1 << ADSC)  |   // Start conversion
-             (1 << ADPS2) | (1 << ADPS1) | (1 << ADPS0); // Prescaler /128
+	ADCSRA = (1 << ADEN)  |
+	(1 << ADATE) |
+	(1 << ADSC)  |
+	(1 << ADPS2) | (1 << ADPS1) | (1 << ADPS0);   // prescaler /128
 }
 
-/* ----------------------------------------------------------------------------
-   ADC_Init_8bit
-   CONFIGURA EL ADC PARA MEDICION A 8 BITS EN EL CANAL ADC2.
------------------------------------------------------------------------------*/
 void ADC_Init_8bit(void)
 {
-    ADMUX = (1 << REFS0) | (1 << ADLAR) | (1 << MUX1); // AVCC referencia, ADC2, ajuste a la izquierda
+	// REFERENCIA = AVCC, AJUSTE A LA IZQUIERDA, CANAL ADC2
+	ADMUX = (1 << REFS0) | (1 << ADLAR) | (1 << MUX1);
 
-    ADCSRA = (1 << ADEN)  | 
-             (1 << ADATE) |
-             (1 << ADSC)  | 
-             (1 << ADPS2) | (1 << ADPS1) | (1 << ADPS0);
+	ADCSRA = (1 << ADEN)  |
+	(1 << ADATE) |
+	(1 << ADSC)  |
+	(1 << ADPS2) | (1 << ADPS1) | (1 << ADPS0);
 }
 
-/* ----------------------------------------------------------------------------
-   ADC_Read_10bit
-   DEVUELVE EL VALOR ADC A 10 BITS (0..1023).
------------------------------------------------------------------------------*/
 uint16_t ADC_Read_10bit(void)
 {
-    while (!(ADCSRA & (1 << ADIF)));   // Wait for conversion
-    uint8_t low  = ADCL;               // Read low bits first
-    uint8_t high = ADCH;               // Read high bits
-    ADCSRA |= (1 << ADIF);             // Clear the interrupt flag
-    return ((uint16_t)high << 8) | low;
+	while (!(ADCSRA & (1 << ADIF)));
+	uint8_t low  = ADCL;
+	uint8_t high = ADCH;
+	ADCSRA |= (1 << ADIF);
+	return ((uint16_t)high << 8) | low;
 }
 
-/* ----------------------------------------------------------------------------
-   ADC_Read_8bit
-   DEVUELVE EL VALOR ADC A 8 BITS (0..255).
------------------------------------------------------------------------------*/
 uint8_t ADC_Read_8bit(void)
 {
-    while (!(ADCSRA & (1 << ADIF)));   // Wait for conversion
-    uint8_t low  = ADCL;               // Dummy read of lower 8 bits
-    uint8_t high = ADCH;               // Read upper 8 bits
-    ADCSRA |= (1 << ADIF);             // Clear the interrupt flag
-    (void)low;                         // Avoid warning
-    return high;
+	while (!(ADCSRA & (1 << ADIF)));
+	uint8_t low  = ADCL;
+	uint8_t high = ADCH;
+	ADCSRA |= (1 << ADIF);
+	(void)low;
+	return high;
 }
 
-/* ----------------------------------------------------------------------------
-   LeeSelector
-   LEE EL ESTADO DE LOS SWITCHES DE SELECCION (A1:A0).
------------------------------------------------------------------------------*/
 uint8_t LeeSelector(void)
 {
-    return (PINA & 0x03); // Return the lower 2 bits
+	return (PINA & 0x03);  // PA1:PA0
 }
 
 // =============================== FUNCION PRINCIPAL ================================
 
 int main(void)
 {
-    char linea1[20];
-    char linea2[20];
-    char mensaje1[] = "Modo: 10 bits";
-    char mensaje2[] = "Modo:  8 bits";
+	char linea2[20];
 
-    // --------------------------- INICIALIZACION HARDWARE -------------------------
-    DDRC = 0xFFU; // LCD en PORTC
-    LCD_INICIALIZA();
-    LIMPIA_LCD();
+	// LCD EN PORTC
+	DDRC = 0xFFU;
+	LCD_INICIALIZA();
+	LIMPIA_LCD();
 
-    DDRA &= ~(1 << PA2);   // ADC2 entrada
-    PORTA &= ~(1 << PA2);  // No pull-up
+	// PA2 COMO ENTRADA ANALOGICA (ADC2)
+	DDRA  &= ~(1 << PA2);
+	PORTA &= ~(1 << PA2);
 
-    // PA0 y PA1 como entradas digitales para selector (pull-up activado)
-    DDRA &= ~((1 << PA0) | (1 << PA1));
-    PORTA |=  (1 << PA0) | (1 << PA1);
+	// PA0 Y PA1 COMO ENTRADAS DIGITALES PARA SELECTOR (CON PULL-UPS)
+	DDRA  &= ~((1 << PA0) | (1 << PA1));
+	PORTA |=  (1 << PA0) | (1 << PA1);
 
-    // --------------------------- BUCLE PRINCIPAL ---------------------------------
-    while (1) {
-        uint8_t sel = LeeSelector();   // Lee A1:A0
+	while (1) {
+		uint8_t sel = LeeSelector();
 
-        // Decodificacion:
-        // 00 o 10 ? Modo 10 bits
-        // 01 o 11 ? Modo 8 bits
-        if ((sel == 0x00) || (sel == 0x02)) {
-            ADC_Init_10bit();
-            _delay_ms(5);
+		if ((sel == 0x00) || (sel == 0x02)) {
+			// ===================== MODO 10 BITS ================================
+			ADC_Init_10bit();
+			_delay_ms(5);
 
-            uint16_t adc10 = ADC_Read_10bit();
+			uint16_t adc10 = ADC_Read_10bit();          // 0..1023
 
-            // Calcula voltaje real:
-            float Vadc = (adc10 * ADC_VREF) / 1024.0f; // Voltaje en nodo ADC
-            float Vfuente = Vadc * ATTEN_FACTOR;       // Voltaje real de la fuente
+			// Voltaje en nodo ADC
+			float Vadc = (adc10 * ADC_VREF) / 1024.0f;
 
-            LIMPIA_LCD();
-            POS_LINEA1(0);
-            ENVIA_CADENA(mensaje1);
+			// Voltaje calculado en la fuente usando el atenuador ideal
+			float Vfuente_ideal = Vadc * ATTEN_IDEAL;
 
-            POS_LINEA2(0);
-            sprintf(linea2, "Vf=%.2f V", Vfuente);
-            ENVIA_CADENA(linea2);
-        }
-        else {
-            ADC_Init_8bit();
-            _delay_ms(5);
+			// Corrección lineal
+			float Vfuente = Vfuente_ideal * GAIN + OFFSET;
 
-            uint8_t adc8 = ADC_Read_8bit();
+			// LIMITES
+			if (Vfuente < 0.0f)  Vfuente = 0.0f;
+			if (Vfuente > 25.0f) Vfuente = 25.0f;
 
-            // Calcula voltaje real:
-            float Vadc = (adc8 * ADC_VREF) / 256.0f; // Voltaje en nodo ADC
-            float Vfuente = Vadc * ATTEN_FACTOR;    // Voltaje real de la fuente
+			LIMPIA_LCD();
+			POS_LINEA1(0);
+			ENVIA_CADENA(mensaje1);
 
-            LIMPIA_LCD();
-            POS_LINEA1(0);
-            ENVIA_CADENA(mensaje2);
+			POS_LINEA2(0);
+			sprintf(linea2, "Vf=%.2f V", Vfuente);
+			ENVIA_CADENA(linea2);
+			} else {
+			// ===================== MODO 8 BITS ================================
+			ADC_Init_8bit();
+			_delay_ms(5);
 
-            POS_LINEA2(0);
-            sprintf(linea2, "Vf=%.2f V", Vfuente);
-            ENVIA_CADENA(linea2);
-        }
+			uint8_t adc8 = ADC_Read_8bit();             // 0..255
 
-        _delay_ms(300); // Retardo
-    }
+			float Vadc = (adc8 * ADC_VREF) / 256.0f;
+			float Vfuente_ideal = Vadc * ATTEN_IDEAL;
+			float Vfuente = Vfuente_ideal * GAIN + OFFSET;
 
-    return 0;
+			if (Vfuente < 0.0f)  Vfuente = 0.0f;
+			if (Vfuente > 25.0f) Vfuente = 25.0f;
+
+			LIMPIA_LCD();
+			POS_LINEA1(0);
+			ENVIA_CADENA(mensaje2);
+
+			POS_LINEA2(0);
+			sprintf(linea2, "Vf=%.2f V", Vfuente);
+			ENVIA_CADENA(linea2);
+		}
+
+		_delay_ms(300);
+	}
+
+	return 0;
 }
-
